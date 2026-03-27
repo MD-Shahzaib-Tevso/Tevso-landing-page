@@ -1,18 +1,28 @@
 export function HomeHeroSection() {
   return (
-    <section className="overflow-hidden bg-white py-20">
+    <section className="overflow-hidden bg-white py-20 mt-26">
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2">
         <div className="space-y-6">
           <h1 className="font-heading text-4xl leading-tight text-slate-900 sm:text-5xl">
-            Build and Scale Your <span className="text-brand">SaaS</span> From MVP to Investor Ready Infrastructure
+            Build & Scale Your <span className="text-brand">SaaS</span> From MVP
+            to Investor Ready Infrastructure
           </h1>
           <p className="max-w-xl font-body text-base leading-7 text-slate-600">
-            Placeholder copy for the hero message. This area can describe your product development and engineering services in a concise,
-            conversion-friendly way.
+            Tevso is a SaaS Growth Engineering Partner helping founders
+            design,build, and scale products without technical debt or
+            scalability risks.
+            
+            We combine engineering excellence, DevOps mastery,
+            and a managed talent network to deliver end-to-end technology
+            solutions — from idea validation to post launch growth.
           </p>
           <div className="flex flex-wrap items-center gap-4">
-            <button className="rounded-md bg-brand px-5 py-3 font-body text-sm font-semibold text-white">Book a Discovery Call</button>
-            <button className="rounded-md border border-brand px-5 py-3 font-body text-sm font-semibold text-brand">View Case Studies</button>
+            <button className="rounded-md bg-brand px-5 py-3 font-body text-sm font-semibold text-white">
+              Book a Discovery Call
+            </button>
+            <button className="rounded-md border border-brand px-5 py-3 font-body text-sm font-semibold text-brand">
+              View Case Studies
+            </button>
           </div>
         </div>
 
