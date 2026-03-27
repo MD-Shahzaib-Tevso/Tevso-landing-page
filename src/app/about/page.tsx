@@ -1,3 +1,17 @@
+import { AboutCapabilitiesSection } from "@/components/sections/AboutCapabilitiesSection";
+import { AboutHeroSection } from "@/components/sections/AboutHeroSection";
+import { AboutIntroSection } from "@/components/sections/AboutIntroSection";
+import { AboutStatsStripSection } from "@/components/sections/AboutStatsStripSection";
+import { ServicesTestimonialsSection } from "@/components/sections/ServicesTestimonialsSection";
+
 export default function AboutPage() {
-  return <h1>About Us</h1>;
+  return (
+    <>
+      <AboutHeroSection />
+      <AboutIntroSection />
+      <AboutStatsStripSection />
+      <AboutCapabilitiesSection />
+      <ServicesTestimonialsSection />
+    </>
+  );
 }
