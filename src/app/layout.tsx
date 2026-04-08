@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato, Raleway } from "next/font/google";
 import { Footer } from "@/components/shared/Footer";
 import { Navbar } from "@/components/shared/Navbar";
+import { Preloader } from "@/components/shared/Preloader";
 import "./globals.css";
 
 const raleway = Raleway({
@@ -28,7 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className={`${raleway.variable} ${lato.variable} min-h-full flex flex-col`}>
+      <body suppressHydrationWarning className={`${raleway.variable} ${lato.variable} min-h-full flex flex-col`}>
+        <Preloader />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
