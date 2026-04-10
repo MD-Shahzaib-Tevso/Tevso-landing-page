@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const transformationItems = [
-  { label: "Strategic product innovation", image: "/transformation-placeholder.png" },
-  { label: "Technical excellence on demand", image: "/transformation-placeholder.png" },
-  { label: "Data driven growth marketing", image: "/transformation-placeholder.png" },
-  { label: "Scalable business leadership", image: "/transformation-placeholder.png" },
+  { label: "Strategic product innovation", image: "/transformation/1.png" },
+  { label: "Technical excellence on demand", image: "/transformation/2.png" },
+  { label: "Data driven growth marketing", image: "/transformation/4.png" },
+  { label: "Scalable business leadership", image: "/transformation/3.png" },
 ];
 
 export function HomeTransformationSection() {
@@ -14,10 +14,10 @@ export function HomeTransformationSection() {
 
         {/* Header row: heading left, button right */}
         <div className="flex flex-col items-start justify-between gap-4 mb-8 sm:flex-row sm:items-center">
-          <h2 className="font-['Raleway'] font-bold text-[36px] leading-[1.2] text-gray-900 max-w-xs">
+          <h2 className="theme-heading">
             Elevate your digital<br />transformation journey
           </h2>
-          <button className="inline-flex items-center justify-center rounded-md bg-brand px-5 py-2.5 font-['Lato'] text-[14px] font-semibold text-white whitespace-nowrap transition-all hover:bg-brand/90 hover:scale-[1.02] active:scale-[0.98]">
+          <button className="theme-btn theme-btn-white">
             Consult Our Experts
           </button>
         </div>

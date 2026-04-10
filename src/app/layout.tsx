@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body suppressHydrationWarning className={`${raleway.variable} ${lato.variable} min-h-full flex flex-col`}>
-        <Preloader />
+        {/* <Preloader /> */}
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

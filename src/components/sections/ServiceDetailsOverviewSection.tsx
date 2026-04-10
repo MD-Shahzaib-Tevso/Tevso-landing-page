@@ -1,51 +1,40 @@
-export function ServiceDetailsOverviewSection() {
-  const features = [
-    "Up siri intention on dependent questions",
-    "Surrounded affording favourable",
-    "Sed ut perspiciatis unde omnis iste status",
-    "Special Careness Risk Free",
-    "Blessed Jauctor Calibr est volume are beguiled",
-  ];
+import Image from "next/image";
 
+export function ServiceDetailsOverviewSection({ title }: { title: string }) {
   return (
-    <section className="py-20">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 lg:flex-row">
-        {/* Left side image placeholder */}
-        <div className="flex-shrink-0 lg:w-1/2">
-          <div className="aspect-video w-full rounded-2xl bg-gradient-to-br from-slate-200 to-slate-300" />
-        </div>
+    <div className="space-y-12">
+      {/* Featured Image */}
+      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[#F1F5F9]">
+        <Image
+          src="/service-overview-main.png" // Placeholder URL
+          alt={`${title} Overview`}
+          fill
+          className="object-cover"
+        />
+      </div>
 
-        {/* Right side content */}
-        <div className="flex h-full flex-col justify-start lg:w-1/2">
-          <h2 className="font-heading text-3xl font-bold text-slate-900">
-            Web Development
-          </h2>
-          
-          <p className="mt-4 font-body text-sm leading-7 text-slate-600">
-            Globally optimize highly efficient solution whereas open-source application.
-            Completely strategize quality internal or external sources for virtual e-business.
-            Phosfluorescently re-engineer enterprise markets via value-added networks.
-            Seamlessly restore inexpensive e-markets via a-vis corporate intellectual capital.
-            Holistically reinvent compelling niche markets via pervasive strategy.
+      {/* Main Copy */}
+      <div className="space-y-8">
+        <h2 className="font-heading text-4xl font-bold text-[#3B32C4] tracking-tight">
+          {title}
+        </h2>
+        
+        <div className="space-y-6">
+          <p className="font-body text-[15px] leading-relaxed text-[#64748B]">
+            Globally optimize highly efficient solution whereas open-source application. Completely 
+            strategize quality internal or "organic" sources for virtual e-business. 
+            Phosfluorescently re-engineer enterprise markets via value-added networks. 
+            Seamlessly restore inexpensive e-markets vis-a-vis corporate intellectual capital. 
+            Holistically reinvent compelling niche markets via scalable strategic.
           </p>
 
-          <p className="mt-4 font-body text-sm leading-7 text-slate-600">
-            Authoritatively scale business meta-services before client-based technologies.
-            Collaboratively strategize synergistic scenarios rather than flexible action items.
-            Continually deliver convergence via mission-critical infrastructures.
+          <p className="font-body text-[15px] leading-relaxed text-[#64748B]">
+            Authoritatively scale business meta-services before client-based technologies. 
+            Collaboratively strategize synergistic scenarios rather than flexible action items. 
+            Continually deliver market positioning convergence and mission-critical infrastructures.
           </p>
-
-          {/* Features list */}
-          <div className="mt-8 space-y-3">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand" />
-                <span className="font-body text-sm text-slate-700">{feature}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

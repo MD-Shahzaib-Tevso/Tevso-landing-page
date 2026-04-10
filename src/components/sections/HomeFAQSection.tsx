@@ -33,10 +33,9 @@ const faqs = [
 
 function FAQItem({ question, answer, isOpen, onToggle }: { question: string; answer: string; isOpen: boolean; onToggle: () => void }) {
   return (
-    <div 
-      className={`rounded-[12px] bg-white transition-all duration-300 ${
-        isOpen ? "shadow-[0_15px_40px_rgba(0,0,0,0.08)]" : "shadow-[0_10px_30px_rgba(0,0,0,0.04)]"
-      }`}
+    <div
+      className={`rounded-[12px] bg-white transition-all duration-300 ${isOpen ? "shadow-[0_15px_40px_rgba(0,0,0,0.08)]" : "shadow-[0_10px_30px_rgba(0,0,0,0.04)]"
+        }`}
     >
       <button
         onClick={onToggle}
@@ -90,7 +89,7 @@ export function HomeFAQSection() {
   return (
     <section className="bg-[#fcfcff] py-16 lg:py-24">
       <div className="w-full px-6 md:px-12 lg:px-16">
-        <h2 className="mb-12 text-center font-heading text-[32px] md:text-[40px] font-bold text-[#222222] lg:mb-16">
+        <h2 className="mb-12 text-center theme-heading lg:mb-16">
           Frequently ask questions
         </h2>
 

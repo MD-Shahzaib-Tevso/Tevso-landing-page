@@ -12,25 +12,25 @@ const testimonials = [
     quote: "Whitepate is designed as a collaboration tool for businesses that is a full project management solution.",
     author: "Oberon Shaw, MCH",
     role: "Head of Talent Acquisition, North America",
-    image: "", // Placeholder for image
+    image: "/banner2.png", // Placeholder for image
   },
   {
     quote: "Whitepate is designed as a collaboration tool for businesses that is a full project management solution.",
     author: "Oberon Shaw, MCH",
     role: "Head of Talent Acquisition, North America",
-    image: "", // Placeholder for image
+    image: "/banner2.png",
   },
   {
     quote: "Whitepate is designed as a collaboration tool for businesses that is a full project management solution.",
     author: "Oberon Shaw, MCH",
     role: "Head of Talent Acquisition, North America",
-    image: "", // Placeholder for image
+    image: "/banner2.png",
   },
   {
     quote: "Whitepate is designed as a collaboration tool for businesses that is a full project management solution.",
     author: "Oberon Shaw, MCH",
     role: "Head of Talent Acquisition, North America",
-    image: "", // Placeholder for image
+    image: "/banner2.png",
   },
 ];
 
@@ -38,7 +38,7 @@ export function HomeTestimonialsSection() {
   return (
     <section className="bg-white py-16 lg:py-24 overflow-hidden">
       <div className="w-full px-6 md:px-12 lg:px-16">
-        <h2 className="text-center font-heading text-[32px] md:text-[40px] font-semibold text-[#222222] mb-12 lg:mb-16">
+        <h2 className="text-center theme-heading  mb-12 lg:mb-16">
           Hear from our business clients
         </h2>
 
@@ -87,16 +87,16 @@ export function HomeTestimonialsSection() {
                   </div>
 
                   {/* Quote Text */}
-                  <p className="font-body text-[16px] md:text-[18px] leading-[1.6] opacity-90 flex-grow">
+                  <p className="font-body text-[16px] md:text-[18px] leading-[1.6] flex-grow">
                     {testimonial.quote}
                   </p>
 
                   {/* Divider */}
-                  <div className="my-8 border-t border-white/20" />
+                  <div className="my-8 border-t-[2px] border-white" />
 
                   {/* Author Header */}
                   <div className="flex items-center gap-4">
-                    <div className="relative h-14 w-14 overflow-hidden rounded-full bg-white/20 shrink-0">
+                    <div className="relative h-[80px] w-[80px] overflow-hidden rounded-full bg-white/20 shrink-0">
                       {testimonial.image ? (
                         <img
                           src={testimonial.image}
@@ -105,7 +105,7 @@ export function HomeTestimonialsSection() {
                         />
                       ) : (
                         <div className="h-full w-full bg-brand-light flex items-center justify-center text-white/50 text-xs text-center p-2">
-                           <div className="w-full h-full bg-slate-400/30 rounded-full" />
+                          <div className="w-full h-full bg-slate-400/30 rounded-full" />
                         </div>
                       )}
                     </div>
@@ -113,7 +113,7 @@ export function HomeTestimonialsSection() {
                       <h4 className="font-heading text-[18px] font-semibold text-white">
                         {testimonial.author}
                       </h4>
-                      <p className="font-body text-[14px] opacity-80 leading-snug mt-0.5">
+                      <p className="font-body text-[14px] opacity-70 leading-snug mt-[10px]">
                         {testimonial.role}
                       </p>
                     </div>

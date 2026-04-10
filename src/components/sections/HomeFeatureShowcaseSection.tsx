@@ -51,7 +51,7 @@ export function HomeFeatureShowcaseSection() {
             </p>
 
             <div>
-              <button className="inline-flex items-center justify-center rounded-sm bg-white px-10 py-5 font-heading text-[15px] font-bold text-[#2c28d8] shadow-lg transition-transform hover:scale-[1.05] active:scale-[0.98]">
+              <button className="theme-btn">
                 Discuss Your SaaS
               </button>
             </div>

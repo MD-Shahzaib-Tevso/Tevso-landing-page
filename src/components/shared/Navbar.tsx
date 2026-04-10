@@ -7,15 +7,7 @@ import { useState, useRef, useEffect } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  {
-    href: "/services",
-    label: "Services",
-    dropdown: [
-      { href: "/services/web-development", label: "Web Development" },
-      { href: "/services/ai-solutions", label: "AI Solutions" },
-      { href: "/services/cloud", label: "Cloud Services" },
-    ],
-  },
+  { href: "/services", label: "Services" },
   { href: "/ai-solutions", label: "AI Solutions" },
   { href: "/about", label: "About" },
   { href: "/technology", label: "Technology" },
@@ -87,12 +79,12 @@ export function Navbar() {
           </Link>
 
           {/* ── Top white bar: contact info ── */}
-          <div className="flex min-h-[44px] items-center justify-center gap-x-0 gap-y-1 rounded-bl-[45px] bg-white px-5 py-2 font-body text-[12px] text-[#3c4b85] sm:justify-start">
+          <div className="flex min-h-[44px] items-center justify-center gap-x-0 gap-y-1 md:rounded-bl-[45px] bg-white px-5 py-2 font-body text-[12px] text-[#3c4b85] sm:justify-start">
             <a
-              className="inline-flex items-center gap-2 pr-5 transition-opacity hover:opacity-70 "
+              className="inline-flex items-center gap-2 pr-5 font-[Poppins] font-normal text-[14px] leading-none tracking-normal theme-text hover:opacity-70 "
               href="tel:+447400714002"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 shrink-0 text-[#3c4b85]" viewBox="0 0 24 24" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 shrink-0 theme-text" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" />
               </svg>
               <span>+ 44 7400714002</span>
@@ -101,10 +93,11 @@ export function Navbar() {
             <span className="mx-1 h-5 border-l border-dashed border-[#c0c8e0]" aria-hidden="true" />
 
             <a
-              className="inline-flex items-center gap-2 pl-5 transition-opacity hover:opacity-70"
+              className="inline-flex items-center gap-2 pl-5  font-normal text-[14px] leading-none tracking-normal theme-text transition-opacity hover:opacity-70"
+
               href="mailto:contact@tevsotech.com"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 shrink-0 text-[#3c4b85]" viewBox="0 0 24 24" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 shrink-0 theme-text" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
               </svg>
               <span>contact@tevsotech.com</span>
@@ -113,63 +106,26 @@ export function Navbar() {
 
           {/* ── Blue nav bar ── */}
           <div className="bg-[#2c28d8]">
-            <div className="flex min-h-10 items-center justify-between px-5 py-2">
+            <div className="flex min-h-10 items-center justify-between px-5 py-[18px]">
 
               {/* Desktop nav */}
-              <nav aria-label="Primary navigation" className="hidden items-center gap-6 lg:flex">
-                {navLinks.map((link) =>
-                  link.dropdown ? (
-                    <div key={link.href} className="relative" ref={dropdownRef}>
-                      <button
-                        className={`group inline-flex items-center gap-1 py-1.5 font-body text-[13px] font-semibold transition-colors ${isActivePath(link.href) ? "text-white" : "text-white/75 hover:text-white"
-                          }`}
-                        onClick={() => setServicesOpen((p) => !p)}
-                        aria-haspopup="true"
-                        aria-expanded={servicesOpen}
-                        type="button"
-                      >
-                        <span>{link.label}</span>
-                        <svg
-                          className={`h-3.5 w-3.5 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
-                          viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
-                          strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
-                        >
-                          <path d="M6 9l6 6 6-6" />
-                        </svg>
-                      </button>
-
-                      {servicesOpen && (
-                        <div className="dropdown-menu absolute left-0 top-full mt-2 min-w-[180px] rounded-lg bg-white py-1.5 shadow-[0_8px_30px_rgba(17,27,80,0.18)]">
-                          {link.dropdown.map((sub) => (
-                            <Link
-                              key={sub.href}
-                              href={sub.href}
-                              className="block px-4 py-2 text-[12px] font-semibold text-[#3c4b85] transition-colors hover:bg-[#f0f2ff] hover:text-[#2c28d8]"
-                              onClick={() => { setServicesOpen(false); closeMobileMenu(); }}
-                            >
-                              {sub.label}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      key={link.href}
-                      className={`group relative py-1.5 font-body text-[13px] font-semibold transition-colors ${isActivePath(link.href) ? "text-white" : "text-white/75 hover:text-white"
+              <nav aria-label="Primary navigation" className="hidden items-center gap-6 lg:flex h-full">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    className={`group relative flex h-full items-center font-body text-[14px] font-medium transition-colors ${isActivePath(link.href) ? "text-white" : "text-white/75 hover:text-white"
+                      }`}
+                    href={link.href}
+                    onClick={closeMobileMenu}
+                  >
+                    <span>{link.label}</span>
+                    <span
+                      aria-hidden="true"
+                      className={`absolute bottom-[-18px] left-1/2 h-[4px] w-[32px] -translate-x-1/2 rounded-t-[4px] bg-white transition-opacity ${isActivePath(link.href) ? "opacity-100" : "opacity-0 group-hover:opacity-70"
                         }`}
-                      href={link.href}
-                      onClick={closeMobileMenu}
-                    >
-                      <span>{link.label}</span>
-                      <span
-                        aria-hidden="true"
-                        className={`absolute -bottom-[7px] left-1/2 h-[2px] w-8 -translate-x-1/2 rounded-full bg-white transition-opacity ${isActivePath(link.href) ? "opacity-100" : "opacity-0 group-hover:opacity-70"
-                          }`}
-                      />
-                    </Link>
-                  )
-                )}
+                    />
+                  </Link>
+                ))}
               </nav>
 
               <button

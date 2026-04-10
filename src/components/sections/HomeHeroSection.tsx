@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function HomeHeroSection() {
   return (
-    <section className="hero-section relative min-h-[700px] overflow-hidden pt-32 pb-20 mt-20">
+    <section className="hero-section relative min-h-[calc(100vh-114px)] overflow-hidden pt-32 pb-20 mt-[114px]">
       {/* High-Performance Background Image Layer */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -32,7 +32,7 @@ export function HomeHeroSection() {
           </div>
 
           <div>
-            <button className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 font-body text-[15px] font-bold text-[#020617] transition-all hover:bg-white/90 hover:scale-[1.02] active:scale-[0.98]">
+            <button className="theme-btn">
               Discuss Your SaaS
             </button>
           </div>

@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
+
+
 
 :root {
   --primary-color: #311DE6;
@@ -19,7 +24,8 @@
 }
 
 body {
-  font-family: var(--font-lato), sans-serif;
+  /* font-family: var(--font-lato), sans-serif; */
+  font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
   color: #1e293b;
 }
@@ -91,10 +97,13 @@ h6 {
 } */
 
 @keyframes pulse-logo {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.05);
     opacity: 0.9;
@@ -112,8 +121,8 @@ h6 {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
-              visibility 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .preloader.fade-out {
@@ -136,12 +145,14 @@ h6 {
   margin: 0 !important;
   width: 10px !important;
   height: 10px !important;
-  background-color: #311DE633 !important; /* Lighter brand blue */
+  background-color: #311DE633 !important;
+  /* Lighter brand blue */
   opacity: 1 !important;
 }
 
 .testimonials-slider .swiper-pagination-bullet-active {
-  background-color: #311DE6 !important; /* Full brand blue */
+  background-color: #311DE6 !important;
+  /* Full brand blue */
 }
 
 .loader-content {
@@ -184,6 +195,7 @@ h6 {
   0% {
     left: -40%;
   }
+
   100% {
     left: 100%;
   }
@@ -199,7 +211,8 @@ h6 {
   content: "";
   position: absolute;
   bottom: 0;
-  left: -40px; /* matched to corner radius */
+  left: -40px;
+  /* matched to corner radius */
   width: 40px;
   height: 40px;
   background-color: transparent;
@@ -207,4 +220,80 @@ h6 {
   box-shadow: 20px 20px 0 20px white;
   z-index: 10;
   pointer-events: none;
+}
+
+
+
+.theme-text {
+  color: var(--primary-color);
+}
+
+.theme-text-mute {
+  color: #636571;
+}
+
+.theme-bg {
+  background-color: var(--primary-color);
+}
+
+.ff-lato {
+  font-family: 'Lato', sans-serif !important;
+}
+
+.ff-po {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.ff-raleway {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #311DE6;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  background-color: #ffffff;
+  color: var(--primary-color);
+  /* theme-text */
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.theme-btn:hover {
+  background-color: var(--primary-color);
+  /* theme-bg */
+  color: #ffffff;
+  /* theme-text inverted */
+}
+
+.theme-btn:active {
+  transform: scale(0.98);
+}
+
+.theme-btn-white {
+  background: var(--primary-color) !important;
+  color: white !important;
+}
+
+.theme-btn-white:hover {
+  background: white !important;
+  color: var(--primary-color) !important;
+}
+
+.theme-heading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 45px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #35332F;
 }

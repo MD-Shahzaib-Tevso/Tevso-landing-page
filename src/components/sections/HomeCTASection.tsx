@@ -9,6 +9,7 @@ export function HomeCTASection() {
         backgroundColor: '#000',
       }}
     >
+
       {/* Gradient Overlay */}
       <div
         className="absolute inset-0 z-0 pointer-events-none"
@@ -25,10 +26,10 @@ export function HomeCTASection() {
             </h2>
 
             <div className="flex flex-wrap gap-5">
-              <button className="rounded-[4px] bg-white px-8 py-3.5 font-body text-[16px] font-semibold text-brand transition-all hover:bg-white/90">
+              <button className="theme-btn">
                 + 44 7400714002
               </button>
-              <button className="rounded-[4px] bg-brand border border-white/30 px-8 py-3.5 font-body text-[16px] font-semibold text-white transition-all hover:bg-white/10">
+              <button className="theme-btn theme-btn-white">
                 Talk to Our Expert
               </button>
             </div>

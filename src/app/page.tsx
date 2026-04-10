@@ -25,9 +25,9 @@ export default function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // 1. Hero Content Entrance (Runs immediately)
+    // 1. HomeHeroSection Entrance (Manual trigger for top of page)
     gsap.from(".hero-content > *", {
-      y: 40,
+      y: 30,
       opacity: 0,
       duration: 1,
       stagger: 0.15,
@@ -35,40 +35,50 @@ export default function HomePage() {
       clearProps: "all"
     });
 
-    // 2. Element Level Scroll Reveals
+    // 2. "One by One" Scroll Reveals for All Sections
     const sections = gsap.utils.toArray("section") as HTMLElement[];
     
     sections.forEach((section) => {
-      // Find top-level children of the section OR top-level children of a grid
-      // This avoids deep selector conflicts like targeting both an article AND its internal paragraphs
-      const targets = section.querySelectorAll(":scope > *, .grid > *, article, .swiper-slide");
+      // Find logical blocks that should animate "one by one"
+      // We target high-level content elements like headers, grid cells, and articles.
+      const elements = section.querySelectorAll(":scope > *, .grid > *, article, .swiper-slide, h2, .max-w-2xl > *, .hero-content > *");
       
-      // Filter out elements that are nested inside already targeted containers in this specific loop
-      const filteredTargets = Array.from(targets).filter(el => {
-        const isDirectChild = el.parentElement === section;
-        const isGridChild = el.parentElement?.classList.contains('grid');
+      // Filter the elements to ensure we only get a flat list of top-level "entrance" items
+      // This prevents nested elements from also animating and causing conflicts.
+      const entranceItems = Array.from(elements).filter((el: any) => {
+        // Only include if the parent is a section or a grid or a container we previously targeted
+        const parent = el.parentElement;
+        if (!parent) return false;
+        
+        const isDirect = parent === section;
+        const isGridChild = parent.classList.contains('grid');
+        const isContentChild = parent.classList.contains('max-w-2xl') || parent.classList.contains('space-y-8') || parent.classList.contains('space-y-10');
         const isSwiperSlide = el.classList.contains('swiper-slide');
-        return isDirectChild || isGridChild || isSwiperSlide;
+        
+        return isDirect || isGridChild || isContentChild || isSwiperSlide;
       });
 
-      if (filteredTargets.length > 0) {
-        gsap.from(filteredTargets, {
+      // Remove the hero section from the scroll loop if it's already animated above
+      if (section.classList.contains('hero-section')) return;
+
+      if (entranceItems.length > 0) {
+        gsap.from(entranceItems, {
           scrollTrigger: {
             trigger: section,
             start: "top 85%",
             toggleActions: "play none none none",
           },
-          y: 30,
+          y: 40,
           opacity: 0,
           duration: 0.8,
-          stagger: 0.1,
+          stagger: 0.12, // The "one by one" feel
           ease: "power2.out",
           clearProps: "all"
         });
       }
     });
 
-    // Refresh ScrollTrigger to ensure all markers and points are correct after initial render
+    // Refresh everything after setup
     ScrollTrigger.refresh();
   }, { scope: containerRef });
 
