@@ -1,37 +1,45 @@
+import { MapPin, Phone, Mail } from "lucide-react";
+
 export function ContactInfoCardsSection() {
   const contactInfo = [
     {
-      icon: "📍",
-      title: "Our Office",
-      details: ["123 Business Street", "London, UK SW1A 1AA"],
+      icon: MapPin,
+      title: "Our office address",
+      details: ["Burnsville, MN 55337 Street, United States"],
     },
     {
-      icon: "📞",
-      title: "Call Anytime",
-      details: ["+44 121 285 0092", "Mon-Fri, 9am-6pm GMT"],
+      icon: Phone,
+      title: "Call us anytime",
+      details: ["+ 44 7400714002"],
     },
     {
-      icon: "📧",
-      title: "Send Email",
-      details: ["contact@tevso.com", "We'll respond within 24 hours"],
+      icon: Mail,
+      title: "Send an email",
+      details: ["contact@tevsotech.com"],
     },
   ];
 
   return (
-    <section className="bg-white py-20">
-      <div className="mx-auto w-full max-w-6xl px-6">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+    <section className="relative z-20 -mt-16 bg-transparent lg:-mt-24">
+      <div className="mx-auto w-full px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {contactInfo.map((info, idx) => (
             <div
               key={idx}
-              className="rounded-2xl border border-slate-200 bg-slate-50 p-8 text-center transition-shadow hover:shadow-lg"
+              className="group flex flex-row items-center gap-6 rounded-[12px] bg-white p-8 shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(0,0,0,0.12)]"
             >
-              <div className="text-5xl">{info.icon}</div>
-              <h3 className="mt-4 font-heading text-xl text-slate-900">{info.title}</h3>
-              <div className="mt-3 space-y-1 font-body text-sm text-slate-600">
-                {info.details.map((detail, idx) => (
-                  <p key={idx}>{detail}</p>
-                ))}
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-[8px] bg-[#311EE6] text-white">
+                <info.icon size={26} strokeWidth={2.5} />
+              </div>
+              <div>
+                <h3 className="font-heading text-[18px] font-bold text-[#311EE6]">
+                  {info.title}
+                </h3>
+                <div className="mt-1 flex flex-col font-body text-[14px] leading-tight text-[#666666]">
+                  {info.details.map((detail, idx) => (
+                    <p key={idx}>{detail}</p>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

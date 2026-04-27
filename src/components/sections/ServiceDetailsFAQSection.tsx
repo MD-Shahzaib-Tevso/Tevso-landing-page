@@ -17,45 +17,47 @@ export function ServiceDetailsFAQSection() {
         "Collaboratively formulate distinctive niches whereas holistic resources. Assertively evolve prospective channels for virtual e-business.",
     },
     {
-      question: "How To Choose A Good QA Consultant?",
+      question: "How to choose a good QA consultant?",
       answer:
         "Professionally embrace dynamic systems for exceptional applications. Authoritatively strategize scalable e-business via comprehensive expertise.",
     },
   ];
 
   return (
-    <section className="bg-slate-50 py-20">
-      <div className="mx-auto w-full max-w-4xl px-6">
-        <h2 className="text-center font-heading text-3xl font-bold text-slate-900">
-          Questions About Services
+    <section className="bg-white py-16">
+      <div className="mx-auto w-full px-6 md:px-12 lg:px-16">
+        <h2 className="text-center font-heading text-3xl font-bold text-[#3B32C4] mb-10 tracking-tight">
+          Questions about services
         </h2>
 
-        <div className="mt-12 space-y-4">
+        <div className="space-y-4 max-w-5xl mx-auto">
           {faqs.map((faq, index) => (
-            <div key={index} className="overflow-hidden rounded-lg border border-slate-200">
+            <div key={index} className="overflow-hidden bg-[#3B32C4] shadow-md">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className={`w-full px-6 py-4 text-left font-heading font-semibold transition-all ${
-                  openIndex === index
-                    ? "bg-brand text-white"
-                    : "bg-white text-slate-900 hover:bg-slate-50"
-                }`}
+                className="w-full px-8 py-5 text-left transition-all hover:bg-[#3B32C4]/90"
               >
-                <div className="flex items-center justify-between">
-                  <span>{faq.question}</span>
-                  <span className="ml-4 text-lg">
+                <div className="flex items-center justify-between text-white">
+                  <span className="font-body text-[15px] font-semibold">{faq.question}</span>
+                  <span className="ml-4 text-xl font-light transform transition-transform duration-300">
                     {openIndex === index ? "−" : "+"}
                   </span>
                 </div>
               </button>
 
-              {openIndex === index && (
-                <div className="border-t border-slate-200 bg-white px-6 py-4">
-                  <p className="font-body text-sm leading-6 text-slate-600">
-                    {faq.answer}
-                  </p>
+              <div
+                className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+                  openIndex === index ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <div className="bg-[#2E26A5] px-8 py-5">
+                    <p className="font-body text-[14px] leading-relaxed text-white/90 m-0">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
