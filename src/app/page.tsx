@@ -25,15 +25,7 @@ export default function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // 1. HomeHeroSection Entrance (Manual trigger for top of page)
-    gsap.from(".hero-content > *", {
-      y: 30,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.15,
-      ease: "power3.out",
-      clearProps: "all"
-    });
+    // 1. HomeHeroSection Entrance will be handled inside its own component
 
     // 2. "One by One" Scroll Reveals for All Sections
     const sections = gsap.utils.toArray("section") as HTMLElement[];
@@ -58,21 +50,26 @@ export default function HomePage() {
         return isDirect || isGridChild || isContentChild || isSwiperSlide;
       });
 
-      // Remove the hero section from the scroll loop if it's already animated above
-      if (section.classList.contains('hero-section')) return;
+      // Remove sections that manage their own complex GSAP animations
+      if (section.classList.contains('hero-section') || section.classList.contains('stats-section')) return;
 
       if (entranceItems.length > 0) {
+        gsap.set(section, { perspective: 1500 });
+        
         gsap.from(entranceItems, {
           scrollTrigger: {
             trigger: section,
-            start: "top 85%",
+            start: "top 80%",
             toggleActions: "play none none none",
           },
-          y: 40,
+          y: 80,
           opacity: 0,
-          duration: 0.8,
-          stagger: 0.12, // The "one by one" feel
-          ease: "power2.out",
+          scale: 0.85,
+          rotationX: -25,
+          transformOrigin: "bottom center",
+          duration: 1.2,
+          stagger: 0.15,
+          ease: "back.out(1.4)",
           clearProps: "all"
         });
       }

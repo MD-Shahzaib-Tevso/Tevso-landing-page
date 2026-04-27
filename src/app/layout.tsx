@@ -3,6 +3,7 @@ import { Lato, Raleway } from "next/font/google";
 import { Footer } from "@/components/shared/Footer";
 import { Navbar } from "@/components/shared/Navbar";
 import { Preloader } from "@/components/shared/Preloader";
+import { SmoothScrollProvider } from "@/components/shared/SmoothScrollProvider";
 import "./globals.css";
 
 const raleway = Raleway({
@@ -31,9 +32,11 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased">
       <body suppressHydrationWarning className={`${raleway.variable} ${lato.variable} min-h-full flex flex-col`}>
         {/* <Preloader /> */}
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <SmoothScrollProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </SmoothScrollProvider>
       </body>
     </html>
   );
