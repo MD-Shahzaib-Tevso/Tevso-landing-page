@@ -1,60 +1,43 @@
 import Image from "next/image";
-import { MoveRight } from "lucide-react";
 
 export function AiSolutionsHeroSection() {
   return (
-    <section className="relative min-h-[600px] w-full overflow-hidden pt-32 pb-20 mt-20 flex items-center bg-[#020617]">
-      {/* Background Image Layer - Easily configurable by changing the src */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/ai-hero-bg.png" // Placeholder URL, user will change this
-          alt="AI Solutions Hero Background"
-          fill
-          priority
-          className="object-cover object-right md:object-center opacity-70"
-          quality={100}
-        />
-        {/* Modern AI Grid Pattern */}
-        <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: "radial-gradient(#ffffff 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }}></div>
-        {/* Gradient Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#020617] via-[#020617]/90 to-[#020617]/20 z-1" />
-      </div>
+    <section className="relative mt-[72px] min-h-[560px] w-full overflow-hidden bg-[#061b55] sm:mt-20 sm:min-h-[520px] lg:min-h-[420px]">
+      {/* Background Image */}
+      <Image
+        src="/Rectangle-22229 1 (1).png"
+        alt="AI Enablement Background"
+        fill
+        priority
+        quality={100}
+        className="z-0 object-cover object-center"
+      />
 
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16 items-center">
-          {/* Left Content */}
-          <div className="max-w-3xl space-y-8 text-left">
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] text-white tracking-tight">
-              Smarter Operations.<br />
-              Better Decisions.<br />
-              Real Results.
-            </h1>
+      {/* Dark overlay for readable text */}
+      <div className="absolute inset-0 z-[1] bg-[#020617]/55 sm:bg-[#020617]/35 lg:bg-[#020617]/20" />
 
-            <p className="font-body text-lg md:text-xl leading-relaxed text-white/90 max-w-2xl">
-              We help organisation embed intelligence where it matters most not as a trend, but as a structured capability that improves how your business thinks, operates, and scales.
-            </p>
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 z-[2] bg-gradient-to-b from-[#061b55]/65 via-[#061b55]/55 to-[#061b55]/85 sm:bg-gradient-to-r sm:from-[#061b55]/85 sm:via-[#061b55]/45 sm:to-transparent" />
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
-              <button className="inline-flex items-center justify-center rounded-sm bg-white px-8 py-3 font-body text-[15px] font-bold text-[#020617] transition-all hover:bg-white/90 active:scale-[0.98]">
-                Request an AI Audit
-              </button>
-              
-              <button className="inline-flex items-center justify-center gap-2 group font-body text-[15px] font-bold text-white transition-all hover:opacity-80">
-                Request an AI Audit
-                <MoveRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </button>
-            </div>
-          </div>
+      {/* Content */}
+      <div className="relative z-10 flex min-h-[560px] w-full items-center justify-center px-5 py-16 sm:min-h-[520px] sm:justify-start sm:px-8 md:px-12 lg:min-h-[420px] lg:px-16 lg:py-12">
+        <div className="w-full max-w-[520px] text-center sm:text-left lg:max-w-[460px]">
+          <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.08em] text-white/90 sm:mb-4 sm:text-[13px]">
+            AI Enablement
+          </p>
 
-          {/* Right Content - Laptop/AI Graphic Placeholder */}
-          <div className="hidden lg:block relative h-[500px]">
-            <Image
-              src="/ai-laptop-graphic.png" // Placeholder URL
-              alt="AI Graphic"
-              fill
-              className="object-contain"
-            />
-          </div>
+          <h1 className="mx-auto mb-4 max-w-[420px] text-[30px] font-semibold leading-[1.15] tracking-[-0.02em] text-white xs:text-[32px] sm:mx-0 sm:max-w-[520px] sm:text-[40px] md:text-[44px] lg:mb-5 lg:max-w-[420px] lg:text-[48px]">
+            Add AI where it improves real systems
+          </h1>
+
+          <p className="mx-auto mb-7 max-w-[430px] text-[14px] leading-[1.7] text-white/90 sm:mx-0 sm:max-w-[460px] sm:text-[15px] lg:max-w-[430px] lg:leading-[1.45]">
+            Tevso helps businesses introduce AI in practical, commercially
+            useful ways without rebuilding everything from scratch.
+          </p>
+
+          <button className="inline-flex w-full max-w-[245px] items-center justify-center rounded-md bg-white px-5 py-3 text-[12px] font-semibold text-[#061b55] transition hover:bg-white/90 sm:w-auto sm:max-w-none lg:px-4 lg:py-2 lg:text-[11px]">
+            Discuss an AI use case
+          </button>
         </div>
       </div>
     </section>

@@ -16,12 +16,12 @@ export default function AiSolutionsPage() {
             <AiSolutionsUntappedSection />
             <AiSolutionsCapabilitiesSection />
             <AiSolutionsScenariosSection />
-            <AiSolutionsTransformationSection />
+            {/* <AiSolutionsTransformationSection />
             <AiSolutionsContextSection />
             <AiSolutionsMarketContextSection />
             <AiSolutionsMethodologySection />
             <AiSolutionsFutureCapabilitiesSection />
-            <AiSolutionsCTASection />
+            <AiSolutionsCTASection /> */}
         </main>
     );
 }

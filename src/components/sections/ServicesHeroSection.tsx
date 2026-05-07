@@ -2,25 +2,43 @@ import Image from "next/image";
 
 export function ServicesHeroSection() {
   return (
-    <section className="relative overflow-hidden py-32 md:py-48 flex items-center justify-center">
-      {/* Background Image Layer */}
-      <div className="absolute inset-0 z-0">
+    <section className="relative flex items-center overflow-hidden py-24 md:py-32">
+      
+      {/* BACKGROUND */}
+      <div className="absolute inset-0">
         <Image
-          src="/services-hero-bg.png" // Placeholder URL, user will change this
-          alt="Services Hero Background"
+          src="/Rectangle 2340.png" // 👉 add your background image
+          alt="Solutions Background"
           fill
           priority
-          className="object-cover object-center"
-          quality={100}
+          className="object-cover"
         />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50 z-1" />
+        {/* DARK BLUE OVERLAY */}
+        <div className="absolute inset-0 bg-[#020c1b]/70" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 text-center">
-        <h1 className="font-heading text-5xl font-bold text-white sm:text-6xl md:text-7xl tracking-tight">
-          Services
+      {/* CONTENT */}
+      <div className="relative z-10 mx-auto w-full max-w-[1180px] px-6">
+        
+        <p className="text-[12px] font-semibold uppercase tracking-wider text-white/70">
+          Solutions
+        </p>
+
+        <h1 className="mt-4 max-w-[700px] text-[36px] font-bold leading-[1.2] text-white sm:text-[48px] md:text-[56px]">
+          Solutions built around <br />
+          business problems, not <br />
+          generic service lists
         </h1>
+
+        <p className="mt-5 max-w-[520px] text-[13px] leading-[1.5] text-white/80">
+          Every engagement starts with understanding the real problem — then we
+          define the right technical approach to solve it.
+        </p>
+
+        <button className="mt-6 bg-white px-5 py-2.5 text-[12px] font-semibold text-[#0a0f2c] hover:bg-gray-200 transition">
+          Talk to Tevso
+        </button>
+
       </div>
     </section>
   );

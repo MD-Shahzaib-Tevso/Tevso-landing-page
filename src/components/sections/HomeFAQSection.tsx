@@ -1,108 +1,41 @@
-"use client";
-
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
-
-const faqs = [
-  {
-    question: "How long until we deliver your first blog post?",
-    answer: "Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush. Merits behind on afraid or warmly.",
-  },
-  {
-    question: "How long until we deliver your first blog post?",
-    answer: "Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush. Merits behind on afraid or warmly.",
-  },
-  {
-    question: "How long until we deliver your first blog post?",
-    answer: "Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush. Merits behind on afraid or warmly.",
-  },
-  {
-    question: "How long until we deliver your first blog post?",
-    answer: "Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush. Merits behind on afraid or warmly.",
-  },
-  {
-    question: "How long until we deliver your first blog post?",
-    answer: "Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush. Merits behind on afraid or warmly.",
-  },
-  {
-    question: "How long until we deliver your first blog post?",
-    answer: "Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush. Merits behind on afraid or warmly.",
-  },
-];
-
-function FAQItem({ question, answer, isOpen, onToggle }: { question: string; answer: string; isOpen: boolean; onToggle: () => void }) {
-  return (
-    <div
-      className={`rounded-[12px] bg-white transition-all duration-300 ${isOpen ? "shadow-[0_15px_40px_rgba(0,0,0,0.08)]" : "shadow-[0_10px_30px_rgba(0,0,0,0.04)]"
-        }`}
-    >
-      <button
-        onClick={onToggle}
-        className="flex w-full items-start gap-4 px-6 py-6 text-left"
-      >
-        <span className="mt-1 shrink-0">
-          <div className="relative flex h-5 w-5 items-center justify-center">
-            {/* Horizontal Bar */}
-            <div className="absolute h-[3px] w-5 rounded-full bg-brand" />
-            {/* Vertical Bar that rotates to become horizontal */}
-            <motion.div
-              className="absolute h-5 w-[3px] rounded-full bg-brand"
-              animate={{ rotate: isOpen ? 90 : 0, opacity: isOpen ? 0 : 1 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-            />
-          </div>
-        </span>
-        <h3 className="font-heading text-[18px] font-semibold leading-tight text-[#222222]">
-          {question}
-        </h3>
-      </button>
-
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: [0.04, 0.62, 0.23, 0.98] }}
-            className="overflow-hidden"
-          >
-            <div className="px-6 pb-6 pl-[60px]">
-              <p className="font-body text-[15px] leading-relaxed text-[#555555]">
-                {answer}
-              </p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-}
+import Image from "next/image";
 
 export function HomeFAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(4); // Setting the 5th item as open to match screenshot (3rd on left col if 2 columns)
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
-    <section className="bg-[#fcfcff] py-16 lg:py-24">
-      <div className="w-full px-6 md:px-12 lg:px-16">
-        <h2 className="mb-12 text-center theme-heading lg:mb-16">
-          Frequently ask questions
-        </h2>
+    <section className="bg-[#f7f7f7] py-12 sm:py-14 md:py-16">
+      <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-center gap-8 px-5 sm:px-6 md:gap-12 md:px-10 lg:grid-cols-2 lg:gap-16">
+        {/* LEFT IMAGE */}
+        <div className="relative h-[240px] w-full overflow-hidden rounded-[14px] shadow-md sm:h-[300px] md:h-[360px] lg:h-[380px] lg:rounded-[16px]">
+          <Image
+            src="/Rectangle 22354.png"
+            alt="AI robot working"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          {faqs.map((faq, index) => (
-            <FAQItem
-              key={index}
-              question={faq.question}
-              answer={faq.answer}
-              isOpen={openIndex === index}
-              onToggle={() => toggleFAQ(index)}
-            />
-          ))}
+        {/* RIGHT CONTENT */}
+        <div className="text-center lg:text-left">
+          <h2 className="text-[28px] font-bold leading-tight text-[#333333] sm:text-[34px] md:text-[40px] lg:leading-[1.05]">
+            Founder-led{" "}
+            <br className="hidden sm:block" />
+            technical delivery
+          </h2>
+
+          <p className="mx-auto mt-5 max-w-[520px] text-[14px] leading-[1.7] text-[#333333] sm:mt-6 sm:text-[15px] md:mt-8 lg:mx-0">
+            Tevso is built around hands-on technical ownership, practical
+            decision-making, and long-term delivery thinking. We work closely
+            with clients who need more than developers — they need a partner who
+            can understand the business, make sound technical decisions, and keep
+            delivery moving with structure and accountability.
+          </p>
+
+          <div className="mt-6 flex justify-center md:mt-8 lg:justify-start">
+            <button className="w-full max-w-[230px] rounded-md bg-[#3924e8] px-6 py-3 text-[12px] font-semibold text-white transition hover:bg-[#2f1fd0] sm:w-auto sm:max-w-none">
+              Discuss your project
+            </button>
+          </div>
         </div>
       </div>
     </section>

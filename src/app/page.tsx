@@ -13,8 +13,9 @@ import { HomeFAQSection } from "@/components/sections/HomeFAQSection";
 import { HomeFeatureShowcaseSection } from "@/components/sections/HomeFeatureShowcaseSection";
 import { HomeHeroSection } from "@/components/sections/HomeHeroSection";
 import { HomeStatsSection } from "@/components/sections/HomeStatsSection";
-import { HomeTestimonialsSection } from "@/components/sections/HomeTestimonialsSection";
+
 import { HomeTransformationSection } from "@/components/sections/HomeTransformationSection";
+import { ContactSectionSS } from "@/components/ContactSectionSS";
 
 // Register ScrollTrigger plugin
 if (typeof window !== "undefined") {
@@ -88,9 +89,10 @@ export default function HomePage() {
       <HomeEngagementSection />
       <HomeTransformationSection />
       <HomeCTASection />
-      <HomeTestimonialsSection />
+     
       <HomeFAQSection />
       <HomeContactFormSection />
+      <ContactSectionSS/>
     </div>
   );
 }

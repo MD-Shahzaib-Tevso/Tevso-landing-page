@@ -1,97 +1,122 @@
-import { Cpu, Search, Share2, TrendingUp, Bot, BarChart3, Quote } from "lucide-react";
+import Image from "next/image";
+import {
+  Briefcase,
+  Workflow,
+  MessageCircleMore,
+  Headset,
+  Sparkles,
+  BarChart3,
+} from "lucide-react";
 
 const cards = [
   {
-    icon: <Cpu className="w-8 h-8 md:w-10 md:h-10 text-white" />,
-    title: "Manual Process Overload",
-    description: "Hours lost to repetitive tasks that trained staff perform mechanically — work that can be handled by intelligent systems, freeing your team for higher-value thinking."
+    icon: <Briefcase className="h-5 w-5 text-white" />,
+    title: "Internal productivity",
+    description:
+      "Summarization, classification, triage, and drafting — built into existing tools rather than bolted on as separate products.",
   },
   {
-    icon: <Search className="w-8 h-8 md:w-10 md:h-10 text-white" />,
-    title: "Data That Doesn't Inform",
-    description: "Organisations collect vast amounts of data but lack the frameworks to translate it into decisions. Reports arrive late. Insights are buried. Opportunities pass unnoticed."
+    icon: <Workflow className="h-5 w-5 text-white" />,
+    title: "Workflow automation",
+    description:
+      "Replace manual decision trees in existing workflows with AI-assisted routing, flagging, or completion — without rebuilding the whole system.",
   },
   {
-    icon: <Share2 className="w-8 h-8 md:w-10 md:h-10 text-white" />,
-    title: "Systems That Don't Communicate",
-    description: "Disconnected tools force manual handoffs between departments, creating delays, errors, and blind spots that compound across operations and erode margins quietly over time."
+    icon: <MessageCircleMore className="h-5 w-5 text-white" />,
+    title: "Communication and follow-ups",
+    description:
+      "Personalized communication at scale — triggered by real signals from your data, not generic scheduling.",
   },
   {
-    icon: <TrendingUp className="w-8 h-8 md:w-10 md:h-10 text-white" />,
-    title: "Scaling Without Structure",
-    description: "As volume grows, so does complexity — but most businesses scale by adding headcount, not by redesigning the operational model to handle growth intelligently."
+    icon: <Headset className="h-5 w-5 text-white" />,
+    title: "Intelligent support operations",
+    description:
+      "First-line resolution, context-aware escalation, and structured ticket handling that reduces load without removing human judgment.",
   },
   {
-    icon: <Bot className="w-8 h-8 md:w-10 md:h-10 text-white" />,
-    title: "Partial Adoption of AI Tools",
-    description: "Tools get purchased. Pilots get launched. But without a coherent implementation strategy, AI investments fragment into isolated experiments that don't create compounding value."
+    icon: <Sparkles className="h-5 w-5 text-white" />,
+    title: "Personalization inside existing products",
+    description:
+      "Add personalized recommendations, surfacing, or responses to existing SaaS products without a full rebuild.",
   },
   {
-    icon: <BarChart3 className="w-8 h-8 md:w-10 md:h-10 text-white" />,
-    title: "Reactive Over Predictive",
-    description: "Most operations respond to problems after they happen. AI enables a shift toward predictive awareness — anticipating demand, risk, and bottlenecks before they materialise."
-  }
+    icon: <BarChart3 className="h-5 w-5 text-white" />,
+    title: "Data-assisted decision workflows",
+    description:
+      "Surface patterns in existing data to support operational decisions — without building a full analytics platform.",
+  },
 ];
 
 export function AiSolutionsUntappedSection() {
   return (
-    <section className="relative w-full py-24 bg-[#F8FAFC] overflow-hidden">
-      {/* Dynamic Background Pattern */}
-      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(#4F46E5 1px, transparent 1px)", backgroundSize: "32px 32px" }}></div>
-      
-      {/* Background Image Layer - Easily configurable by user */}
-      <div className="absolute inset-0 z-0 opacity-40">
-        <div 
-          className="w-full h-full bg-cover bg-center" 
-          style={{ backgroundImage: "url('/ai-untapped-bg.png')" }} // Placeholder URL
-        ></div>
-      </div>
+    <section className="relative w-full overflow-hidden bg-[#f4f4f7] py-12 sm:py-14 md:py-16 lg:py-20">
+      {/* Background Image */}
+      <Image
+        src="/Frame.png"
+        alt="AI background"
+        fill
+        priority
+        className="absolute inset-0 z-0 object-cover object-center"
+      />
 
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-16 mx-auto">
-        {/* Title */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-5xl font-bold text-[#4F46E5] leading-[1.2] tracking-tight">
-            Most businesses are sitting on untapped efficiency and don't know it yet.
+      {/* Light overlay */}
+      <div className="absolute inset-0 z-[1] bg-white/55 sm:bg-white/45 md:bg-white/35" />
+
+      {/* Subtle dotted texture */}
+      <div
+        className="pointer-events-none absolute inset-0 z-[2] opacity-[0.08]"
+        style={{
+          backgroundImage:
+            "radial-gradient(#7c7c7c 0.6px, transparent 0.6px)",
+          backgroundSize: "16px 16px",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-[980px] px-5 sm:px-6 md:px-8 lg:px-6">
+        {/* Heading */}
+        <div className="mb-7 text-center sm:mb-8 md:mb-10">
+          <h2 className="text-[26px] font-semibold leading-tight tracking-[-0.02em] text-[#2f2f2f] sm:text-[30px] md:text-[36px]">
+            Where AI adds genuine value
           </h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {/* Cards */}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
           {cards.map((card, index) => (
-            <div 
-              key={index} 
-              className="group relative p-8 rounded-2xl bg-gradient-to-br from-[#3B32C4] to-[#251E91] text-white flex flex-col space-y-6 transition-all hover:scale-[1.03] hover:shadow-2xl overflow-hidden"
+            <div
+              key={index}
+              className="rounded-[16px] bg-[#4330f1] p-5 text-white shadow-[0_8px_20px_rgba(67,48,241,0.22)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(67,48,241,0.28)] sm:p-5 md:p-6 lg:p-5"
             >
-              {/* Subtle background icon for aesthetic */}
-              <div className="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 sm:h-9 sm:w-9">
                 {card.icon}
               </div>
 
-              <div className="flex-shrink-0">
-                {card.icon}
-              </div>
-              
-              <div className="space-y-4">
-                <h3 className="font-heading text-2xl font-bold leading-tight">
-                  {card.title}
-                </h3>
-                <p className="font-body text-[15px] leading-relaxed text-white/80">
-                  {card.description}
-                </p>
-              </div>
+              <h3 className="mb-3 text-[16px] font-semibold leading-snug sm:text-[17px] lg:text-[16px]">
+                {card.title}
+              </h3>
+
+              <p className="text-[13px] leading-[1.7] text-white/90 sm:text-[13px] lg:text-[12.5px] lg:leading-[1.6]">
+                {card.description}
+              </p>
             </div>
           ))}
         </div>
 
-        {/* Quote Section */}
-        <div className="max-w-5xl mx-auto">
-          <div className="relative p-1 rounded-[2rem] bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500">
-            <div className="bg-[#020617] rounded-[1.8rem] p-10 md:p-14 text-center">
-              <p className="font-body text-lg md:text-2xl text-white italic leading-relaxed">
-                "The gap is rarely a lack of data or tools. It's the absence of a structured approach to turning operational friction into a solvable problem."
-              </p>
-            </div>
+        {/* Quote box */}
+        <div className="mt-7 sm:mt-8">
+          <div className="mx-auto max-w-[920px] rounded-[14px] border border-white/60 bg-[#8f8f99]/70 px-5 py-5 text-center shadow-sm backdrop-blur-sm sm:px-6">
+            <p className="text-[13px] italic leading-relaxed text-white sm:text-[14px]">
+              AI is most valuable when it strengthens real operations, not when
+              it is added as a trend. This mirrors the profile well.
+            </p>
           </div>
+        </div>
+
+        {/* Bottom button */}
+        <div className="mt-7 flex justify-center sm:mt-8">
+          <button className="w-full max-w-[250px] rounded-md bg-white px-5 py-3 text-[12px] font-medium text-[#4330f1] shadow-sm transition hover:bg-[#f8f8ff] sm:w-auto sm:max-w-none lg:px-4 lg:py-2 lg:text-[10px]">
+            Discuss an AI opportunity
+          </button>
         </div>
       </div>
     </section>

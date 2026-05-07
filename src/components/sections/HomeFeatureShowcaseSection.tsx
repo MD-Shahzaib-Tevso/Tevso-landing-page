@@ -2,62 +2,58 @@ import Image from "next/image";
 
 export function HomeFeatureShowcaseSection() {
   return (
-    <section className="relative overflow-hidden bg-[#2c28d8] py-24 text-white">
-      {/* Abstract Pixelated/Blocky Patterns on Right Side */}
-      <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.07] pointer-events-none select-none">
-        <div className="absolute right-0 top-1/4 h-32 w-32 bg-white" />
-        <div className="absolute right-32 top-[calc(25%+128px)] h-32 w-32 bg-white" />
-        <div className="absolute right-0 top-[calc(25%+256px)] h-48 w-48 bg-white" />
-        <div className="absolute right-48 top-[calc(25%+384px)] h-32 w-32 bg-white" />
-      </div>
+    <section className="bg-[#f5f6fa] py-12 sm:py-16 md:py-20 lg:py-24">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 px-5 sm:px-6 md:px-10 lg:grid-cols-2 lg:gap-16 lg:px-12">
+        {/* LEFT CONTENT */}
+        <div className="order-2 space-y-6 text-center lg:order-1 lg:space-y-8 lg:text-left">
+          <h2 className="text-[30px] font-bold leading-tight text-[#1c1c1c] sm:text-[34px] md:text-[38px] lg:text-[40px]">
+            Where growing products{" "}
+            <br className="hidden sm:block" />
+            usually start to break
+          </h2>
 
-      <div className="relative z-10 grid w-full grid-cols-1 items-center gap-20 px-6 md:px-12 lg:px-16 lg:grid-cols-2">
+          <p className="mx-auto max-w-[520px] text-[15px] leading-relaxed text-gray-600 sm:text-[16px] lg:mx-0">
+            Most software problems do not start with code alone. They start when
+            a business grows faster than the systems underneath it.
+          </p>
 
-        {/* Left: Stacked Laptops Illustration */}
-        <div className="relative flex justify-center lg:justify-start">
-          <div className="relative w-full max-w-md lg:max-w-xl">
+          {/* BULLETS */}
+          <ul className="mx-auto max-w-[560px] space-y-3 text-left text-[14px] leading-relaxed text-gray-700 sm:text-[15px] lg:mx-0">
+            {[
+              "Products built quickly now need structure and cleanup",
+              "Manual workflows are slowing teams down",
+              "Weak architecture is creating delivery risk",
+              "Legacy systems need modernization without disruption",
+              "Teams want AI value without a full rebuild",
+              "Businesses need technical ownership without a full internal department",
+            ].map((item, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#4f46e5]" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
 
-
-            {/* Top Laptop (Main Dashboard) */}
-            <div className="relative z-20 transition-transform duration-500 hover:scale-[1.02]">
-              <Image
-                src="/laptop.png"
-                alt="Main Feature Showcase Dashboard"
-                width={750}
-                height={550}
-                className="w-full h-auto rounded-lg"
-              />
-            </div>
-
-            {/* Subtle glow behind the laptops */}
-
+          {/* BUTTON */}
+          <div className="flex justify-center lg:justify-start">
+            <button className="w-full max-w-[260px] rounded-md bg-[#4f46e5] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#4338ca] sm:w-auto sm:max-w-none">
+              Discuss your current setup
+            </button>
           </div>
         </div>
 
-        {/* Right: Content */}
-        <div className="max-w-2xl space-y-10 text-left">
-          <div className="space-y-4">
-            <p className="font-['Raleway'] font-bold text-[20px] leading-[100%] tracking-[0%] align-middle uppercase text-white/90">
-              The New Era of Tevso
-            </p>
-            <h2 className=" text-white font-['Raleway'] font-bold text-[44px] leading-[100%] tracking-[0px] align-middle">
-              Turning complex data into actionable insights
-            </h2>
-          </div>
-
-          <div className="space-y-8">
-            <p className="font-['Lato'] font-normal text-[16px] leading-[100%] tracking-[0%] align-middle text-blue-50/90">
-              "Streamlining data through intuitive design. This layout uses a spacious, card-based system and clear KPI hierarchy to make complex analytics easy to navigate and act upon instantly."
-            </p>
-
-            <div>
-              <button className="theme-btn">
-                Discuss Your SaaS
-              </button>
-            </div>
+        {/* RIGHT IMAGE */}
+        <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
+          <div className="relative h-[320px] w-full max-w-[360px] overflow-hidden rounded-[18px] shadow-xl sm:h-[420px] sm:max-w-[400px] md:h-[480px] lg:h-[520px] lg:max-w-[420px]">
+            <Image
+              src="/TeamWork.png"
+              alt="Team working"
+              width={420}
+              height={520}
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
-
       </div>
     </section>
   );

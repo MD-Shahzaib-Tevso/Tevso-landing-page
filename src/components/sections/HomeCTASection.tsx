@@ -1,54 +1,103 @@
+"use client";
+
+import { useState } from "react";
+
+const steps = [
+  {
+    number: "01",
+    title: "Understand the business",
+    description:
+      "We start by understanding the product, workflow, business model, and actual problem.",
+  },
+  {
+    number: "02",
+    title: "Shape the solution",
+    description:
+      "We define a realistic approach covering features, architecture, integrations, and delivery priorities.",
+  },
+  {
+    number: "03",
+    title: "Deliver in phases",
+    description:
+      "We structure delivery so progress stays visible and priorities can adapt without losing momentum.",
+  },
+  {
+    number: "04",
+    title: "Communicate clearly",
+    description:
+      "Clients always know what is in progress, what is blocked, what is done, and what comes next.",
+  },
+  {
+    number: "05",
+    title: "Build with long-term thinking",
+    description:
+      "We create systems that remain stable, useful, and scalable as the business evolves.",
+  },
+];
+
 export function HomeCTASection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
-    <section
-      className="relative w-full bg-brand overflow-hidden py-20 lg:py-24 text-white"
-      style={{
-        backgroundImage: 'url("/banner2.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundColor: '#000',
-      }}
-    >
+    <section className="bg-[#f5f5f5] py-12 sm:py-14 md:py-16 lg:py-14">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-6 md:px-10 lg:px-6">
+        {/* Heading */}
+        <h2 className="text-center text-[26px] font-bold leading-tight text-[#333] sm:text-[30px] md:text-[34px] lg:text-[30px]">
+          How we work
+        </h2>
 
-      {/* Gradient Overlay */}
-      <div
-        className="absolute inset-0 z-0 pointer-events-none"
-        style={{ background: 'linear-gradient(90deg, #311EE6 0%, rgba(49, 30, 230, 0) 100%)' }}
-      />
+        {/* Cards */}
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-10 lg:grid-cols-5 lg:gap-5">
+          {steps.map((step, index) => {
+            const isActive = index === activeIndex;
 
-      <div className="w-full px-6 md:px-12 lg:px-16 relative z-10">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          {/* Left Content */}
-          <div className="space-y-8">
-            <h2 className="font-heading text-[40px] md:text-[50px] lg:text-[54px] font-bold leading-[1.1] tracking-tight">
-              Your vision, our code <br className="hidden md:block" />
-              digital growth delivered
-            </h2>
+            return (
+              <div
+                key={step.number}
+                onClick={() => setActiveIndex(index)}
+                className={`relative min-h-[210px] w-full cursor-pointer rounded-[14px] border p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:min-h-[230px] lg:min-h-[250px] ${
+                  isActive
+                    ? "border-transparent bg-[#3924e8] text-white"
+                    : "border-[#e5e5e5] bg-white text-[#333]"
+                }`}
+              >
+                {/* TOP ROW */}
+                <div className="flex items-center justify-between">
+                  <span
+                    className={`text-[22px] font-bold sm:text-[24px] ${
+                      isActive ? "text-white" : "text-[#333]"
+                    }`}
+                  >
+                    {step.number}
+                  </span>
 
-            <div className="flex flex-wrap gap-5">
-              <button className="theme-btn">
-                + 44 7400714002
-              </button>
-              <button className="theme-btn theme-btn-white">
-                Talk to Our Expert
-              </button>
-            </div>
-          </div>
+                  <div
+                    className={`flex h-9 w-9 items-center justify-center rounded-full text-[18px] font-medium sm:h-10 sm:w-10 ${
+                      isActive
+                        ? "bg-white text-[#3924e8]"
+                        : "bg-[#3924e8] text-white"
+                    }`}
+                  >
+                    →
+                  </div>
+                </div>
 
-          {/* Right Content - Laptop Placeholder */}
-          {/* <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[600px]">
-              <div 
-                className="absolute inset-y-0 left-0 w-1/4 z-10 pointer-events-none"
-                style={{ background: 'linear-gradient(90deg, #311EE6 0%, rgba(49, 30, 230, 0) 100%)' }}
-              />
-              <img
-                src=""
-                alt="Digital growth visualization"
-                className="w-full h-auto object-contain min-h-[300px] lg:min-h-[400px]"
-              />
-            </div>
-          </div> */}
+                {/* TITLE */}
+                <h3 className="mt-5 text-[16px] font-bold leading-snug sm:text-[17px] lg:text-[14px]">
+                  {step.title}
+                </h3>
+
+                {/* DESC */}
+                <p
+                  className={`mt-3 text-[14px] leading-[1.7] sm:text-[15px] lg:text-[13px] lg:leading-[1.6] ${
+                    isActive ? "text-white/90" : "text-[#555]"
+                  }`}
+                >
+                  {step.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

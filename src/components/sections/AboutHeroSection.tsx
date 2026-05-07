@@ -2,27 +2,45 @@ import Image from "next/image";
 
 export function AboutHeroSection() {
   return (
-    <section className="relative h-[480px] w-full overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+    <section className="relative mt-[72px] min-h-[500px] w-full overflow-hidden sm:mt-20 sm:min-h-[540px] lg:min-h-[520px]">
+      {/* BACKGROUND IMAGE */}
+      <div className="absolute inset-0">
         <Image
-          src="/about-person.png"
-          alt="About Us Hero"
+          src="/Rectangle 2340 (1).png"
+          alt="About Tevso"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/55" />
+
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-black/60 sm:bg-black/55" />
+
+        {/* RESPONSIVE GRADIENT */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/75 sm:bg-gradient-to-r sm:from-black/75 sm:via-black/35 sm:to-transparent" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-6xl items-center justify-center px-6">
-        <h1 className="font-heading text-5xl font-bold text-white sm:text-6xl md:text-7xl">
-          About Us
-        </h1>
+      {/* CONTENT */}
+      <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1180px] items-center px-5 py-14 sm:min-h-[540px] sm:px-8 md:px-10 lg:min-h-[520px] lg:px-6">
+        <div className="mx-auto max-w-[620px] text-center text-white sm:mx-0 sm:text-left">
+          <p className="text-[12px] font-medium uppercase tracking-[0.08em] text-white/85 sm:text-[13px]">
+            About
+          </p>
+
+          <h1 className="mt-4 text-[30px] font-semibold leading-[1.18] tracking-[-0.02em] text-white sm:text-[42px] md:text-[50px] lg:text-[58px]">
+            A technical partner
+            <br />
+            built for long-term
+            <br />
+            product growth
+          </h1>
+
+          <p className="mx-auto mt-6 max-w-[470px] text-[14px] leading-[1.7] text-white/90 sm:mx-0 sm:mt-7 sm:text-[15px]">
+            Tevso helps startups and growing businesses build, improve, and
+            scale digital products with stronger technical foundations.
+          </p>
+        </div>
       </div>
     </section>
   );
 }
-

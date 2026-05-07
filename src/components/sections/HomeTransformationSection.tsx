@@ -1,51 +1,85 @@
 import Image from "next/image";
 
-const transformationItems = [
-  { label: "Strategic product innovation", image: "/transformation/1.png" },
-  { label: "Technical excellence on demand", image: "/transformation/2.png" },
-  { label: "Data driven growth marketing", image: "/transformation/4.png" },
-  { label: "Scalable business leadership", image: "/transformation/3.png" },
+const caseStudies = [
+  {
+    title: "24 / 7 Digital Veterinary Care Platform",
+    image: "/Macbook.png",
+    description:
+      "White-label platform with portals, consultations, payments, subscriptions, analytics, and reporting — supporting 500k+ users and 50+ clinics.",
+  },
+  {
+    title: "Online Pet Pharmacy Platform",
+    image: "/4 3.png",
+    description:
+      "Structured tenant and guarantor verification with automated workflows, credit checks, and AML support, used by 100+ letting agents.",
+  },
+  {
+    title: "Shipping and Clearing Platform",
+    image: "/2 7.png",
+    description:
+      "Partners wanted to offer energy switching services under their own brand without building complex supplier integrations.",
+  },
+  {
+    title: "AI Marketing Automation Platform",
+    image: "/3 3.png",
+    description:
+      "Partner portals, dashboards, APIs, and supplier automation for multiple UK partners, processing 500k+ completed sales.",
+  },
 ];
 
 export function HomeTransformationSection() {
   return (
-    <section className="bg-white py-16">
-      <div className="w-full px-6 md:px-12 lg:px-16">
+    <section className="bg-[#f7f7f7] py-12 sm:py-14 md:py-16 lg:py-12">
+      <div className="mx-auto w-full max-w-[1120px] px-5 sm:px-6 md:px-10 lg:px-6">
+        {/* Heading */}
+        <h2 className="text-center text-[26px] font-bold leading-tight text-[#333] sm:text-[30px] md:text-[34px] lg:text-[28px]">
+          Case studies
+        </h2>
 
-        {/* Header row: heading left, button right */}
-        <div className="flex flex-col items-start justify-between gap-4 mb-8 sm:flex-row sm:items-center">
-          <h2 className="theme-heading">
-            Elevate your digital<br />transformation journey
-          </h2>
-          <button className="theme-btn theme-btn-white">
-            Consult Our Experts
-          </button>
-        </div>
-
-        {/* 2×2 Image Grid */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {transformationItems.map((item) => (
+        {/* Cards */}
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+          {caseStudies.map((item) => (
             <article
-              key={item.label}
-              className="group relative h-[220px] overflow-hidden  cursor-pointer"
+              key={item.title}
+              className="overflow-hidden rounded-[12px] border border-[#e5e5e5] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_35px_rgba(0,0,0,0.12)]"
             >
-              {/* Background Image — scales up on hover */}
-              <Image
-                src={item.image}
-                alt={item.label}
-                fill
-                className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-              />
-              {/* Dark gradient overlay — deepens on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent transition-opacity duration-300 group-hover:opacity-90" />
-              {/* Label — centered vertically + horizontally */}
-              <h3 className="absolute inset-0 flex items-center justify-center px-5 font-['Raleway'] font-semibold text-[18px] leading-snug text-white text-center transition-transform duration-300 group-hover:-translate-y-1">
-                {item.label}
-              </h3>
+              {/* IMAGE */}
+              <div className="relative h-[190px] w-full bg-[#f3f3f3] sm:h-[170px] md:h-[190px] lg:h-[140px]">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-contain p-5 sm:p-4"
+                />
+              </div>
+
+              {/* CONTENT */}
+              <div className="p-5 sm:p-4">
+                <h3 className="text-[15px] font-bold leading-snug text-[#3924e8] sm:text-[14px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[13px] leading-[1.7] text-[#555] sm:text-[12px] sm:leading-[1.6]">
+                  {item.description}
+                </p>
+
+                <a
+                  href="#"
+                  className="mt-4 inline-block text-[13px] font-medium text-[#3924e8] underline sm:text-[12px]"
+                >
+                  View More
+                </a>
+              </div>
             </article>
           ))}
         </div>
 
+        {/* BUTTON */}
+        <div className="mt-8 flex justify-center sm:mt-10 lg:mt-8">
+          <button className="w-full max-w-[240px] rounded-md bg-[#3924e8] px-5 py-3 text-[12px] font-medium text-white transition hover:bg-[#2f1fd0] sm:w-auto sm:max-w-none lg:text-[11px]">
+            View all case studies
+          </button>
+        </div>
       </div>
     </section>
   );
