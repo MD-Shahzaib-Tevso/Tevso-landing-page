@@ -98,10 +98,10 @@ export default function TechnologyShowcaseSection() {
             className="object-cover object-center"
           />
 
-          {/* Mobile readable overlay */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/85 via-black/65 to-black/90 sm:bg-[linear-gradient(90deg,_rgba(0,0,0,0.78)_0%,_rgba(0,0,0,0.62)_45%,_rgba(0,0,0,0.18)_100%)]" />
+          {/* Light readable overlay */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/45 sm:bg-[linear-gradient(90deg,_rgba(0,0,0,0.45)_0%,_rgba(0,0,0,0.28)_45%,_rgba(0,0,0,0.05)_100%)]" />
 
-          <div className="pointer-events-none absolute inset-0 bg-[#020817]/45" />
+          <div className="pointer-events-none absolute inset-0 bg-[#020817]/15" />
         </div>
 
         {/* Content */}
@@ -216,10 +216,7 @@ export default function TechnologyShowcaseSection() {
               ”
             </div>
 
-            <h2 className="relative z-10 max-w-[560px] font-['Raleway'] text-[26px] font-bold leading-[1.25] tracking-[-0.3px] text-white sm:text-[30px] md:text-[31px] lg:text-[32px]">
-              Let’s build systems that stay clear, scalable, and easy to manage
-              as your business grows.
-            </h2>
+            <h2 className="relative z-10 max-w-[560px] font-['Raleway'] text-[26px] font-bold leading-[1.25] tracking-[-0.3px] text-white sm:text-[30px] md:text-[31px] lg:text-[32px]"></h2>
           </div>
         </div>
       </section>

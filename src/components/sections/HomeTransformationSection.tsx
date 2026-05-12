@@ -27,51 +27,55 @@ const caseStudies = [
   },
 ];
 
+const carouselItems = [...caseStudies, ...caseStudies];
+
 export function HomeTransformationSection() {
   return (
-    <section className="bg-[#f7f7f7] py-12 sm:py-14 md:py-16 lg:py-12">
+    <section className="overflow-hidden bg-[#f7f7f7] py-12 sm:py-14 md:py-16 lg:py-12">
       <div className="mx-auto w-full max-w-[1120px] px-5 sm:px-6 md:px-10 lg:px-6">
         {/* Heading */}
         <h2 className="text-center text-[26px] font-bold leading-tight text-[#333] sm:text-[30px] md:text-[34px] lg:text-[28px]">
           Case studies
         </h2>
 
-        {/* Cards */}
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
-          {caseStudies.map((item) => (
-            <article
-              key={item.title}
-              className="overflow-hidden rounded-[12px] border border-[#e5e5e5] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_35px_rgba(0,0,0,0.12)]"
-            >
-              {/* IMAGE */}
-              <div className="relative h-[190px] w-full bg-[#f3f3f3] sm:h-[170px] md:h-[190px] lg:h-[140px]">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-contain p-5 sm:p-4"
-                />
-              </div>
+        {/* Carousel */}
+        <div className="mt-8 w-full overflow-hidden">
+          <div className="case-carousel-track flex w-max gap-6 lg:gap-5">
+            {carouselItems.map((item, index) => (
+              <article
+                key={`${item.title}-${index}`}
+                className="w-[280px] flex-shrink-0 overflow-hidden rounded-[12px] border border-[#e5e5e5] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_35px_rgba(0,0,0,0.12)] sm:w-[260px] md:w-[270px] lg:w-[260px]"
+              >
+                {/* IMAGE */}
+                <div className="relative h-[190px] w-full bg-[#f3f3f3] sm:h-[170px] md:h-[190px] lg:h-[140px]">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-contain p-5 sm:p-4"
+                  />
+                </div>
 
-              {/* CONTENT */}
-              <div className="p-5 sm:p-4">
-                <h3 className="text-[15px] font-bold leading-snug text-[#3924e8] sm:text-[14px]">
-                  {item.title}
-                </h3>
+                {/* CONTENT */}
+                <div className="p-5 sm:p-4">
+                  <h3 className="text-[15px] font-bold leading-snug text-[#3924e8] sm:text-[14px]">
+                    {item.title}
+                  </h3>
 
-                <p className="mt-3 text-[13px] leading-[1.7] text-[#555] sm:text-[12px] sm:leading-[1.6]">
-                  {item.description}
-                </p>
+                  <p className="mt-3 text-[13px] leading-[1.7] text-[#555] sm:text-[12px] sm:leading-[1.6]">
+                    {item.description}
+                  </p>
 
-                <a
-                  href="#"
-                  className="mt-4 inline-block text-[13px] font-medium text-[#3924e8] underline sm:text-[12px]"
-                >
-                  View More
-                </a>
-              </div>
-            </article>
-          ))}
+                  <a
+                    href="#"
+                    className="mt-4 inline-block text-[13px] font-medium text-[#3924e8] underline sm:text-[12px]"
+                  >
+                    View More
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
 
         {/* BUTTON */}
@@ -81,6 +85,25 @@ export function HomeTransformationSection() {
           </button>
         </div>
       </div>
+
+      <style jsx>{`
+        .case-carousel-track {
+          animation: caseSlideLeft 22s linear infinite;
+        }
+
+        .case-carousel-track:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes caseSlideLeft {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 }

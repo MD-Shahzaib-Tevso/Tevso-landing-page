@@ -2,22 +2,22 @@ import Image from "next/image";
 
 export function AboutHeroSection() {
   return (
-    <section className="relative mt-[72px] min-h-[500px] w-full overflow-hidden sm:mt-20 sm:min-h-[540px] lg:min-h-[520px]">
+    <section className="relative mt-[72px] min-h-[750px] w-full overflow-hidden sm:mt-20 sm:min-h-[540px] lg:min-h-[520px]">
       {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0">
         <Image
-          src="/Rectangle 2340 (1).png"
+          src="/Rectangle 2340 (7).png"
           alt="About Tevso"
           fill
           className="object-cover object-center"
           priority
         />
 
-        {/* DARK OVERLAY */}
-        <div className="absolute inset-0 bg-black/60 sm:bg-black/55" />
+        {/* LIGHT OVERLAY */}
+        <div className="absolute inset-0 bg-black/25 sm:bg-black/20" />
 
-        {/* RESPONSIVE GRADIENT */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/75 sm:bg-gradient-to-r sm:from-black/75 sm:via-black/35 sm:to-transparent" />
+        {/* RESPONSIVE LIGHT GRADIENT */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/40 sm:bg-gradient-to-r sm:from-black/45 sm:via-black/20 sm:to-transparent" />
       </div>
 
       {/* CONTENT */}

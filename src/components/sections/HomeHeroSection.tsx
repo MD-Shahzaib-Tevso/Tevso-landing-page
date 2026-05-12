@@ -24,26 +24,26 @@ export function HomeHeroSection() {
 
       tl.fromTo(
         ".word-reveal",
-        { yPercent: 120, rotateZ: 5, opacity: 0 },
+        { yPercent: 120, rotateZ: 4, opacity: 0 },
         {
           yPercent: 0,
           rotateZ: 0,
           opacity: 1,
-          duration: 1.2,
+          duration: 0.9,
           ease: "power4.out",
-          stagger: 0.03,
+          stagger: 0.025,
         }
       ).fromTo(
         ".fade-up-element",
-        { y: 30, opacity: 0 },
+        { y: 22, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 1,
+          duration: 0.8,
           ease: "power3.out",
-          stagger: 0.15,
+          stagger: 0.12,
         },
-        "-=0.9"
+        "-=0.55"
       );
     },
     { scope: containerRef }
@@ -51,16 +51,14 @@ export function HomeHeroSection() {
 
   const renderWords = (text: string) => {
     return text.split(/(\s+)/).map((word, i) => {
-      if (word.trim() === "") {
-        return <span key={i}>{word}</span>;
-      }
+      if (word.trim() === "") return <span key={i}>{word}</span>;
 
       return (
         <span
           key={i}
-          className="relative inline-block overflow-hidden pb-1 -mb-1 sm:pb-2 sm:-mb-2"
+          className="relative inline-block overflow-hidden pb-1 -mb-1"
         >
-          <span className="word-reveal inline-block origin-bottom-left pt-1 -mt-1 will-change-transform sm:pt-2 sm:-mt-2">
+          <span className="word-reveal inline-block origin-bottom-left will-change-transform">
             {word}
           </span>
         </span>
@@ -71,9 +69,9 @@ export function HomeHeroSection() {
   return (
     <section
       ref={containerRef}
-      className="hero-section relative mt-[72px] min-h-[620px] w-full overflow-hidden sm:min-h-[720px] lg:mt-[114px] lg:min-h-[calc(100vh-114px)]"
+      className="relative mt-[72px] h-[100vh] w-full overflow-hidden bg-[#06133d] sm:mt-20"
     >
-      {/* Background Image */}
+      {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/banner.png"
@@ -81,42 +79,34 @@ export function HomeHeroSection() {
           fill
           priority
           quality={100}
-          className="object-cover object-[58%_center] sm:object-center"
+          className="object-cover object-center"
         />
-
-        {/* Mobile overlay */}
-        <div className="absolute inset-0 bg-black/55 sm:bg-black/40 lg:bg-black/0" />
-
-        {/* Mobile gradient for readable text */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/60 lg:hidden" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 flex min-h-[620px] w-full items-center justify-center px-5 py-14 sm:min-h-[720px] sm:px-8 md:px-12 lg:min-h-[calc(100vh-114px)] lg:justify-start lg:px-16 lg:py-20">
-        <div className="w-full max-w-[680px] text-center lg:text-left">
-          <h1 className="font-heading text-[30px] font-bold leading-[1.15] tracking-tight text-white xs:text-[32px] sm:text-[46px] md:text-[56px] lg:text-6xl">
+      {/* CONTENT */}
+      <div className="relative z-10 mx-auto flex h-full w-full max-w-[1180px] items-start px-[50px] pt-[78px]">
+        <div className="w-full max-w-[410px]">
+          <h1 className="font-['Raleway'] font-bold text-[45px] leading-[100%] tracking-normal text-white">
             {renderWords(
-              "Build & Scale Your SaaS From MVP to Investor Ready Infrastructure."
+              "Build software that scales with your business, not against it"
             )}
           </h1>
 
-          <div className="fade-up-element mt-5 space-y-4 sm:mt-6 sm:space-y-5 lg:space-y-6">
-            <p className="mx-auto max-w-[600px] font-body text-[14px] leading-[1.75] text-white sm:text-base md:text-lg lg:mx-0">
-              Tevso is a SaaS Growth Engineering Partner helping founders
-              design, build, and scale products without technical debt or
-              scalability risks.
-            </p>
+          <p className="fade-up-element mt-[28px] max-w-[405px] font-body text-[16px] font-normal leading-[1.35] text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
+            Tevso is a founder-led technical partner for SaaS products, internal
+            platforms, workflow automation, and AI-enabled systems. We help
+            growing businesses fix messy architecture, reduce manual operations,
+            and build digital systems that are stable, scalable, and commercially
+            useful.
+          </p>
 
-            <p className="mx-auto max-w-[600px] font-body text-[14px] leading-[1.75] text-white sm:text-base md:text-lg lg:mx-0">
-              We combine engineering excellence, DevOps mastery, and a managed
-              talent network to deliver end-to-end technology solutions from
-              idea validation to post launch growth.
-            </p>
-          </div>
+          <div className="fade-up-element mt-[24px] flex items-center gap-[9px]">
+            <button className="h-[32px] bg-white px-[13px] text-[11px] font-medium text-[#352FE1] transition hover:bg-white/90">
+              Book a discovery call
+            </button>
 
-          <div className="fade-up-element mt-7 flex justify-center lg:justify-start">
-            <button className="theme-btn w-full max-w-[240px] sm:w-auto sm:max-w-none">
-              Discuss Your SaaS
+            <button className="h-[32px] bg-white px-[14px] text-[11px] font-medium text-[#352FE1] transition hover:bg-white/90">
+              View case studies
             </button>
           </div>
         </div>

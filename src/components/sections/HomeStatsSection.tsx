@@ -12,28 +12,28 @@ if (typeof window !== "undefined") {
 const stats = [
   {
     value: "500k+",
-    label: "Project delivered",
-    description: "Follow a hashtag growth total posts, videos and images.",
+    label: "Active users",
+    secondLine: "supported",
   },
   {
     value: "500k+",
-    label: "Active clients",
-    description: "Follow a hashtag growth total posts, videos and images.",
+    label: "Sales processed",
+    secondLine: "",
   },
   {
-    value: "100k+",
-    label: "Lines of code",
-    description: "Follow a hashtag growth total posts, videos and images.",
+    value: "10+",
+    label: "Letting agents served",
+    secondLine: "",
   },
   {
-    value: "50k+",
-    label: "Engineers & designers",
-    description: "Follow a hashtag growth total posts, videos and images.",
+    value: "50+",
+    label: "Clinics onboarded",
+    secondLine: "",
   },
   {
-    value: "8k+",
-    label: "Engineers & designers",
-    description: "Follow a hashtag growth total posts, videos and images.",
+    value: "8+",
+    label: "White-label",
+    secondLine: "deployments",
   },
 ];
 
@@ -42,70 +42,26 @@ export function HomeStatsSection() {
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-        },
-      });
-
-      tl.fromTo(
+      gsap.fromTo(
         ".stat-card",
         {
           opacity: 0,
-          y: 80,
-          scale: 0.9,
-          rotateX: -35,
-          transformPerspective: 1000,
+          y: 18,
+          scale: 0.96,
         },
         {
           opacity: 1,
           y: 0,
           scale: 1,
-          rotateX: 0,
-          duration: 1,
-          stagger: 0.12,
-          ease: "back.out(1.5)",
-          clearProps: "transformPerspective",
+          duration: 0.55,
+          stagger: 0.08,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 85%",
+          },
         }
-      )
-        .fromTo(
-          ".stat-value-reveal",
-          { yPercent: 120, rotateZ: 8, opacity: 0, scale: 0.5 },
-          {
-            yPercent: 0,
-            rotateZ: 0,
-            opacity: 1,
-            scale: 1,
-            duration: 1,
-            stagger: 0.12,
-            ease: "elastic.out(1, 0.7)",
-          },
-          "-=1"
-        )
-        .fromTo(
-          ".stat-label-reveal",
-          { yPercent: 120 },
-          {
-            yPercent: 0,
-            duration: 0.8,
-            stagger: 0.12,
-            ease: "power4.out",
-          },
-          "-=0.9"
-        )
-        .fromTo(
-          ".stat-desc-reveal",
-          { opacity: 0, y: 15 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            stagger: 0.12,
-            ease: "power3.out",
-          },
-          "-=0.8"
-        );
+      );
     },
     { scope: containerRef }
   );
@@ -113,34 +69,54 @@ export function HomeStatsSection() {
   return (
     <section
       ref={containerRef}
-      className="stats-section bg-slate-50/40 py-12 sm:py-16 md:py-20 lg:py-24 [perspective:2000px]"
+      className="relative w-full overflow-hidden border-t border-[#e5e7eb] bg-[#f8f9fb] px-[30.07px] pt-[25px] pb-[38px]"
     >
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-16">
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-5 xl:gap-8 [transform-style:preserve-3d]">
+      <div className="mx-auto h-[123px] w-full max-w-[1381px] rotate-0 rounded-[10px] opacity-100">
+        <div className="grid h-full grid-cols-2 gap-[11px] sm:grid-cols-3 lg:grid-cols-5">
           {stats.map((stat, index) => (
             <article
-              key={`${stat.label}-${index}`}
-              className="stat-card flex min-h-[230px] flex-col items-center justify-center rounded-2xl border border-[#D2D2D4] bg-white px-5 py-8 text-center shadow-[0px_4px_14px_0px_#00000040] transition-all hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] sm:min-h-[250px] sm:px-6 md:px-7 lg:px-6 xl:px-5"
+              key={`${stat.value}-${index}`}
+              className="stat-card flex h-[123px] flex-col items-center justify-center rounded-[10px] border border-[#e6e6e6] bg-white px-2 text-center shadow-[0_2px_8px_rgba(0,0,0,0.28)]"
             >
-              <span className="flex items-center justify-center overflow-hidden pb-2 -mb-2 font-['Raleway'] text-[34px] font-semibold leading-none tracking-tight text-[#2c28d8] sm:text-[38px] md:text-[40px]">
-                <span className="stat-value-reveal block origin-bottom-left pt-2 -mt-2 will-change-transform">
-                  {stat.value}
-                </span>
-              </span>
-
-              <h3 className="mt-4 flex items-center justify-center overflow-hidden pb-2 -mb-2 font-['Raleway'] text-[20px] font-semibold leading-tight text-[#222222] sm:text-[22px] md:text-[24px]">
-                <span className="stat-label-reveal block origin-bottom-left pt-2 -mt-2 will-change-transform">
-                  {stat.label}
-                </span>
+              <h3 className="font-['Raleway'] text-[47px] font-semibold leading-none tracking-wide text-[#352FE1]">
+                {stat.value}
               </h3>
 
-              <p className="stat-desc-reveal mt-3 max-w-[230px] text-center font-['Lato'] text-[15px] font-normal leading-[1.5] text-[#555555] sm:text-[16px] md:text-[17px] lg:text-[16px] xl:text-[15px]">
-                {stat.description}
+              <p className="mt-[3px] font-['Lato'] text-[9.5px] font-medium leading-[1.15] text-[#111111]">
+                {stat.label}
+                {stat.secondLine && (
+                  <>
+                    <br />
+                    {stat.secondLine}
+                  </>
+                )}
               </p>
             </article>
           ))}
         </div>
       </div>
+
+      <button
+        type="button"
+        aria-label="Scroll down"
+        className="absolute bottom-[7px] right-[13px] flex h-[22px] w-[22px] items-center justify-center rounded-full bg-[#352FE1] shadow-md"
+      >
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 24 24"
+          fill="none"
+          className="text-white"
+        >
+          <path
+            d="M6 9L12 15L18 9"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
     </section>
   );
 }

@@ -5,12 +5,19 @@ import Image from "next/image";
 
 export function HomeContactFormSection() {
   return (
-    <section className="relative overflow-hidden bg-[#321ee6] py-12 text-white sm:py-14 md:py-16 lg:py-16">
-      {/* RIGHT BACKGROUND SHAPE */}
-      <div className="pointer-events-none absolute -right-36 -top-28 h-[320px] w-[320px] rounded-full border-[50px] border-white/5 sm:h-[380px] sm:w-[380px] md:-right-28 md:-top-20 md:h-[420px] md:w-[420px] md:border-[70px]" />
-      <div className="pointer-events-none absolute right-4 top-6 h-14 w-14 rounded-[10px] bg-white/5 sm:h-20 sm:w-20" />
-      <div className="pointer-events-none absolute right-0 top-[90px] h-16 w-16 rounded-[10px] bg-white/5 sm:top-[105px] sm:h-24 sm:w-24" />
+    <section className="relative isolate overflow-hidden bg-[#321ee6] py-12 text-white sm:py-14 md:py-16 lg:py-16">
+      {/* BACKGROUND LOGO */}
+  <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-end">
+  <Image
+    src="/Tevso-white-logo 1.png"
+    alt="Background"
+    width={307}
+    height={525}
+    className="object-contain"
+  />
+</div>
 
+      {/* CONTENT */}
       <div className="relative z-10 mx-auto grid max-w-[1150px] grid-cols-1 items-center gap-8 px-5 sm:px-6 md:gap-12 md:px-10 lg:grid-cols-2 lg:gap-14 lg:px-12">
         {/* LEFT IMAGE */}
         <div className="flex justify-center lg:justify-start">

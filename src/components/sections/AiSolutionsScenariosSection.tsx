@@ -13,7 +13,7 @@ export function AiSolutionsScenariosSection() {
 
       <div className="relative z-10 mx-auto flex max-w-[1100px] items-center justify-between gap-8 px-6 md:px-12">
         {/* Left laptop image */}
-        <div className="relative hidden h-[130px] w-[230px] md:block">
+        <div className="relative hidden h-[250px] w-[230px] md:block">
           <Image
             src="/Gemini.png"
             alt="AI laptop"

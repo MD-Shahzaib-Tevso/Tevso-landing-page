@@ -16,6 +16,7 @@ import { HomeStatsSection } from "@/components/sections/HomeStatsSection";
 
 import { HomeTransformationSection } from "@/components/sections/HomeTransformationSection";
 import { ContactSectionSS } from "@/components/ContactSectionSS";
+import { PracticalAISection } from "@/components/sections/PracticalAISection";
 
 // Register ScrollTrigger plugin
 if (typeof window !== "undefined") {
@@ -82,14 +83,17 @@ export default function HomePage() {
 
   return (
     <div ref={containerRef}>
+      {/* home  */}
       <HomeHeroSection />
-      <HomeStatsSection />
+
+      {/* stats  */}
+      <HomeStatsSection />  
       <HomeFeatureShowcaseSection />
       <HomeCaseStudiesSection />
       <HomeEngagementSection />
       <HomeTransformationSection />
       <HomeCTASection />
-     
+      <PracticalAISection />
       <HomeFAQSection />
       <HomeContactFormSection />
       <ContactSectionSS/>

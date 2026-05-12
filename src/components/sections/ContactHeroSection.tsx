@@ -2,38 +2,43 @@ import Image from "next/image";
 
 export function ContactHeroSection() {
   return (
-    <section className="relative mt-[72px] min-h-[520px] w-full overflow-hidden sm:mt-20 sm:min-h-[560px] lg:min-h-[570px]">
+    <section className="relative mt-[72px] h-[500px] w-full overflow-hidden bg-[#06272d] sm:mt-20">
       {/* BACKGROUND IMAGE */}
-      <div className="absolute inset-0">
-        <Image
-          src="/Rectangle 2340 (2).png"
-          alt="Contact Hero Background"
-          fill
-          priority
-          className="object-cover object-[68%_center] sm:object-[72%_center]"
-        />
+      <Image
+        src="/Rectangle 2340 (5).png"
+        alt="Contact Hero Background"
+        fill
+        priority
+        quality={100}
+        className="object-cover object-center"
+      />
 
-        {/* DARK OVERLAY */}
-        <div className="absolute inset-0 bg-[#121b2b]/65 sm:bg-[#121b2b]/55" />
+      {/* LIGHT OVERLAY */}
+      <div className="absolute inset-0 bg-[#06242a]/15" />
 
-        {/* RESPONSIVE GRADIENT */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#111827]/80 via-[#111827]/60 to-[#111827]/85 sm:bg-gradient-to-r sm:from-[#111827]/95 sm:via-[#111827]/75 sm:to-transparent" />
-      </div>
+      {/* LEFT LIGHT GRADIENT */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#05171d]/55 via-[#05171d]/25 to-transparent" />
 
       {/* CONTENT */}
-      <div className="relative z-10 mx-auto flex min-h-[520px] w-full max-w-[1180px] items-center justify-center px-5 py-14 sm:min-h-[560px] sm:justify-start sm:px-8 md:px-10 lg:min-h-[570px] lg:px-6">
-        <div className="mx-auto max-w-[520px] text-center text-white sm:mx-0 sm:text-left">
-          <h1 className="text-[32px] font-semibold leading-[1.12] tracking-[-0.02em] text-white sm:text-[40px] md:text-[48px] lg:leading-[1.08]">
-            Let&apos;s discuss what
+      <div className="relative z-10 h-full w-full px-[38px] pt-[48px]">
+        <div className="max-w-[560px] text-white">
+          <p className="mb-[12px] font-['Inter'] text-[12px] font-medium uppercase leading-none tracking-[0.04em] text-white">
+            CONTACT
+          </p>
+
+          <h1 className="max-w-[390px] font-['Lato'] text-[36px] font-semibold leading-[1.15] tracking-[0.2px] text-white">
+            Let’s discuss what
             <br />
             your system needs
             <br />
             next
           </h1>
 
-          <p className="mx-auto mt-5 max-w-[500px] text-[14px] leading-[1.7] text-white/90 sm:mx-0 sm:mt-6 sm:text-[14px] md:text-[15px] lg:text-[14px] lg:leading-[1.55]">
+          <p className="mt-[21px] max-w-[590px] font-['Inter'] text-[13px] font-normal leading-[1.55] text-white">
             Whether you are building a new product, cleaning up an existing
-            platform, adding AI into workflows, or looking for a reliable
+            <br />
+            platform, adding AI into workflows, or looking for reliable
+            <br />
             technical partner, we would be glad to explore how Tevso can help.
           </p>
         </div>
