@@ -16,25 +16,24 @@ const navLinks = [
 ];
 
 export function Navbar() {
+
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
-
   const isActivePath = (href: string) => {
     if (href === "/") return pathname === "/";
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
   return (
-   <header className="fixed left-0 top-0 z-50 w-full bg-[linear-gradient(rgba(49, 29, 230, 1),rgba(82, 105, 233, 1),rgba(49, 29, 230, 1))] ">
+    <header className="fixed left-0 top-0 z-50 w-full bg-[linear-gradient(rgba(49, 29, 230, 1),rgba(82, 105, 233, 1),rgba(49, 29, 230, 1))] ">
       {/* DESKTOP HEADER */}
-      <div className="hidden h-[92px] w-full bg-[#352FE1] lg:flex">
+      <div className="hidden lg:flex w-full bg-[#352FE1]">
         {/* LOGO AREA */}
         <Link
           href="/"
           aria-label="Tevso home"
-          className="flex h-[92px] w-[160px] shrink-0 items-center justify-start bg-[#352FE1] pl-[18px]"
+          className="flex w-40 shrink-0 items-center justify-start bg-[#352FE1] pl-[18px]"
         >
           <Image
             src="/tevso-logo.png"
@@ -49,61 +48,48 @@ export function Navbar() {
         {/* RIGHT SIDE */}
         <div className="flex min-w-0 flex-1 flex-col">
           {/* TOP WHITE BAR */}
-          <div className="flex h-[40px] items-center rounded-bl-[28px] bg-white pl-[18px] text-[#352FE1]">
-            <a
-              href="tel:+447400714002"
-              className="flex items-center gap-[7px] text-[11px] font-medium leading-none"
-            >
-              <svg
-                className="h-[13px] w-[13px] shrink-0"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" />
-              </svg>
+          <div className="flex items-center rounded-bl-[28px] py-3 px-6 bg-white gap-8 text-[#352FE1]">
+            <a href="tel:+447400714002" className="flex items-center justify-center gap-2 text-sm font-normal leading-none"            >
+              <Image
+                src="navbar/phone.svg"
+                alt="Phone"
+                width={14}
+                height={14}
+                className="h-[20px] w-[20px] shrink-0"
+              />
               <span>+ 44 7400714002</span>
             </a>
-
-            <a
-              href="mailto:contact@tevsotech.com"
-              className="ml-[62px] flex items-center gap-[8px] text-[11px] font-medium leading-none"
-            >
-              <svg
-                className="h-[14px] w-[14px] shrink-0"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
-              </svg>
+            <a href="mailto:contact@tevsotech.com" className="flex items-center gap-2 text-sm font-normal leading-none">
+              <Image
+                src="navbar/email.svg"
+                alt="Phone"
+                width={14}
+                height={14}
+                className="h-[20px] w-[20px] shrink-0"
+              />
               <span>contact@tevsotech.com</span>
             </a>
           </div>
 
           {/* BOTTOM NAV */}
-          <div className="flex h-[52px] items-center justify-between bg-[#352FE1] pr-[56px]">
-            <nav className="flex h-full items-center">
+          <div className="flex items-center justify-between gap-4 bg-[#352FE1] py-4 pl-4 pr-14">
+            <nav className="flex h-full items-center gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative flex h-full items-center px-[21px] text-[10px] font-medium transition-colors ${
-                    isActivePath(link.href)
-                      ? "text-white"
-                      : "text-white/90 hover:text-white"
-                  }`}
-                >
-                  {link.label}
-
-                  {isActivePath(link.href) && (
-                    <span className="absolute bottom-0 left-1/2 h-[4px] w-[34px] -translate-x-1/2 rounded-t-full bg-white" />
-                  )}
+                  className={`flex h-full items-center max-[1065px]:text-xs text-sm font-normal transition-colors ${isActivePath(link.href) ? "text-white" : "text-white/90 hover:text-white"}`}>
+                  <span className="relative inline-block">
+                    {link.label}
+                    {isActivePath(link.href) && (<span className="absolute bottom-[-24px] left-0 h-[4px] w-full rounded-t-full bg-white" />)}
+                  </span>
                 </Link>
               ))}
             </nav>
 
             <Link
               href="/services"
-              className="flex h-[35px] w-[130px] items-center justify-center bg-white text-[11px] font-medium text-[#352FE1] transition hover:bg-white/90"
+              className="flex p-2 items-center justify-center bg-white max-[1065px]:text-xs text-sm font-medium text-[#352FE1] transition hover:bg-white/90"
             >
               Explore Your Solution
             </Link>
@@ -113,7 +99,8 @@ export function Navbar() {
 
       {/* MOBILE HEADER */}
       <div className="lg:hidden">
-        <div className="flex h-[72px] items-center justify-between bg-[#352FE1] px-4">
+        <div className="flex h-20 items-center justify-between bg-[#352FE1] px-4">
+
           <Link href="/" aria-label="Tevso home" onClick={closeMobileMenu}>
             <Image
               src="/tevso-logo.png"
@@ -140,35 +127,36 @@ export function Navbar() {
               strokeWidth="2"
               strokeLinecap="round"
             >
-              {isMobileMenuOpen ? (
-                <path d="M18 6L6 18M6 6l12 12" />
-              ) : (
-                <path d="M4 7h16M4 12h16M4 17h16" />
-              )}
+              {isMobileMenuOpen ? (<path d="M18 6L6 18M6 6l12 12" />) : (<path d="M4 7h16M4 12h16M4 17h16" />)}
             </svg>
           </button>
+
         </div>
 
-        <div
-          className={`overflow-hidden bg-[#352FE1] transition-all duration-300 ${
-            isMobileMenuOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <div className="border-t border-white/15 px-4 py-4">
-            <div className="mb-4 rounded-xl bg-white px-4 py-3 text-[#352FE1]">
-              <a
-                href="tel:+447400714002"
-                className="mb-3 flex items-center gap-2 text-sm font-medium"
-              >
-                <span>+ 44 7400714002</span>
-              </a>
+        <div className={`overflow-hidden bg-[#352FE1] transition-all duration-300 ${isMobileMenuOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"}`}>
+          <div className="flex flex-col items-stretch justify-center border-t border-white/15 p-4 gap-4">
 
-              <a
-                href="mailto:contact@tevsotech.com"
-                className="flex items-center gap-2 text-sm font-medium"
-              >
+            <div className="flex justify-center items-center flex-wrap gap-4 sm:gap-8 rounded-md bg-white p-4 text-[#352FE1]">
+              <Link href="tel:+447400714002" className="flex items-center gap-2 text-sm font-normal">
+                <Image
+                  src="navbar/phone.svg"
+                  alt="Phone"
+                  width={14}
+                  height={14}
+                  className="h-[20px] w-[20px] shrink-0"
+                />
+                <span>+ 44 7400714002</span>
+              </Link>
+              <Link href="mailto:contact@tevsotech.com" className="flex items-center gap-2 text-sm font-normal">
+                <Image
+                  src="navbar/email.svg"
+                  alt="Phone"
+                  width={14}
+                  height={14}
+                  className="h-[20px] w-[20px] shrink-0"
+                />
                 <span>contact@tevsotech.com</span>
-              </a>
+              </Link>
             </div>
 
             <nav className="flex flex-col">
@@ -177,24 +165,20 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={closeMobileMenu}
-                  className={`rounded-md px-3 py-3 text-sm font-medium ${
-                    isActivePath(link.href)
-                      ? "bg-white/15 text-white"
-                      : "text-white/80 hover:bg-white/10 hover:text-white"
-                  }`}
+                  className={`rounded-md p-3 text-sm font-normal ${isActivePath(link.href) ? "bg-white/15 text-white" : "text-white/80 hover:bg-white/10 hover:text-white"}`}
                 >
                   {link.label}
                 </Link>
               ))}
-
               <Link
                 href="/services"
                 onClick={closeMobileMenu}
-                className="mt-3 flex h-10 items-center justify-center rounded-md bg-white text-sm font-semibold text-[#352FE1]"
+                className="flex h-10 items-center justify-center rounded-md bg-white text-sm font-semibold text-[#352FE1]"
               >
                 Explore Your Solution
               </Link>
             </nav>
+
           </div>
         </div>
       </div>
