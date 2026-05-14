@@ -56,9 +56,9 @@ export function HomeHeroSection() {
       return (
         <span
           key={i}
-          className="relative inline-block overflow-hidden pb-1 -mb-1"
+          className="relative inline-block overflow-hidden pb-1 -mb-1 sm:pb-2 sm:-mb-2"
         >
-          <span className="word-reveal inline-block origin-bottom-left will-change-transform">
+          <span className="word-reveal inline-block origin-bottom-left pt-1 -mt-1 will-change-transform sm:pt-2 sm:-mt-2">
             {word}
           </span>
         </span>
@@ -69,7 +69,7 @@ export function HomeHeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative mt-[72px] h-[100vh] w-full overflow-hidden bg-[#06133d] sm:mt-20"
+      className="hero-section flex flex-col justify-center relative mt-[72px] min-h-[624px] w-full overflow-hidden sm:min-h-[720px] lg:mt-[110px] max-[1065px]:lg:mt-[108px] lg:min-h-[calc(100vh-110px)]"
     >
       {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0 z-0">
@@ -79,20 +79,26 @@ export function HomeHeroSection() {
           fill
           priority
           quality={100}
-          className="object-cover object-center"
+          className="object-cover object-[58%_center] sm:object-center"
         />
+
+        {/* Mobile overlay */}
+        {/* <div className="absolute inset-0 bg-black/55 sm:bg-black/40 lg:bg-black/0" /> */}
+
+        {/* Mobile gradient for readable text */}
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/60 lg:hidden" /> */}
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-[1180px] items-start px-[50px] pt-[78px]">
-        <div className="w-full max-w-[410px]">
-          <h1 className="font-['Raleway'] font-bold text-[45px] leading-[100%] tracking-normal text-white">
+      <div className="relative z-10 mx-auto flex h-full w-full items-start p-14">
+        <div className="w-full max-w-[660px] gap-8 flex flex-col">
+          <h1 className="font-['Raleway'] font-bold text-5xl leading-[100%] tracking-normal text-white">
             {renderWords(
               "Build software that scales with your business, not against it"
             )}
           </h1>
 
-          <p className="fade-up-element mt-[28px] max-w-[405px] font-body text-[16px] font-normal leading-[1.35] text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
+          <p className="fade-up-element font-body text-xl  font-normal leading-[35px] text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
             Tevso is a founder-led technical partner for SaaS products, internal
             platforms, workflow automation, and AI-enabled systems. We help
             growing businesses fix messy architecture, reduce manual operations,
@@ -100,12 +106,12 @@ export function HomeHeroSection() {
             useful.
           </p>
 
-          <div className="fade-up-element mt-[24px] flex items-center gap-[9px]">
-            <button className="h-[32px] bg-white px-[13px] text-[11px] font-medium text-[#352FE1] transition hover:bg-white/90">
+          <div className="fade-up-element flex items-center gap-4">
+            <button className="bg-white p-4 text-sm font-normal text-[#352FE1] transition hover:bg-white/90">
               Book a discovery call
             </button>
 
-            <button className="h-[32px] bg-white px-[14px] text-[11px] font-medium text-[#352FE1] transition hover:bg-white/90">
+            <button className="bg-white p-4 text-sm font-normal text-[#352FE1] transition hover:bg-white/90">
               View case studies
             </button>
           </div>
