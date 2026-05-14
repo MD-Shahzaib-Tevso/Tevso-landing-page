@@ -5,15 +5,17 @@ import Link from "next/link";
 export function Footer() {
   const websiteLinks = [
     { name: "Home", href: "/" },
+    { name: "Solutions", href: "/services" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "AI Enablement", href: "/ai-solutions" },
+    { name: "How We Work", href: "/technology" },
     { name: "About", href: "/about" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Case studies", href: "/case-studies" },
-    { name: "Contact us", href: "/contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const services = [
     "Website designing",
-    "Website developement",
+    "Website development",
     "Seo services",
     "Application designing",
     "Application development",
@@ -21,10 +23,13 @@ export function Footer() {
 
   return (
     <footer className="bg-[#f7f7f7] pt-12 md:pt-20">
-      <div className="mx-auto max-w-[1120px] px-5 sm:px-6">
-        <div className="grid grid-cols-1 gap-10 text-center sm:grid-cols-2 sm:text-left md:grid-cols-[1.4fr_1fr_1.2fr_1.2fr] md:gap-12">
-          {/* LOGO */}
-          <div className="flex flex-col items-center justify-center sm:items-start">
+      <div className="mx-auto max-w-6xl px-14 lg:px-10">
+
+        {/* TOP */}
+        <div className="flex flex-col gap-8 lg:flex-row lg:justify-between">
+
+          {/* LEFT LOGO */}
+          <div className="w-full lg:w-[190px]">
             <Link href="/">
               <Image
                 src="/footer-logo.png"
@@ -35,93 +40,125 @@ export function Footer() {
               />
             </Link>
 
-            <div className="mt-6 flex items-center justify-center gap-5 text-[#3924e8] sm:justify-start md:mt-8">
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="text-[18px] font-bold transition hover:opacity-70"
-              >
-                f
+            <div className="mt-6 flex items-center gap-5 md:mt-8">
+              <a href="#" aria-label="Facebook">
+                <Image
+                  src="/footer/facebook.svg"
+                  alt="Facebook"
+                  width={24}
+                  height={24}
+                />
               </a>
 
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="transition hover:opacity-70"
-              >
-                <span className="flex h-4 w-4 items-center justify-center rounded-[4px] border-2 border-[#3924e8] text-[9px] font-bold">
-                  ●
-                </span>
+              <a href="#" aria-label="Instagram">
+                <Image
+                  src="/footer/instagram.svg"
+                  alt="Instagram"
+                  width={20}
+                  height={20}
+                />
               </a>
 
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="text-[13px] font-bold transition hover:opacity-70"
-              >
-                in
+              <a href="#" aria-label="LinkedIn">
+                <Image
+                  src="/footer/linkedin.svg"
+                  alt="LinkedIn"
+                  width={24}
+                  height={24}
+                />
               </a>
             </div>
           </div>
 
-          {/* WEBSITE LINKS */}
-          <div>
-            <h3 className="text-[18px] font-bold text-[#222222]">
-              Website Links
-            </h3>
+          {/* RIGHT CONTENT */}
+          <div className="flex max-[460px]:flex-col gap-8 sm:flex-row lg:gap-20 max-[700px]:justify-between">
 
-            <ul className="mt-5 space-y-4 text-[13px] text-[#555555] md:mt-7 md:space-y-6">
-              {websiteLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
+            {/* WEBSITE LINKS */}
+            <div className="min-w-[190px] max-[520px]:min-w-[120px]">
+              <h3 className="text-[18px] font-bold text-[#222]">
+                Website Links
+              </h3>
+
+              <ul className="mt-6 space-y-5 text-[14px] text-[#555]">
+                {websiteLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="transition hover:text-[#3924e8]"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* SERVICES */}
+            <div className="min-w-[190px]">
+              <h3 className="text-[18px] font-bold text-[#222]">
+                Services
+              </h3>
+
+              <ul className="mt-6 space-y-5 text-[14px] text-[#555]">
+                {services.map((service) => (
+                  <li key={service}>
+                    <Link
+                      href="#"
+                      className="transition hover:text-[#3924e8]"
+                    >
+                      {service}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* CONTACT */}
+            <div className="max-[700px]:hidden min-w-[190px]">
+              <h3 className="text-[18px] font-bold text-[#222]">
+                Contact Us
+              </h3>
+
+              <ul className="mt-6 space-y-5 text-[14px] text-[#555]">
+                <li>
+                  <a
+                    href="tel:+447400714002"
                     className="transition hover:text-[#3924e8]"
                   >
-                    {link.name}
-                  </Link>
+                    + 44 7400714002
+                  </a>
                 </li>
-              ))}
-            </ul>
-          </div>
 
-          {/* SERVICES */}
-          <div>
-            <h3 className="text-[18px] font-bold text-[#222222]">Services</h3>
-
-            <ul className="mt-5 space-y-4 text-[13px] text-[#555555] md:mt-7 md:space-y-6">
-              {services.map((service) => (
-                <li key={service}>
-                  <Link
-                    href="#"
-                    className="transition hover:text-[#3924e8]"
+                <li>
+                  <a
+                    href="mailto:contact@tevsotech.com"
+                    className="break-all transition hover:text-[#3924e8]"
                   >
-                    {service}
-                  </Link>
+                    contact@tevsotech.com
+                  </a>
                 </li>
-              ))}
-            </ul>
+              </ul>
+            </div>
           </div>
 
-          {/* CONTACT */}
-          <div>
-            <h3 className="text-[18px] font-bold text-[#222222]">
+          {/* CONTACT (MOBILE) */}
+          <div className="hidden max-[700px]:block min-w-[190px]">
+            <h3 className="text-[18px] font-bold text-[#222]">
               Contact Us
             </h3>
-
-            <ul className="mt-5 space-y-4 text-[13px] text-[#555555] md:mt-7 md:space-y-6">
+            <ul className="mt-6 space-y-5 text-[14px] text-[#555]">
               <li>
                 <a
                   href="tel:+447400714002"
-                  className="break-words transition hover:text-[#3924e8]"
+                  className="transition hover:text-[#3924e8]"
                 >
                   + 44 7400714002
                 </a>
               </li>
-
               <li>
                 <a
                   href="mailto:contact@tevsotech.com"
-                  className="break-words transition hover:text-[#3924e8]"
+                  className="break-all transition hover:text-[#3924e8]"
                 >
                   contact@tevsotech.com
                 </a>
@@ -131,8 +168,8 @@ export function Footer() {
         </div>
 
         {/* BOTTOM */}
-        <div className="mt-10 border-t border-[#dcdcdc] px-4 py-5 text-center">
-          <p className="text-[12px] leading-6 text-[#666666] sm:text-[13px]">
+        <div className="mt-12 border-t border-[#dcdcdc] py-6">
+          <p className="text-center text-[13px] text-[#666]">
             © Copyright 2026 Tevso - All Rights Reserved.
           </p>
         </div>
