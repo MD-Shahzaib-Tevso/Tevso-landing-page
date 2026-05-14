@@ -1,60 +1,53 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 const stats = [
-  {
-    value: "500k+",
-    label: "Active users",
-    secondLine: "supported",
-  },
-  {
-    value: "500k+",
-    label: "Sales processed",
-    secondLine: "",
-  },
-  {
-    value: "10+",
-    label: "Letting agents served",
-    secondLine: "",
-  },
-  {
-    value: "50+",
-    label: "Clinics onboarded",
-    secondLine: "",
-  },
-  {
-    value: "8+",
-    label: "White-label",
-    secondLine: "deployments",
-  },
+  { value: "500k+", label: "Active users", secondLine: "supported" },
+  { value: "500k+", label: "Sales processed" },
+  { value: "10+", label: "Letting agents served" },
+  { value: "50+", label: "Clinics onboarded" },
+  { value: "8+", label: "White-label", secondLine: "deployments" },
 ];
+
+const CARD_WIDTH = 240;
+const GAP = 24;
 
 export function HomeStatsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [useSlider, setUseSlider] = useState(false);
+
+  useEffect(() => {
+    const checkOverflow = () => {
+      if (!containerRef.current) return;
+      const containerWidth = containerRef.current.offsetWidth;
+      const totalCardsWidth = stats.length * CARD_WIDTH + (stats.length - 1) * GAP;
+      setUseSlider(totalCardsWidth > containerWidth);
+    };
+    checkOverflow();
+    window.addEventListener("resize", checkOverflow);
+    return () => window.removeEventListener("resize", checkOverflow);
+  }, []);
 
   useGSAP(
     () => {
       gsap.fromTo(
-        ".stat-card",
-        {
-          opacity: 0,
-          y: 18,
-          scale: 0.96,
-        },
+        ".stats-content",
+        { opacity: 0, y: 30 },
         {
           opacity: 1,
           y: 0,
-          scale: 1,
-          duration: 0.55,
-          stagger: 0.08,
+          duration: 0.8,
           ease: "power3.out",
           scrollTrigger: {
             trigger: containerRef.current,
@@ -66,57 +59,64 @@ export function HomeStatsSection() {
     { scope: containerRef }
   );
 
+  const renderCard = (stat: (typeof stats)[0], index: number) => (
+    <article
+      key={index}
+      className="flex h-[150px] min-w-[240px] flex-col items-center justify-center rounded-2xl border border-[#e6e6e6] bg-white px-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+    >
+      <h3 className="font-['Raleway'] text-4xl font-bold text-[#352FE1] lg:text-5xl">
+        {stat.value}
+      </h3>
+
+      <p className="mt-3 text-sm font-medium leading-tight text-[#111]">
+        {stat.label}
+        {stat.secondLine && (
+          <>
+            <br />
+            {stat.secondLine}
+          </>
+        )}
+      </p>
+    </article>
+  );
+
   return (
     <section
       ref={containerRef}
-      className="relative w-full overflow-hidden border-t border-[#e5e7eb] bg-[#f8f9fb] px-[30.07px] pt-[25px] pb-[38px]"
+      className="border-t border-[#e5e7eb] bg-[#f5f6fa] py-10"
     >
-      <div className="mx-auto h-[123px] w-full max-w-[1381px] rotate-0 rounded-[10px] opacity-100">
-        <div className="grid h-full grid-cols-2 gap-[11px] sm:grid-cols-3 lg:grid-cols-5">
-          {stats.map((stat, index) => (
-            <article
-              key={`${stat.value}-${index}`}
-              className="stat-card flex h-[123px] flex-col items-center justify-center rounded-[10px] border border-[#e6e6e6] bg-white px-2 text-center shadow-[0_2px_8px_rgba(0,0,0,0.28)]"
-            >
-              <h3 className="font-['Raleway'] text-[47px] font-semibold leading-none tracking-wide text-[#352FE1]">
-                {stat.value}
-              </h3>
-
-              <p className="mt-[3px] font-['Lato'] text-[9.5px] font-medium leading-[1.15] text-[#111111]">
-                {stat.label}
-                {stat.secondLine && (
-                  <>
-                    <br />
-                    {stat.secondLine}
-                  </>
-                )}
-              </p>
-            </article>
-          ))}
-        </div>
+      <div className="min-w-6xl px-14">
+        {useSlider ? (
+          <Swiper
+            modules={[Autoplay]}
+            className="stats-content "
+            loop
+            centeredSlides={false}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            spaceBetween={GAP}
+            breakpoints={{
+              0: { slidesPerView: 1.15 },
+              480: { slidesPerView: 1.5 },
+              640: { slidesPerView: 2 },
+              768: { slidesPerView: 3 },
+              1024: { slidesPerView: 4 },
+            }}
+          >
+            {stats.map((stat, index) => (
+              <SwiperSlide key={index} className="w-auto!">
+                {renderCard(stat, index)}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <div className="stats-content flex justify-center gap-6">
+            {stats.map(renderCard)}
+          </div>
+        )}
       </div>
-
-      <button
-        type="button"
-        aria-label="Scroll down"
-        className="absolute bottom-[7px] right-[13px] flex h-[22px] w-[22px] items-center justify-center rounded-full bg-[#352FE1] shadow-md"
-      >
-        <svg
-          width="12"
-          height="12"
-          viewBox="0 0 24 24"
-          fill="none"
-          className="text-white"
-        >
-          <path
-            d="M6 9L12 15L18 9"
-            stroke="currentColor"
-            strokeWidth="3"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </button>
     </section>
   );
 }
