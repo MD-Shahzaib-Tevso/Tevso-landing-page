@@ -83,10 +83,10 @@ export function HomeHeroSection() {
         />
 
         {/* Mobile overlay */}
-        {/* <div className="absolute inset-0 bg-black/55 sm:bg-black/40 lg:bg-black/0" /> */}
+        <div className="absolute inset-0 sm:bg-black/20 lg:bg-black/0" />
 
         {/* Mobile gradient for readable text */}
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/60 lg:hidden" /> */}
+        <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/25 to-black/60 lg:hidden" />
       </div>
 
       {/* CONTENT */}
