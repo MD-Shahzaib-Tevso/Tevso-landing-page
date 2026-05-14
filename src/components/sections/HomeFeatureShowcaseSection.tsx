@@ -8,7 +8,7 @@ export function HomeFeatureShowcaseSection() {
         <div className="order-1 space-y-8 text-left">
           <h2 className="text-[30px] font-bold leading-tight text-[#1c1c1c] sm:text-[34px] md:text-[38px] lg:text-[40px]">
             Where growing products{" "}
-            <br className="hidden sm:block" />
+            <br className="hidden lg:block" />
             usually start to break
           </h2>
 
