@@ -5,20 +5,20 @@ export function HomeFeatureShowcaseSection() {
     <section className="bg-[#f5f6fa] py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 px-5 sm:px-6 md:px-10 lg:grid-cols-2 lg:gap-16 lg:px-12">
         {/* LEFT CONTENT */}
-        <div className="order-2 space-y-6 text-center lg:order-1 lg:space-y-8 lg:text-left">
+        <div className="order-1 space-y-8 text-left">
           <h2 className="text-[30px] font-bold leading-tight text-[#1c1c1c] sm:text-[34px] md:text-[38px] lg:text-[40px]">
             Where growing products{" "}
             <br className="hidden sm:block" />
             usually start to break
           </h2>
 
-          <p className="mx-auto max-w-[520px] text-[15px] leading-relaxed text-gray-600 sm:text-[16px] lg:mx-0">
+          <p className="max-w-[520px] text-[15px] leading-relaxed text-gray-600 sm:text-[16px]">
             Most software problems do not start with code alone. They start when
             a business grows faster than the systems underneath it.
           </p>
 
           {/* BULLETS */}
-          <ul className="mx-auto max-w-[560px] space-y-3 text-left text-[14px] leading-relaxed text-gray-700 sm:text-[15px] lg:mx-0">
+          <ul className="max-w-[560px] space-y-3 text-left text-sm leading-relaxed text-gray-700 sm:text-sm">
             {[
               "Products built quickly now need structure and cleanup",
               "Manual workflows are slowing teams down",
@@ -35,7 +35,7 @@ export function HomeFeatureShowcaseSection() {
           </ul>
 
           {/* BUTTON */}
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-start">
             <button className="w-full max-w-[260px] rounded-md bg-[#4f46e5] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#4338ca] sm:w-auto sm:max-w-none">
               Discuss your current setup
             </button>
@@ -43,7 +43,7 @@ export function HomeFeatureShowcaseSection() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
+        <div className="order-1 justify-center lg:order-2 hidden lg:flex lg:justify-end">
           <div className="relative h-[320px] w-full max-w-[360px] overflow-hidden rounded-[18px] shadow-xl sm:h-[420px] sm:max-w-[400px] md:h-[480px] lg:h-[520px] lg:max-w-[420px]">
             <Image
               src="/TeamWork.png"
