@@ -85,7 +85,7 @@ export function HomeStatsSection() {
       ref={containerRef}
       className="border-t border-[#e5e7eb] bg-[#f5f6fa] py-10"
     >
-      <div className="min-w-6xl px-14">
+      <div className="max-w-6xl mx-auto px-14">
         {useSlider ? (
           <Swiper
             modules={[Autoplay]}
