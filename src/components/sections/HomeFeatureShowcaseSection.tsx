@@ -3,7 +3,7 @@ import Image from "next/image";
 export function HomeFeatureShowcaseSection() {
   return (
     <section className="bg-[#f5f6fa] py-12 sm:py-16 md:py-20 lg:py-24">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 px-5 sm:px-6 md:px-10 lg:grid-cols-2 lg:gap-16 lg:px-12">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-8 sm:px-14 lg:grid-cols-2 lg:gap-16">
         {/* LEFT CONTENT */}
         <div className="order-1 space-y-8 text-left">
           <h2 className="text-[30px] font-bold leading-tight text-[#1c1c1c] sm:text-[34px] md:text-[38px] lg:text-[40px]">
