@@ -8,37 +8,37 @@ import "swiper/css/pagination";
 
 const supportCards = [
   {
-    icon: "/Group (4).png",
+    icon: "/technical-support/support1.png",
     title: "Build stronger SaaS products",
     description:
       "From MVPs to mature platforms, we structure, build, and scale software with long-term maintainability in mind.",
   },
   {
-    icon: "/Group (4).png",
+    icon: "/technical-support/support2.png",
     title: "Fix messy systems and workflows",
     description:
       "We turn manual, fragmented operations into structured digital workflows that improve speed, visibility, and control.",
   },
   {
-    icon: "/Group (4).png",
+    icon: "/technical-support/support3.png",
     title: "Strengthen architecture and backend foundations",
     description:
       "We design reliable backend systems, APIs, and technical foundations that support scale, security, and future growth.",
   },
   {
-    icon: "/Group (4).png",
+    icon: "/technical-support/support4.png",
     title: "Introduce AI where it adds real value",
     description:
       "We help businesses add AI into existing systems for automation, internal productivity, and operational efficiency.",
   },
   {
-    icon: "/Group (4).png",
+    icon: "/technical-support/support5.png",
     title: "Modernize legacy platforms",
     description:
       "We improve and extend older systems without forcing unnecessary rebuilds or disrupting daily operations.",
   },
   {
-    icon: "/Group (4).png",
+    icon: "/technical-support/support6.png",
     title: "Provide technical delivery capacity",
     description:
       "Whether you need a dedicated resource or retained support, we bring reliable technical execution with accountability.",
@@ -54,7 +54,7 @@ function SupportCard({ card }: { card: (typeof supportCards)[0] }) {
           alt={card.title}
           width={28}
           height={28}
-          className="h-[28px] w-[28px] object-contain transition-all duration-300 group-hover:brightness-0"
+          className="h-[28px] w-[28px] object-contain transition-all duration-300 brightness-2000 group-hover:brightness-105"
         />
       </div>
 
