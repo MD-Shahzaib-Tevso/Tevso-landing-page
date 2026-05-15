@@ -7,13 +7,13 @@ export function AiSolutionsScenariosSection() {
     <section className="relative w-full overflow-hidden bg-[#3b22f4] py-12 md:py-16">
       {/* Right background subtle pattern */}
       <div className="absolute right-0 top-0 h-full w-[45%] opacity-15">
-        <div className="absolute -right-20 -top-20 h-[320px] w-[320px] rounded-full border-[35px] border-white/20" />
-        <div className="absolute right-10 top-10 h-[180px] w-[180px] rounded-full border-[28px] border-white/20" />
+        <div className="absolute -right-20 -top-20 h-[320px] w-[320px] rounded-full border-35 border-white/20" />
+        <div className="absolute right-10 top-10 h-[180px] w-[180px] rounded-full border-28 border-white/20" />
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-[1100px] items-center justify-between gap-8 px-6 md:px-12">
+      <div className="relative z-10 mx-auto flex max-w-6xl items-center justify-between gap-8 px-8 sm:px-14">
         {/* Left laptop image */}
-        <div className="relative hidden h-[250px] w-[230px] md:block">
+        <div className="relative hidden h-[250px] w-[230px] lg:block">
           <Image
             src="/Gemini.png"
             alt="AI laptop"
@@ -34,7 +34,7 @@ export function AiSolutionsScenariosSection() {
             whether AI is the right lever and how to add it without disruption.
           </p>
 
-          <button className="bg-white px-5 py-2 text-[11px] font-semibold text-[#3b22f4] shadow-sm transition hover:bg-white/90">
+          <button className="bg-white px-3 py-2 text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90">
             Discuss an AI use case
           </button>
         </div>
