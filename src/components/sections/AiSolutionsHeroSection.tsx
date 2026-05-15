@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function AiSolutionsHeroSection() {
   return (
-    <section className="relative mt-[72px] h-[350px] w-full overflow-hidden bg-black sm:mt-20">
+    <section className="hero-section flex flex-col justify-center relative mt-[72px] min-h-[624px] w-full overflow-hidden sm:min-h-[720px] lg:mt-[110px] max-[1065px]:lg:mt-[108px] lg:min-h-[calc(100vh-110px)]">
       {/* Background Image */}
       <Image
         src="/Rectangle-22229 2.png"
@@ -23,22 +23,22 @@ export function AiSolutionsHeroSection() {
       <div className="absolute inset-x-0 bottom-0 h-[70px] bg-gradient-to-t from-black/25 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 h-full w-full">
-        <div className="ml-[36px] max-w-[430px] pt-[43px]">
-          <p className="mb-[14px] font-['Inter'] text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.7)]">
+      <div className="relative z-10 mx-auto w-full">
+        <div className="flex flex-col h-full w-full gap-5 items-start p-14">
+          <p className="text-[22px] font-medium uppercase tracking-wider text-white/55 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
             AI ENABLEMENT
           </p>
 
-          <h1 className="mb-[16px] max-w-[410px] font-['Lato'] text-[34px] font-semibold leading-[1.15] tracking-[-0.02em] text-white drop-shadow-[0_3px_8px_rgba(0,0,0,0.75)]">
+          <h2 className="max-w-[700px] text-[36px] font-normal leading-normal text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)] sm:text-[48px] md:text-[56px]">
             Add AI where it improves real systems
-          </h1>
+          </h2>
 
-          <p className="mb-[15px] max-w-[405px] font-['Inter'] text-[13px] font-normal leading-[1.45] text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
+          <p className="max-w-[520px] text-[18px] leading-normal text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
             Tevso helps businesses introduce AI in practical, commercially useful
             ways without rebuilding everything from scratch.
           </p>
 
-          <button className="h-[29px] bg-white px-[10px] font-['Inter'] text-[10px] font-bold text-[#1d22c8] transition hover:bg-white/90">
+         <button className="bg-white p-4 text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90">
             Discuss an AI use case
           </button>
         </div>
