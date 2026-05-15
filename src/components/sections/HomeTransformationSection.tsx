@@ -34,7 +34,7 @@ export function HomeTransformationSection() {
     <section className="overflow-hidden bg-[#f7f7f7] py-12 sm:py-14 md:py-16 lg:py-12">
       <div className="mx-auto max-w-6xl px-8 sm:px-14">
         {/* Heading */}
-        <h2 className="text-center text-[26px] font-bold leading-tight text-[#333] sm:text-[30px] md:text-[34px] lg:text-[28px]">
+        <h2 className="text-center text-[26px] font-bold leading-tight text-[#333] sm:text-[30px] md:text-[34px] lg:text-[40px]">
           Case studies
         </h2>
 

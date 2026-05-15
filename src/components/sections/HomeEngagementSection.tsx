@@ -27,7 +27,7 @@ export function HomeEngagementSection() {
         {/* RIGHT CONTENT */}
         <div className="flex h-full flex-col justify-between text-left">
           <div>
-            <h2 className="text-[26px] font-bold leading-tight text-[#333333] sm:text-[30px] md:text-[34px]">
+            <h2 className="text-[26px] font-bold leading-tight text-[#333333] sm:text-[30px] md:text-[34px] lg:text-[40px]">
               More than a development agency
             </h2>
 
