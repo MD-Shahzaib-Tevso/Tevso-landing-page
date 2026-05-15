@@ -6,7 +6,7 @@ import { Phone, Mail } from "lucide-react";
 export function ContactSectionSS() {
   return (
     <section
-      className="relative overflow-hidden bg-cover bg-center bg-no-repeat px-8 py-12 sm:px-14 sm:py-14 md:py-16 lg:py-20"
+      className="relative overflow-hidden bg-cover bg-center bg-no-repeat px-8 py-12 sm:px-14 sm:py-14 md:py-16 lg:py-20 border-t border-[#ffffff]"
       style={{
         backgroundImage: "url('/Background.png')",
       }}
