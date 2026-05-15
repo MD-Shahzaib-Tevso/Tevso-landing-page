@@ -146,7 +146,7 @@ export function ServicesProcessSection() {
 
           return (
             <div
-              key={service.title}
+              key={index}
               className={`flex w-full flex-col gap-8 rounded-[20px] bg-[#f3f3f3] lg:gap-12 lg:p-10 ${reverseLayout ? "lg:flex-row-reverse lg:items-start" : "lg:flex-row lg:items-center"}`}
             >
               {/* IMAGE */}
