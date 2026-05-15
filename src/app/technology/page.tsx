@@ -86,7 +86,7 @@ export default function TechnologyShowcaseSection() {
   return (
     <section ref={containerRef} className="w-full bg-white text-[#111111]">
       {/* HERO TOP */}
-      <section className="relative mt-[72px] min-h-[520px] w-full overflow-hidden bg-[#020817] sm:mt-20 sm:min-h-[500px] lg:min-h-[430px]">
+      <section className="hero-section flex flex-col justify-center relative mt-[72px] min-h-[624px] w-full overflow-hidden sm:min-h-[720px] lg:mt-[110px] max-[1065px]:lg:mt-[108px] lg:min-h-[calc(100vh-110px)]">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -98,20 +98,21 @@ export default function TechnologyShowcaseSection() {
             className="object-cover object-center"
           />
 
-          {/* Light readable overlay */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/45 sm:bg-[linear-gradient(90deg,_rgba(0,0,0,0.45)_0%,_rgba(0,0,0,0.28)_45%,_rgba(0,0,0,0.05)_100%)]" />
+          {/* VERY LIGHT OVERLAY ONLY FOR TEXT READABILITY */}
+          <div className="absolute inset-0 bg-black/10" />
 
-          <div className="pointer-events-none absolute inset-0 bg-[#020817]/15" />
-        </div>
+          {/* LIGHT LEFT GRADIENT */}
+          <div className="absolute inset-0 bg-linear-to-r from-black/35 via-black/10 to-transparent" /></div>
 
         {/* Content */}
-        <div className="relative z-10 flex min-h-[520px] items-center justify-center px-5 py-14 text-center sm:min-h-[500px] sm:justify-start sm:px-8 sm:text-left md:px-10 lg:min-h-[430px] lg:px-12">
-          <div className="max-w-[610px]">
-            <p className="hero-top-animate mb-3 font-body text-[12px] font-medium uppercase tracking-[0.5px] text-white sm:text-[13px]">
+        <div className="relative z-10 mx-auto w-full">
+          {/* LEFT TEXT */}
+          <div className="flex flex-col h-full w-full gap-5 max-w-[660px] items-start p-14">
+            <p className="text-[22px] font-medium uppercase tracking-wider text-white/55 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
               HOW WE WORK
             </p>
 
-            <h1 className="hero-top-animate font-heading text-[30px] font-semibold leading-[1.22] tracking-wide text-white sm:text-[38px] md:text-[45px]">
+            <h1 className="mt-4 text-3xl font-bold leading-tight text-white drop-shadow-[0_3px_8px_rgba(0,0,0,0.7)] sm:text-4xl lg:text-5xl">
               A working style built around{" "}
               <br className="hidden sm:block" />
               clarity, momentum, and{" "}
@@ -119,7 +120,7 @@ export default function TechnologyShowcaseSection() {
               ownership
             </h1>
 
-            <p className="hero-top-animate mx-auto mt-5 max-w-[610px] font-body text-[14px] leading-[1.75] text-white/90 sm:mx-0">
+            <p className="mt-5 texts-base leading-normal text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
               What clients value in a technical partner is not only skill, but
               reliability in execution. Tevso combines hands-on technical
               delivery with practical business awareness to help clients move
