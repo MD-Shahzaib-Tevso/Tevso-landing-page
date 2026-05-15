@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function ServicesHeroSection() {
   return (
-    <section className="relative flex items-center overflow-hidden py-24 md:py-32">
+    <section className="hero-section flex flex-col justify-center relative mt-[72px] min-h-[624px] w-full overflow-hidden sm:min-h-[720px] lg:mt-[110px] max-[1065px]:lg:mt-[108px] lg:min-h-[calc(100vh-110px)]">
       {/* BACKGROUND */}
       <div className="absolute inset-0">
         <Image
@@ -15,25 +15,27 @@ export function ServicesHeroSection() {
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 mx-auto w-full max-w-[1180px] px-6">
-        <p className="text-[12px] font-semibold uppercase tracking-wider text-white/70 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
-          Solutions
-        </p>
+      <div className="relative z-10 mx-auto w-full">
+        <div className="flex flex-col h-full w-full gap-5 items-start p-14">
+          <p className="text-[22px] font-medium uppercase tracking-wider text-white/55 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
+            Solutions
+          </p>
 
-        <h1 className="mt-4 max-w-[700px] text-[36px] font-bold leading-[1.2] text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)] sm:text-[48px] md:text-[56px]">
-          Solutions built around <br />
-          business problems, not <br />
-          generic service lists
-        </h1>
+          <h2 className="max-w-[700px] text-[36px] font-normal leading-normal text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)] sm:text-[48px] md:text-[56px]">
+            Solutions built around <br />
+            business problems, not <br />
+            generic service lists
+          </h2>
 
-        <p className="mt-5 max-w-[520px] text-[13px] leading-[1.5] text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
-          Every engagement starts with understanding the real problem — then we
-          define the right technical approach to solve it.
-        </p>
+          <p className="max-w-[520px] text-[18px] leading-normal text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
+            Every engagement starts with understanding the real problem — then we
+            define the right technical approach to solve it.
+          </p>
 
-        <button className="mt-6 bg-white px-5 py-2.5 text-[12px] font-semibold text-[#0a0f2c] transition hover:bg-gray-200">
-          Talk to Tevso
-        </button>
+          <button className="bg-white p-4 text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90">
+            Talk to Tevso
+          </button>
+        </div>
       </div>
     </section>
   );
