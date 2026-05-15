@@ -23,7 +23,7 @@ export function Footer() {
 
   return (
     <footer className="bg-[#f7f7f7] pt-12 md:pt-20">
-      <div className="mx-auto max-w-6xl px-14 lg:px-10">
+      <div className="mx-auto max-w-6xl px-8 sm:px-14">
 
         {/* TOP */}
         <div className="flex flex-col gap-8 lg:flex-row lg:justify-between">
@@ -71,20 +71,20 @@ export function Footer() {
           </div>
 
           {/* RIGHT CONTENT */}
-          <div className="flex max-[460px]:flex-col gap-8 sm:flex-row lg:gap-20 max-[700px]:justify-between">
+          <div className="flex max-[380px]:flex-col gap-8 sm:flex-row lg:gap-20 max-[700px]:justify-between">
 
             {/* WEBSITE LINKS */}
-            <div className="min-w-[190px] max-[520px]:min-w-[120px]">
-              <h3 className="text-[18px] font-bold text-[#222]">
+            <div className="min-w-[190px] max-[460px]:min-w-[120px]">
+              <h3 className="text-[18px] max-[460px]:text-base font-bold text-[#222]">
                 Website Links
               </h3>
 
-              <ul className="mt-6 space-y-5 text-[14px] text-[#555]">
+              <ul className="mt-6 space-y-5 max-[460px]:space-y-3 text-[14px] text-[#555]">
                 {websiteLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="transition hover:text-[#3924e8]"
+                      className="transition hover:text-[#3924e8] max-[460px]:text-[12px]"
                     >
                       {link.name}
                     </Link>
@@ -94,17 +94,17 @@ export function Footer() {
             </div>
 
             {/* SERVICES */}
-            <div className="min-w-[190px]">
-              <h3 className="text-[18px] font-bold text-[#222]">
+            <div className="min-w-[190px] max-[460px]:min-w-[120px]">
+              <h3 className="text-[18px] max-[460px]:text-base font-bold text-[#222]">
                 Services
               </h3>
 
-              <ul className="mt-6 space-y-5 text-[14px] text-[#555]">
+              <ul className="mt-6 space-y-5 max-[460px]:space-y-3 text-[14px] text-[#555]">
                 {services.map((service) => (
                   <li key={service}>
                     <Link
                       href="#"
-                      className="transition hover:text-[#3924e8]"
+                      className="transition hover:text-[#3924e8] max-[460px]:text-[12px]"
                     >
                       {service}
                     </Link>
@@ -143,14 +143,14 @@ export function Footer() {
 
           {/* CONTACT (MOBILE) */}
           <div className="hidden max-[700px]:block min-w-[190px]">
-            <h3 className="text-[18px] font-bold text-[#222]">
+            <h3 className="text-[18px] max-[460px]:text-base font-bold text-[#222]">
               Contact Us
             </h3>
-            <ul className="mt-6 space-y-5 text-[14px] text-[#555]">
+            <ul className="mt-6 space-y-5 max-[460px]:space-y-3 text-[14px] text-[#555]">
               <li>
                 <a
                   href="tel:+447400714002"
-                  className="transition hover:text-[#3924e8]"
+                  className="transition hover:text-[#3924e8] max-[460px]:text-[12px]"
                 >
                   + 44 7400714002
                 </a>
@@ -158,7 +158,7 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:contact@tevsotech.com"
-                  className="break-all transition hover:text-[#3924e8]"
+                  className="break-all transition hover:text-[#3924e8] max-[460px]:text-[12px]"
                 >
                   contact@tevsotech.com
                 </a>
