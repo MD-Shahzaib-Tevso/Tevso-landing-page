@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function AboutHeroSection() {
   return (
-    <section className="relative mt-[72px] min-h-[750px] w-full overflow-hidden sm:mt-20 sm:min-h-[540px] lg:min-h-[520px]">
+    <section className="hero-section flex flex-col justify-center relative mt-[72px] min-h-[624px] w-full overflow-hidden sm:min-h-[720px] lg:mt-[110px] max-[1065px]:lg:mt-[108px] lg:min-h-[calc(100vh-110px)]">
       {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0">
         <Image
@@ -17,13 +17,14 @@ export function AboutHeroSection() {
         <div className="absolute inset-0 bg-black/25 sm:bg-black/20" />
 
         {/* RESPONSIVE LIGHT GRADIENT */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/40 sm:bg-gradient-to-r sm:from-black/45 sm:via-black/20 sm:to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/35 via-black/20 to-black/40 sm:bg-linear-to-r sm:from-black/45 sm:via-black/20 sm:to-transparent" />
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1180px] items-center px-5 py-14 sm:min-h-[540px] sm:px-8 md:px-10 lg:min-h-[520px] lg:px-6">
-        <div className="mx-auto max-w-[620px] text-center text-white sm:mx-0 sm:text-left">
-          <p className="text-[12px] font-medium uppercase tracking-[0.08em] text-white/85 sm:text-[13px]">
+      <div className="relative z-10 mx-auto w-full">
+        {/* LEFT TEXT */}
+        <div className="flex flex-col h-full w-full gap-5 max-w-[660px] items-start p-14">
+          <p className="text-[22px] font-medium uppercase tracking-wider text-white/55 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
             About
           </p>
 
@@ -35,7 +36,7 @@ export function AboutHeroSection() {
             product growth
           </h1>
 
-          <p className="mx-auto mt-6 max-w-[470px] text-[14px] leading-[1.7] text-white/90 sm:mx-0 sm:mt-7 sm:text-[15px]">
+          <p className="mt-5 texts-base leading-normal text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)] lg:max-w-[500px]">
             Tevso helps startups and growing businesses build, improve, and
             scale digital products with stronger technical foundations.
           </p>
