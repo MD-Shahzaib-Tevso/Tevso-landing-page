@@ -11,11 +11,11 @@ const points = [
 
 export function PracticalAISection() {
   return (
-    <section className="w-full bg-[#f7f7f7] px-8 sm:px-14 py-10">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 lg:grid-cols-2 md:gap-16">
+    <section className="w-full bg-[#f7f7f7] py-10">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 px-8 sm:px-14 items-center gap-10 lg:grid-cols-2 md:gap-16">
         {/* LEFT CONTENT */}
         <div className="text-left">
-          <h2 className="text-[28px] font-bold text-[#333333] sm:text-[30px] md:text-[32px]">
+          <h2 className="text-[28px] font-bold text-[#333333] sm:text-[34px] md:text-[40px]">
             Practical AI, not AI for show
           </h2>
 
