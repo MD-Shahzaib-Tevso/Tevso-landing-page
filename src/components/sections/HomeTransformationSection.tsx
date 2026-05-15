@@ -32,7 +32,7 @@ const carouselItems = [...caseStudies, ...caseStudies];
 export function HomeTransformationSection() {
   return (
     <section className="overflow-hidden bg-[#f7f7f7] py-12 sm:py-14 md:py-16 lg:py-12">
-      <div className="mx-auto w-full max-w-[1120px] px-5 sm:px-6 md:px-10 lg:px-6">
+      <div className="mx-auto max-w-6xl px-8 sm:px-14">
         {/* Heading */}
         <h2 className="text-center text-[26px] font-bold leading-tight text-[#333] sm:text-[30px] md:text-[34px] lg:text-[28px]">
           Case studies
@@ -79,8 +79,8 @@ export function HomeTransformationSection() {
         </div>
 
         {/* BUTTON */}
-        <div className="mt-8 flex justify-center sm:mt-10 lg:mt-8">
-          <button className="w-full max-w-[240px] rounded-md bg-[#3924e8] px-5 py-3 text-[12px] font-medium text-white transition hover:bg-[#2f1fd0] sm:w-auto sm:max-w-none lg:text-[11px]">
+        <div className="mt-8 flex justify-center">
+          <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0]">
             View all case studies
           </button>
         </div>
