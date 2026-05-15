@@ -11,15 +11,15 @@ const points = [
 
 export function PracticalAISection() {
   return (
-    <section className="w-full bg-[#f7f7f7] px-5 py-10 sm:px-6 md:px-10 lg:px-0">
-      <div className="mx-auto grid max-w-[920px] grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-16">
+    <section className="w-full bg-[#f7f7f7] px-8 sm:px-14 py-10">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 lg:grid-cols-2 md:gap-16">
         {/* LEFT CONTENT */}
         <div className="text-left">
-          <h2 className="font-['Lato'] text-[28px] font-bold leading-[1.15] text-[#333333] sm:text-[30px] md:text-[32px]">
+          <h2 className="text-[28px] font-bold text-[#333333] sm:text-[30px] md:text-[32px]">
             Practical AI, not AI for show
           </h2>
 
-          <p className="mt-5 max-w-[390px] font-['Lato'] text-[14px] font-normal leading-[1.45] text-[#333333]">
+          <p className="mt-5 lg:max-w-[390px] text-sm font-normal text-[#333333]">
             We help businesses introduce AI where it creates measurable value
             inside real systems and workflows.
           </p>
@@ -28,7 +28,7 @@ export function PracticalAISection() {
             {points.map((point) => (
               <li
                 key={point}
-                className="flex items-start gap-3 font-['Lato'] text-[14px] leading-[1.15] text-[#333333]"
+                className="flex items-start gap-3 text-sm text-[#333333]"
               >
                 <span className="mt-[5px] h-[7px] w-[7px] shrink-0 rounded-full bg-[#311DE5]" />
                 <span>{point}</span>
@@ -36,19 +36,21 @@ export function PracticalAISection() {
             ))}
           </ul>
 
-          <button className="mt-6 h-[29px] bg-[#311DE5] px-5 font-['Inter'] text-[10px] font-medium text-white transition hover:bg-[#2717c9]">
-            Explore AI enablement
-          </button>
+          <div className="mt-10 flex justify-start">
+            <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0]">
+              Explore AI enablement
+            </button>
+          </div>
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative h-[260px] w-full overflow-hidden rounded-[8px] sm:h-[300px] md:h-[315px]">
+        <div className="hidden lg:block relative h-[450px] overflow-hidden rounded-[8px]">
           <Image
             src="/Rectangle 22353 (1).png"
             alt="AI enablement"
             fill
             priority
-            className="object-cover object-center"
+            className="object-contain object-center"
           />
         </div>
       </div>
