@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function CaseStudiesHeroSection() {
   return (
-    <section className="relative mt-20 min-h-[377px] overflow-hidden">
+    <section className="hero-section flex flex-col justify-center relative mt-[72px] min-h-[624px] w-full overflow-hidden sm:min-h-[720px] lg:mt-[110px] max-[1065px]:lg:mt-[108px] lg:min-h-[calc(100vh-110px)]">
       {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0">
         <Image
@@ -19,14 +19,14 @@ export function CaseStudiesHeroSection() {
         <div className="absolute inset-0 bg-black/10" />
 
         {/* LIGHT LEFT GRADIENT */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/10 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-black/35 via-black/10 to-transparent" />
       </div>
 
       {/* CONTENT */}
-      <div className="relative mx-auto flex min-h-[377px] max-w-[1200px] flex-col items-center justify-between gap-10 px-6 py-16 lg:flex-row lg:py-20">
+      <div className="relative z-10 mx-auto w-full">
         {/* LEFT TEXT */}
-        <div className="max-w-[550px] text-white">
-          <p className="text-xs font-semibold uppercase tracking-wider text-white/80 drop-shadow-[0_2px_5px_rgba(0,0,0,0.6)]">
+        <div className="flex flex-col h-full w-full gap-5 max-w-[660px] items-start p-14">
+          <p className="text-[22px] font-medium uppercase tracking-wider text-white/55 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
             Case Studies
           </p>
 
@@ -34,13 +34,13 @@ export function CaseStudiesHeroSection() {
             Work that proves the approach
           </h1>
 
-          <p className="mt-4 text-sm text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.65)] sm:text-base">
-            Six platforms built or improved across veterinary, property,
+          <p className="mt-5 texts-base leading-normal text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
+            Six platforms built or improved aross veterinary, property,
             utilities, logistics, e-commerce, and AI — each with a real business
             problem at the center.
           </p>
 
-          <button className="mt-6 bg-white px-5 py-2 text-sm font-semibold text-[#0b1f5b] transition hover:bg-gray-200">
+          <button className="bg-white p-4 text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90">
             Discuss an AI use case
           </button>
         </div>
