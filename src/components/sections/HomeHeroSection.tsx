@@ -106,12 +106,12 @@ export function HomeHeroSection() {
             useful.
           </p>
 
-          <div className="fade-up-element flex items-center gap-4">
-            <button className="bg-white p-4 text-sm font-normal text-[#352FE1] transition hover:bg-white/90">
+          <div className="fade-up-element flex items-center flex-wrap gap-4">
+            <button className="bg-white p-4 text-sm font-normal text-[#352FE1] transition rounded-md hover:bg-white/90">
               Book a discovery call
             </button>
 
-            <button className="bg-white p-4 text-sm font-normal text-[#352FE1] transition hover:bg-white/90">
+            <button className="bg-white p-4 text-sm font-normal text-[#352FE1] transition rounded-md hover:bg-white/90">
               View case studies
             </button>
           </div>

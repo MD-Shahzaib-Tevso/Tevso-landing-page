@@ -89,7 +89,7 @@ export function Navbar() {
 
             <Link
               href="/services"
-              className="flex p-2 items-center justify-center bg-white max-[1065px]:text-xs text-sm font-medium text-[#352FE1] transition hover:bg-white/90"
+              className="flex p-2 items-center justify-center bg-white max-[1065px]:text-xs text-sm font-medium text-[#352FE1] transition rounded-md hover:bg-white/90"
             >
               Explore Your Solution
             </Link>
