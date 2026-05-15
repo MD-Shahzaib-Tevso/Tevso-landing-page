@@ -6,7 +6,7 @@ import { Phone, Mail } from "lucide-react";
 export function ContactSectionSS() {
   return (
     <section
-      className="relative overflow-hidden bg-cover bg-center bg-no-repeat px-5 py-12 sm:px-6 sm:py-14 md:px-10 md:py-16 lg:py-20"
+      className="relative overflow-hidden bg-cover bg-center bg-no-repeat px-8 py-12 sm:px-14 sm:py-14 md:py-16 lg:py-20"
       style={{
         backgroundImage: "url('/Background.png')",
       }}
@@ -15,7 +15,7 @@ export function ContactSectionSS() {
       <div className="absolute inset-0 z-0" />
 
       {/* MAIN CARD */}
-      <div className="relative z-10 mx-auto max-w-[1000px] rounded-[18px] border-[2px] border-[#311DE5] bg-white p-6 shadow-xl sm:p-8 md:rounded-[20px] md:border-[3px] md:p-10 lg:p-14">
+      <div className="relative z-10 mx-auto max-w-6xl rounded-[18px] border-2 border-[#311DE5] bg-white p-6 shadow-xl sm:p-8 md:rounded-[20px] md:border-[3px] md:p-10 lg:p-14">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
           {/* LEFT CONTENT */}
           <div className="text-center md:text-left">
@@ -25,7 +25,7 @@ export function ContactSectionSS() {
               system needs next
             </h2>
 
-            <p className="mx-auto mt-4 max-w-[420px] text-[14px] leading-relaxed text-gray-600 sm:mt-5 sm:text-[15px] md:mx-0">
+            <p className="mx-auto mt-4 sm:text-base text-[14px] leading-relaxed text-gray-600 sm:mt-5 sm:text-[15px] md:mx-0">
               Whether you are building a new product, cleaning up an existing
               platform, adding AI into workflows, or looking for a reliable
               technical partner, we would be glad to explore how Tevso can help.
