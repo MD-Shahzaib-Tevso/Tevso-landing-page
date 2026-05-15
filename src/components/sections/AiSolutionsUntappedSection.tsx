@@ -60,11 +60,11 @@ export function AiSolutionsUntappedSection() {
       />
 
       {/* Light overlay */}
-      <div className="absolute inset-0 z-[1] bg-white/55 sm:bg-white/45 md:bg-white/35" />
+      <div className="absolute inset-0 z-1 bg-white/55 sm:bg-white/45 md:bg-white/35" />
 
       {/* Subtle dotted texture */}
       <div
-        className="pointer-events-none absolute inset-0 z-[2] opacity-[0.08]"
+        className="pointer-events-none absolute inset-0 z-2 opacity-[0.08]"
         style={{
           backgroundImage:
             "radial-gradient(#7c7c7c 0.6px, transparent 0.6px)",
@@ -72,7 +72,7 @@ export function AiSolutionsUntappedSection() {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-[980px] px-5 sm:px-6 md:px-8 lg:px-6">
+      <div className="relative z-10 mx-auto max-w-6xl px-8 sm:px-14">
         {/* Heading */}
         <div className="mb-7 text-center sm:mb-8 md:mb-10">
           <h2 className="text-[26px] font-semibold leading-tight tracking-[-0.02em] text-[#2f2f2f] sm:text-[30px] md:text-[36px]">
@@ -104,7 +104,7 @@ export function AiSolutionsUntappedSection() {
 
         {/* Quote box */}
         <div className="mt-7 sm:mt-8">
-          <div className="mx-auto max-w-[920px] rounded-[14px] border border-white/60 bg-[#8f8f99]/70 px-5 py-5 text-center shadow-sm backdrop-blur-sm sm:px-6">
+          <div className="mx-auto max-w-[850px] rounded-2xl border border-white/75 bg-white/0 px-5 py-5 text-center shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5px] sm:px-6">
             <p className="text-[13px] italic leading-relaxed text-white sm:text-[14px]">
               AI is most valuable when it strengthens real operations, not when
               it is added as a trend. This mirrors the profile well.
@@ -114,7 +114,7 @@ export function AiSolutionsUntappedSection() {
 
         {/* Bottom button */}
         <div className="mt-7 flex justify-center sm:mt-8">
-          <button className="w-full max-w-[250px] rounded-md bg-white px-5 py-3 text-[12px] font-medium text-[#4330f1] shadow-sm transition hover:bg-[#f8f8ff] sm:w-auto sm:max-w-none lg:px-4 lg:py-2 lg:text-[10px]">
+          <button className="bg-white p-4 text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90">
             Discuss an AI opportunity
           </button>
         </div>
