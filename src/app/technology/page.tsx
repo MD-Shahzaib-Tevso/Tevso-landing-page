@@ -201,20 +201,22 @@ export default function TechnologyShowcaseSection() {
 
       {/* CTA */}
       <section className="success-section-trigger bg-[#352FE1]">
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          {/* hidden on mobile */}
-          <div className="success-animate relative hidden h-60 md:block">
-            <Image
-              src="/technology-talk-with-us.png"
-              alt="Talk with us"
-              fill
-              className="object-cover"
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 md:items-stretch">
+          {/* LEFT IMAGE */}
+          <div className="success-animate relative hidden md:block">
+            <div className="relative h-full min-h-[240px] w-full">
+              <Image
+                src="/technology-talk-with-us.png"
+                alt="Talk with us"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
 
           <div className="success-animate relative flex min-h-45 items-center justify-center overflow-hidden bg-[#352FE1] px-6 py-10 text-center md:min-h-60 md:justify-start md:px-12 md:text-left">
 
-            <div className="pointer-events-none absolute -right-5 -top-12.5 text-[220px] font-bold text-white/5">
+            <div className="pointer-events-none absolute -right-5 -top-12 text-[220px] font-bold text-white/5">
               ”
             </div>
 
