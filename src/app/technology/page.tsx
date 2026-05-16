@@ -131,62 +131,63 @@ export default function TechnologyShowcaseSection() {
       </section>
 
       {/* CORE PRINCIPLES */}
-      <section className="stack-section-trigger relative w-full overflow-hidden bg-[#f3f3f3] py-12 sm:py-14 md:py-16">
-        <div className="mx-auto max-w-[1180px] px-5 sm:px-6 md:px-10 lg:px-[52px]">
-          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1fr_275px] md:gap-[70px] lg:gap-[95px]">
-            {/* Left Content */}
-            <div className="stack-section-animate mx-auto max-w-[560px] text-center md:mx-0 md:max-w-[390px] md:text-left">
-              <h2 className="font-['Raleway'] text-[26px] font-bold leading-tight text-[#333333] md:text-[25px]">
+      <section className="stack-section-trigger relative w-full overflow-hidden bg-[#f3f3f3] py-12 md:py-16">
+        <div className="mx-auto max-w-6xl px-8 sm:px-14">
+          <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+            {/* text */}
+            <div className="stack-section-animate w-full md:w-[48%]">
+              <h2 className="text-[32px] font-bold text-[#333]">
                 Core principles
               </h2>
 
-              <ul className="mt-5 list-disc space-y-2 pl-5 text-left font-['Raleway'] text-[14px] leading-[1.6] text-[#333333] md:mt-[18px] md:space-y-[4px] md:text-[12px] md:leading-[14px]">
+              <ul className="mt-5 list-disc space-y-2 pl-5 text-[15px] leading-[1.6] text-[#444]">
                 <li>Founder-level ownership and accountability</li>
                 <li>Practical decision-making, not overengineering</li>
                 <li>Direct and transparent communication</li>
                 <li>Documentation and process clarity</li>
-                <li>
-                  Flexibility across project, retainer, and team-extension
-                  models
-                </li>
-                <li>
-                  Strong technical involvement where product decisions matter
-                </li>
+                <li>Flexibility across project, retainer, and team-extension models</li>
+                <li>Strong technical involvement where product decisions matter</li>
               </ul>
             </div>
 
-            {/* Right Image - hidden on mobile */}
-            <div className="stack-section-animate hidden justify-end md:flex">
-              <img
-                src="/Rectangle 22357 (8).png"
-                alt="Core principles"
-                className="h-[158px] w-full max-w-[275px] rounded-[7px] object-cover"
-              />
+            {/* image */}
+            <div className="stack-section-animate w-full md:w-[42%]">
+              <div className="relative h-60 overflow-hidden rounded-2xl md:h-65">
+                <Image
+                  src="/Rectangle 22357 (8).png"
+                  alt="Core principles"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* PROCESS STEPS */}
-      <section className="platform-section-trigger w-full bg-[#f3f3f3] py-12 sm:py-14 md:py-16">
-        <div className="mx-auto max-w-[1180px] px-5 sm:px-6 md:px-10 lg:px-12">
-          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[320px_1fr] md:gap-x-[70px] lg:gap-x-[95px]">
-            {/* Left Image - hidden on mobile */}
-            <div className="platform-animate hidden justify-start md:flex">
-              <img
-                src="/Rectangle 22359.png"
-                alt="Process steps"
-                className="h-auto w-full max-w-[290px] rounded-[12px] object-cover"
-              />
+      <section className="platform-section-trigger pb-12 bg-[#f3f3f3] md:pb-16">
+        <div className="mx-auto max-w-6xl px-8 sm:px-14">
+          <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+            {/* image first desktop */}
+            <div className="order-2 w-full md:order-1 md:w-[42%]">
+              <div className="platform-animate relative h-60 overflow-hidden rounded-2xl md:h-65">
+                <Image
+                  src="/Rectangle 22359.png"
+                  alt="Process steps"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
 
-            {/* Right Content */}
-            <div className="platform-animate mx-auto max-w-[560px] text-center md:mx-0 md:max-w-[420px] md:text-left">
-              <h2 className="font-['Raleway'] text-[26px] font-bold leading-tight text-[#333333] sm:text-[28px] md:text-[30px]">
+            {/* text */}
+            <div className="platform-animate order-1 w-full md:order-2 md:w-[48%]">
+              <h2 className="text-[32px] font-bold text-[#333]">
                 Process steps
               </h2>
 
-              <ul className="mt-5 list-disc space-y-2 pl-5 text-left font-['Raleway'] text-[14px] leading-[1.6] text-[#333333] md:mt-[22px] md:space-y-[6px]">
+              <ul className="mt-5 list-disc space-y-2 pl-5 text-[15px] leading-[1.6] text-[#444]">
                 <li>Understand the business and workflow</li>
                 <li>Shape the right technical approach</li>
                 <li>Deliver in visible phases</li>
@@ -198,26 +199,28 @@ export default function TechnologyShowcaseSection() {
         </div>
       </section>
 
-      {/* SUCCESS */}
-      <section className="success-section-trigger w-full overflow-hidden bg-[#352FE1]">
+      {/* CTA */}
+      <section className="success-section-trigger bg-[#352FE1]">
         <div className="grid grid-cols-1 md:grid-cols-2">
-          {/* Left Image - hidden on mobile */}
-          <div className="success-animate hidden h-[212px] w-full overflow-hidden md:block">
-            <img
-              src="/Frame .png"
+          {/* hidden on mobile */}
+          <div className="success-animate relative hidden h-60 md:block">
+            <Image
+              src="/technology-talk-with-us.png"
               alt="Talk with us"
-              className="h-full w-full object-cover object-center"
+              fill
+              className="object-cover"
             />
           </div>
 
-          {/* Right Content */}
-          <div className="success-animate relative flex min-h-[260px] items-center justify-center overflow-hidden bg-[#352FE1] px-5 py-10 text-center sm:px-8 md:min-h-[212px] md:justify-start md:px-[26px] md:text-left lg:px-[28px]">
-            {/* Quote Background */}
-            <div className="pointer-events-none absolute right-[-20px] top-[-50px] font-['Raleway'] text-[180px] font-bold leading-none text-white/[0.05] sm:text-[220px] md:right-[-12px] md:top-[-74px] md:text-[260px]">
+          <div className="success-animate relative flex min-h-45 items-center justify-center overflow-hidden bg-[#352FE1] px-6 py-10 text-center md:min-h-60 md:justify-start md:px-12 md:text-left">
+
+            <div className="pointer-events-none absolute -right-5 -top-12.5 text-[220px] font-bold text-white/5">
               ”
             </div>
 
-            <h2 className="relative z-10 max-w-[560px] font-['Raleway'] text-[26px] font-bold leading-[1.25] tracking-[-0.3px] text-white sm:text-[30px] md:text-[31px] lg:text-[32px]"></h2>
+            <h2 className="relative z-10 max-w-107.5 text-[28px] font-bold leading-tight text-white md:text-[42px]">
+              Talk With Us About Your Product Or Platform
+            </h2>
           </div>
         </div>
       </section>
