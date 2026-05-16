@@ -2,51 +2,47 @@ import Image from "next/image";
 
 export function AboutIntroSection() {
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
-      <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-10 px-5 sm:px-6 md:px-10 lg:h-[380px] lg:flex-row lg:items-stretch lg:justify-between lg:gap-12">
-        
+    <section className="w-full bg-[#f5f5f5] py-14 sm:py-16 lg:py-20">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-8 sm:px-14 lg:flex-row lg:justify-between lg:gap-20">
+
         {/* LEFT CONTENT */}
-        <div className="order-2 flex w-full flex-col justify-between text-center lg:order-1 lg:w-[48%] lg:text-left">
-          <div>
-            <h2 className="text-[28px] font-bold leading-tight text-[#333333] sm:text-[34px] md:text-[38px]">
-              About Us
-            </h2>
+        <div className="w-full lg:w-[46%]">
+          <h2 className="text-[34px] font-bold leading-tight text-[#333333]">
+            About Us
+          </h2>
 
-            <p className="mx-auto mt-4 max-w-[560px] text-[14px] leading-[1.65] text-[#333333] sm:text-[15px] md:text-[16px] lg:mx-0">
-              Tevso helps startups and growing businesses build, improve, and
-              scale digital products with stronger technical foundations. We work
-              across SaaS, internal systems, AI-enabled workflows, integrations,
-              and modernization projects, bringing together technical execution,
-              architecture thinking, and commercial awareness.
-            </p>
+          <p className="mt-4 lg:max-w-117.5 text-sm leading-[1.7] text-[#444444]">
+            Tevso helps startups and growing businesses build, improve, and
+            scale digital products with stronger technical foundations. We work
+            across SaaS, internal systems, AI-enabled workflows, integrations,
+            and modernization projects, bringing together technical execution,
+            architecture thinking, and commercial awareness.
+          </p>
 
-            <p className="mx-auto mt-4 max-w-[560px] text-[14px] leading-[1.65] text-[#333333] sm:text-[15px] md:text-[16px] lg:mx-0">
-              We are best suited to teams that value clear communication,
-              practical thinking, hands-on ownership, and systems built for
-              long-term usefulness rather than short-term patchwork.
-            </p>
+          <p className="mt-4 lg:max-w-117.5 text-sm leading-[1.7] text-[#444444]">
+            We are best suited to teams that value clear communication,
+            practical thinking, hands-on ownership, and systems built for
+            long-term usefulness rather than short-term patchwork.
+          </p>
 
-            <p className="mx-auto mt-4 max-w-[560px] text-[14px] leading-[1.65] text-[#333333] sm:text-[15px] md:text-[16px] lg:mx-0">
-              That positioning is already present in your profile and should stay
-              central.
-            </p>
-          </div>
+          <p className="mt-4 lg:max-w-117.5 text-sm leading-[1.7] text-[#444444]">
+            That positioning is already present in your profile and should stay
+            central.
+          </p>
 
-          <div className="mt-7 flex justify-center lg:mt-0 lg:justify-start">
-            <button className="w-full max-w-[240px] rounded-md bg-[#2d22e8] px-5 py-3 text-[13px] font-semibold text-white transition hover:bg-[#1d16bd] sm:w-auto sm:max-w-none">
-              Discuss an AI use case
-            </button>
-          </div>
+          <button className="mt-4 rounded-sm bg-[#2d22e8] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1f17b8]">
+            Discuss an AI use case
+          </button>
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="order-1 w-full lg:order-2 lg:w-[48%]">
-          <div className="relative h-[300px] w-full overflow-hidden rounded-[14px] shadow-md sm:h-[340px] md:h-[360px] lg:h-full">
+        <div className="w-full lg:w-auto">
+          <div className="relative h-62.5 w-full overflow-hidden rounded-xl sm:h-80 lg:h-97.5 lg:w-107.5">
             <Image
               src="/Rectangle 22357 (7).png"
               alt="About Tevso Team"
               fill
-              className="object-cover object-center"
+              className="object-cover"
               priority
             />
           </div>
