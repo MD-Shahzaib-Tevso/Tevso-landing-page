@@ -1,11 +1,11 @@
-import { ContactFormSection } from "@/components/sections/ContactFormSection";
 import { ContactHeroSection } from "@/components/sections/ContactHeroSection";
+import { ContactSectionSS } from "@/components/ContactSectionSS";
 
 export default function ContactPage() {
   return (
     <>
       <ContactHeroSection />
-      <ContactFormSection />
+      <ContactSectionSS />
     </>
   );
 }
