@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
   Briefcase,
@@ -7,6 +8,10 @@ import {
   Sparkles,
   BarChart3,
 } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const cards = [
   {
@@ -47,6 +52,32 @@ const cards = [
   },
 ];
 
+function Card({
+  icon,
+  title,
+  description,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="h-full rounded-2xl bg-[#4330f1] p-5 text-white shadow-[0_8px_20px_rgba(67,48,241,0.22)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(67,48,241,0.28)]">
+      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10">
+        {icon}
+      </div>
+
+      <h3 className="mb-3 text-base font-semibold leading-snug">
+        {title}
+      </h3>
+
+      <p className="text-[13px] leading-[1.7] text-white/90">
+        {description}
+      </p>
+    </div>
+  );
+}
+
 export function AiSolutionsUntappedSection() {
   return (
     <section className="relative w-full overflow-hidden bg-[#f4f4f7] py-12 sm:py-14 md:py-16 lg:py-20">
@@ -80,31 +111,36 @@ export function AiSolutionsUntappedSection() {
           </h2>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+        {/* MOBILE SLIDER */}
+        <div className="block sm:hidden">
+          <Swiper
+            modules={[Pagination]}
+            slidesPerView={1}
+            centeredSlides
+            loop
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            spaceBetween={10}
+            pagination={{ clickable: true }}
+            className="[&_.swiper-pagination]:relative! [&_.swiper-pagination]:mt-6! [&_.swiper-pagination-bullet-active]:bg-[#3924e8]!"
+          >
+            {cards.map((card, index) => (
+              <SwiperSlide key={index}>
+                <Card {...card} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* DESKTOP GRID */}
+        <div className="hidden grid-cols-1 gap-5 sm:grid sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
           {cards.map((card, index) => (
-            <div
-              key={index}
-              className="rounded-[16px] bg-[#4330f1] p-5 text-white shadow-[0_8px_20px_rgba(67,48,241,0.22)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(67,48,241,0.28)] sm:p-5 md:p-6 lg:p-5"
-            >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 sm:h-9 sm:w-9">
-                {card.icon}
-              </div>
-
-              <h3 className="mb-3 text-[16px] font-semibold leading-snug sm:text-[17px] lg:text-[16px]">
-                {card.title}
-              </h3>
-
-              <p className="text-[13px] leading-[1.7] text-white/90 sm:text-[13px] lg:text-[12.5px] lg:leading-[1.6]">
-                {card.description}
-              </p>
-            </div>
+            <Card key={index} {...card} />
           ))}
         </div>
 
         {/* Quote box */}
         <div className="mt-7 sm:mt-8">
-          <div className="mx-auto max-w-[850px] rounded-2xl border border-white/75 bg-white/0 px-5 py-5 text-center shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5px] sm:px-6">
+          <div className="mx-auto max-w-212.5 rounded-2xl border border-white/75 bg-white/0 px-5 py-5 text-center shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5px] sm:px-6">
             <p className="text-[13px] italic leading-relaxed text-white sm:text-[14px]">
               AI is most valuable when it strengthens real operations, not when
               it is added as a trend. This mirrors the profile well.
