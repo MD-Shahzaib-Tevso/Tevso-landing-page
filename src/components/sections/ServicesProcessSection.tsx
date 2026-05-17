@@ -140,46 +140,48 @@ const servicesData = [
 export function ServicesProcessSection() {
   return (
     <section className="bg-[#f5f5f5] py-12 sm:py-16 lg:py-20">
-      <div className="mx-auto w-full max-w-6xl space-y-10 px-4 sm:px-14">
+      <div className="mx-auto w-full max-w-7xl space-y-20 px-8 sm:px-14">
         {servicesData.map((service, index) => {
           const reverseLayout = index % 2 !== 0;
 
           return (
             <div
               key={index}
-              className={`flex w-full flex-col gap-8 rounded-[20px] bg-[#f3f3f3] lg:gap-12 lg:p-10 ${reverseLayout ? "lg:flex-row-reverse lg:items-start" : "lg:flex-row lg:items-center"}`}
+              className={`flex w-full flex-col gap-8 rounded-[20px] bg-[#f3f3f3] lg:gap-12 lg:${reverseLayout ? "flex-row-reverse" : "flex-row"}`}
             >
               {/* IMAGE */}
               <div className="order-1 w-full lg:w-1/2">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  width={700}
-                  height={500}
-                  priority={index === 0}
-                  className="h-[260px] w-full rounded-[16px] object-cover sm:h-[340px] md:h-fit lg:h-fit"
-                />
+                <div className="relative h-[280px] w-full overflow-hidden rounded-2xl sm:h-[360px] lg:h-full lg:min-h-[520px]">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    priority={index === 0}
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
               </div>
 
               {/* CONTENT */}
-              <div className="order-2 w-full lg:w-1/2">
-                <h2 className="text-[24px] font-bold text-[#2b2b2b] sm:text-[32px]">
+              <div className="order-2 w-full lg:w-1/2 flex flex-col justify-between gap-3">
+                <h2 className="text-2xl font-bold text-[#2b2b2b] sm:text-3xl">
                   {service.title}
                 </h2>
 
                 {service.sections.map((item) => (
-                  <div key={item.heading} className="mt-5">
-                    <h3 className="text-base font-semibold text-[#3b32c4]">
+                  <div key={item.heading} className="flex flex-col gap-2">
+                    <h3 className="text-xl font-semibold text-[#3b32c4]">
                       {item.heading}
                     </h3>
-                    <p className="mt-1 text-sm leading-[1.7] text-[#555]">
+                    <p className="mt-1 text-base leading-[1.7] text-[#555]">
                       {item.text}
                     </p>
                   </div>
                 ))}
 
-                <div className="mt-5">
-                  <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0]">
+                <div>
+                  <button className="rounded-md bg-[#3924e8] px-8 py-4 text-base font-medium text-white transition hover:bg-[#2f1fd0]">
                     {service.button}
                   </button>
                 </div>
