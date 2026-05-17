@@ -204,7 +204,7 @@ export default function TechnologyShowcaseSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 md:items-stretch">
           {/* LEFT IMAGE */}
           <div className="success-animate relative hidden md:block">
-            <div className="relative h-full min-h-[240px] w-full">
+            <div className="relative h-full min-h-60 w-full">
               <Image
                 src="/technology-talk-with-us.png"
                 alt="Talk with us"
@@ -216,11 +216,18 @@ export default function TechnologyShowcaseSection() {
 
           <div className="success-animate relative flex min-h-45 items-center justify-center overflow-hidden bg-[#352FE1] px-6 py-10 text-center md:min-h-60 md:justify-start md:px-12 md:text-left">
 
-            <div className="pointer-events-none absolute -right-5 -top-12 text-[220px] font-bold text-white/5">
-              ”
+            {/* Right background logo pattern */}
+            <div className="pointer-events-none absolute right-0 top-1/2 z-0 -translate-y-1/2">
+              <Image
+                src="/Tevso-white-logo 1.png"
+                alt="Tevso background logo"
+                width={300}
+                height={500}
+                className="w-auto h-48 md:h-64"
+              />
             </div>
 
-            <h2 className="relative z-10 max-w-107.5 text-[28px] font-bold leading-tight text-white md:text-[42px]">
+            <h2 className="relative z-10 max-w-lg md:w-full lg:text-4xl md:text-3xl text-4xl font-bold leading-tight text-white">
               Talk With Us About Your Product Or Platform
             </h2>
           </div>

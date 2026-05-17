@@ -4,14 +4,14 @@ import Image from "next/image";
 export function HomeContactFormSection() {
   return (
     <section className="relative isolate overflow-hidden bg-[#321ee6] py-12 text-white sm:py-14 md:py-16 lg:py-20">
-      {/* Background logo */}
-      <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-end">
+      {/* Right background logo pattern */}
+      <div className="pointer-events-none absolute right-0 top-1/2 z-0 -translate-y-1/2 hidden lg:block">
         <Image
           src="/Tevso-white-logo 1.png"
-          alt="Background"
-          width={307}
-          height={525}
-          className="object-contain opacity-20"
+          alt="Tevso background logo"
+          width={300}
+          height={500}
+          className="h-80 w-auto md:h-105 lg:h-125"
         />
       </div>
 

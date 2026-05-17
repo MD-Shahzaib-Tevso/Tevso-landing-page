@@ -5,10 +5,16 @@ import Image from "next/image";
 export function AiSolutionsScenariosSection() {
   return (
     <section className="relative w-full overflow-hidden bg-[#3b22f4] py-12 md:py-16">
-      {/* Right background subtle pattern */}
-      <div className="absolute right-0 top-0 h-full w-[45%] opacity-15">
-        <div className="absolute -right-20 -top-20 h-[320px] w-[320px] rounded-full border-35 border-white/20" />
-        <div className="absolute right-10 top-10 h-[180px] w-[180px] rounded-full border-28 border-white/20" />
+
+      {/* Right background logo pattern */}
+      <div className="pointer-events-none absolute right-0 top-1/2 z-0 -translate-y-1/2 hidden lg:block">
+        <Image
+          src="/Tevso-white-logo 1.png"
+          alt="Tevso background logo"
+          width={300}
+          height={500}
+          className="h-80 w-auto md:h-105 lg:h-125"
+        />
       </div>
 
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col-reverse items-center justify-between gap-10 px-6 sm:px-8 lg:flex-row lg:px-14">
