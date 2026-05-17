@@ -1,0 +1,119 @@
+=========================================
+Folder Structure Follow for Tevso website:
+=========================================
+
+=========================================
+my-website/
+│── public/                        # static assets
+│   ├── images/
+│   │   ├── home/
+│   │   ├── about/
+│   │   ├── solutions/
+│   │   └── common/
+│   ├── icons/
+│   └── videos/
+│
+│── src/
+│   │
+│   ├── app/                      # Next.js App Router
+│   │   ├── layout.tsx
+│   │   ├── page.tsx              # Home
+│   │   ├── globals.css
+│   │   ├── loading.tsx
+│   │   ├── not-found.tsx
+│   │   │
+│   │   ├── solutions/
+│   │   │   └── page.tsx
+│   │   ├── case-studies/
+│   │   │   └── page.tsx
+│   │   ├── ai-enablement/
+│   │   │   └── page.tsx
+│   │   ├── how-we-work/
+│   │   │   └── page.tsx
+│   │   ├── about/
+│   │   │   └── page.tsx
+│   │   └── contact/
+│   │       └── page.tsx
+│   │
+│   ├── components/
+│   │   │
+│   │   ├── layout/               # global layout parts
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── MobileMenu.tsx
+│   │   │   └── PageWrapper.tsx
+│   │   │
+│   │   ├── shared/               # reusable UI
+│   │   │   ├── Button.tsx
+│   │   │   ├── Heading.tsx
+│   │   │   ├── Section.tsx
+│   │   │   ├── Container.tsx
+│   │   │   ├── Hero.tsx
+│   │   │   ├── CTA.tsx
+│   │   │   └── Marquee.tsx
+│   │   │
+│   │   ├── animations/           # reusable animation wrappers
+│   │   │   ├── FadeIn.tsx
+│   │   │   ├── RevealText.tsx
+│   │   │   ├── Parallax.tsx
+│   │   │   └── Stagger.tsx
+│   │   │
+│   │   └── ui/                   # primitive UI
+│   │       ├── Input.tsx
+│   │       ├── Modal.tsx
+│   │       └── Card.tsx
+│   │
+│   ├── features/                 # page-specific sections
+│   │   │
+│   │   ├── home/
+│   │   │   ├── sections/
+│   │   │   │   ├── Hero.tsx
+│   │   │   │   ├── Services.tsx
+│   │   │   │   ├── Testimonials.tsx
+│   │   │   │   └── CTA.tsx
+│   │   │   └── data.ts
+│   │   │
+│   │   ├── solutions/
+│   │   │   ├── sections/
+│   │   │   │   ├── Hero.tsx
+│   │   │   │   ├── SolutionsGrid.tsx
+│   │   │   │   └── Process.tsx
+│   │   │   └── data.ts
+│   │   │
+│   │   ├── case-studies/
+│   │   ├── ai-enablement/
+│   │   ├── how-we-work/
+│   │   ├── about/
+│   │   └── contact/
+│   │
+│   ├── hooks/
+│   │   ├── useGSAPFade.ts
+│   │   ├── useScrollTrigger.ts
+│   │   ├── useLenis.ts          # optional smooth scroll
+│   │   └── useMediaQuery.ts
+│   │
+│   ├── lib/
+│   │   ├── gsap.ts              # gsap setup/register plugins
+│   │   ├── constants.ts
+│   │   ├── helpers.ts
+│   │   └── seo.ts
+│   │
+│   ├── styles/
+│   │   ├── animations.css
+│   │   └── utilities.css
+│   │
+│   ├── types/
+│   │   ├── common.ts
+│   │   └── sections.ts
+│   │
+│   └── content/                 # CMS-like static content
+│       ├── navigation.ts
+│       ├── footer.ts
+│       └── seo.ts
+│
+│── tailwind.config.ts
+│── next.config.ts
+│── tsconfig.json
+│── package.json
+└── README.md
+=========================================
