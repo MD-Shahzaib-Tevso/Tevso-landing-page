@@ -11,7 +11,7 @@ export function AiSolutionsScenariosSection() {
         <div className="absolute right-10 top-10 h-[180px] w-[180px] rounded-full border-28 border-white/20" />
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-6xl flex-col-reverse items-center justify-between gap-10 px-6 sm:px-8 lg:flex-row lg:px-14">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col-reverse items-center justify-between gap-10 px-6 sm:px-8 lg:flex-row lg:px-14">
         {/* Left laptop image */}
         <div className="relative h-[220px] w-[220px] sm:h-[260px] sm:w-[260px] lg:h-[250px] lg:w-[500px]">
           <Image

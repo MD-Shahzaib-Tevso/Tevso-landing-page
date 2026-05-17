@@ -3,7 +3,7 @@ import Image from "next/image";
 export function AboutIntroSection() {
   return (
     <section className="w-full bg-[#f5f5f5] py-14 sm:py-16 lg:py-20">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 sm:px-10 lg:flex-row lg:items-stretch lg:justify-between lg:gap-20">
+      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 sm:px-10 lg:flex-row lg:items-stretch lg:justify-between lg:gap-20">
 
         {/* LEFT CONTENT */}
         <div className="flex w-full flex-col justify-between lg:w-[46%]">

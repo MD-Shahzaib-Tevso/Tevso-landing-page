@@ -15,7 +15,7 @@ export function ContactSectionSS() {
       <div className="absolute inset-0 z-0" />
 
       {/* MAIN CARD */}
-      <div className="relative z-10 mx-auto max-w-6xl rounded-[18px] border-2 border-[#311DE5] bg-white p-6 shadow-xl sm:p-8 md:rounded-[20px] md:border-[3px] md:p-10 lg:p-14">
+      <div className="relative z-10 mx-auto max-w-7xl rounded-[18px] border-2 border-[#311DE5] bg-white p-6 shadow-xl sm:p-8 md:rounded-[20px] md:border-[3px] md:p-10 lg:p-14">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
           {/* LEFT CONTENT */}
           <div className="text-center md:text-left">

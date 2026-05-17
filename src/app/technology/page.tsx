@@ -132,7 +132,7 @@ export default function TechnologyShowcaseSection() {
 
       {/* CORE PRINCIPLES */}
       <section className="stack-section-trigger relative w-full overflow-hidden bg-[#f3f3f3] py-12 md:py-16">
-        <div className="mx-auto max-w-6xl px-8 sm:px-14">
+        <div className="mx-auto max-w-7xl px-8 sm:px-14">
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             {/* text */}
             <div className="stack-section-animate w-full md:w-[48%]">
@@ -167,7 +167,7 @@ export default function TechnologyShowcaseSection() {
 
       {/* PROCESS STEPS */}
       <section className="platform-section-trigger pb-12 bg-[#f3f3f3] md:pb-16">
-        <div className="mx-auto max-w-6xl px-8 sm:px-14">
+        <div className="mx-auto max-w-7xl px-8 sm:px-14">
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             {/* image first desktop */}
             <div className="order-2 w-full md:order-1 md:w-[42%]">

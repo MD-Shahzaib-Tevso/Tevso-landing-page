@@ -16,7 +16,7 @@ export function HomeContactFormSection() {
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-8 sm:px-14 md:gap-12 lg:grid-cols-2 lg:gap-14">
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-8 sm:px-14 md:gap-12 lg:grid-cols-2 lg:gap-14">
         {/* LEFT IMAGE */}
         <div className="order-2 flex justify-center lg:order-1 lg:justify-start">
           <Image

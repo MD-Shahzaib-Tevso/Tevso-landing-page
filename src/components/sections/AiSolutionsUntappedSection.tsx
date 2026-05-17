@@ -103,7 +103,7 @@ export function AiSolutionsUntappedSection() {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-8 sm:px-14">
+      <div className="relative z-10 mx-auto max-w-7xl px-8 sm:px-14">
         {/* Heading */}
         <div className="mb-7 text-center sm:mb-8 md:mb-10">
           <h2 className="text-[26px] font-semibold leading-tight tracking-[-0.02em] text-[#2f2f2f] sm:text-[30px] md:text-[36px]">

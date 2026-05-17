@@ -23,7 +23,7 @@ export function Footer() {
 
   return (
     <footer className="bg-[#f7f7f7] pt-12 md:pt-20">
-      <div className="mx-auto max-w-6xl px-8 sm:px-14">
+      <div className="mx-auto max-w-7xl px-8 sm:px-14">
 
         {/* TOP */}
         <div className="flex flex-col gap-8 lg:flex-row lg:justify-between">

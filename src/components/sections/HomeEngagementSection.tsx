@@ -12,7 +12,7 @@ const points = [
 export function HomeEngagementSection() {
   return (
     <section className="bg-[#f7f7f7] py-12 sm:py-14 md:py-16 lg:py-10">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-8 px-8 sm:px-14 md:gap-12 lg:grid-cols-[480px_1fr] lg:gap-14">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-stretch gap-8 px-8 sm:px-14 md:gap-12 lg:grid-cols-[480px_1fr] lg:gap-14">
         {/* LEFT IMAGE */}
         <div className="hidden lg:block relative h-[220px] w-full overflow-hidden rounded-[14px] shadow-md sm:h-[280px] md:h-[320px]">
           <Image
