@@ -78,7 +78,7 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`flex h-full items-center max-[1065px]:text-xs text-sm font-normal transition-colors ${isActivePath(link.href) ? "text-white" : "text-white/90 hover:text-white"}`}>
+                  className={`flex h-full items-center max-[1065px]:text-xs text-sm font-normal transition-colors ${isActivePath(link.href) ? "text-white" : "text-white/80 hover:text-white"}`}>
                   <span className="relative inline-block">
                     {link.label}
                     {isActivePath(link.href) && (<span className="absolute bottom-[-24px] left-0 h-[4px] w-full rounded-t-full bg-white" />)}
