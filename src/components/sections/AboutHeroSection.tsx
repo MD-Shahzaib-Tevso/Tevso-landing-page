@@ -24,9 +24,9 @@ export function AboutHeroSection() {
       <div className="relative z-10 mx-auto w-full">
         {/* LEFT TEXT */}
         <div className="flex flex-col h-full w-full gap-5 max-w-[660px] items-start p-14">
-          <p className="text-[22px] font-medium uppercase tracking-wider text-white/55 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
+          {/* <p className="text-[22px] font-medium uppercase tracking-wider text-white/55 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
             About
-          </p>
+          </p> */}
 
           <h1 className="mt-4 text-[30px] font-semibold leading-[1.18] tracking-[-0.02em] text-white sm:text-[42px] md:text-[50px] lg:text-[58px]">
             A technical partner

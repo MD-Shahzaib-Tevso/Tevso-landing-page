@@ -32,7 +32,7 @@ export function ContactSectionSS() {
             </p>
 
             {/* CONTACT INFO */}
-            <div className="mx-auto mt-6 max-w-[360px] space-y-3 text-[14px] text-[#333] md:mx-0">
+            <div className="mx-auto mt-6 max-w-90 space-y-3 text-[14px] text-[#333] md:mx-0">
               <a
                 href="tel:+447400714002"
                 className="flex items-center justify-center gap-3 rounded-md bg-[#f4f4f6] px-4 py-3 transition hover:bg-[#eeeeff] md:justify-start"

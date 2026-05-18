@@ -109,13 +109,13 @@ export function HomeHeroSection() {
 
           <div className="fade-up-element flex items-center flex-wrap gap-4">
             <Link href="/contact" className="no-underline">
-              <button className="bg-white p-4 text-sm font-normal text-[#352FE1] transition rounded-md hover:bg-white/90 cursor-pointer">
+              <button className="bg-white p-4 text-sm font-medium text-[#352FE1] transition rounded-md hover:bg-white/90 cursor-pointer">
                 Book a discovery call
               </button>
             </Link>
 
             <Link href="/case-studies" className="no-underline">
-              <button className="bg-white p-4 text-sm font-normal text-[#352FE1] transition rounded-md hover:bg-white/90 cursor-pointer">
+              <button className="bg-white p-4 text-sm font-medium text-[#352FE1] transition rounded-md hover:bg-white/90 cursor-pointer">
                 View case studies
               </button>
             </Link>

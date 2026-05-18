@@ -23,9 +23,9 @@ export function ContactHeroSection() {
       <div className="relative z-10 mx-auto w-full">
         {/* LEFT TEXT */}
         <div className="flex flex-col h-full w-full gap-5 max-w-[660px] items-start p-14">
-          <p className="text-[22px] font-medium uppercase tracking-wider text-white/55 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
+          {/* <p className="text-[22px] font-medium uppercase tracking-wider text-white/55 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
             CONTACT
-          </p>
+          </p> */}
 
           <h1 className="mt-4 text-3xl font-bold leading-tight text-white drop-shadow-[0_3px_8px_rgba(0,0,0,0.7)] sm:text-4xl lg:text-5xl">
             Let’s discuss what

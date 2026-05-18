@@ -26,9 +26,9 @@ export function AiSolutionsHeroSection() {
       {/* Content */}
       <div className="relative z-10 mx-auto w-full">
         <div className="flex flex-col h-full w-full gap-5 items-start p-14">
-          <p className="text-[22px] font-medium uppercase tracking-wider text-white/55 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
+          {/* <p className="text-[22px] font-medium uppercase tracking-wider text-white/55 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
             AI ENABLEMENT
-          </p>
+          </p> */}
 
           <h2 className="max-w-[700px] text-[36px] font-normal leading-normal text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)] sm:text-[48px] md:text-[56px]">
             Add AI where it improves real systems
@@ -40,7 +40,7 @@ export function AiSolutionsHeroSection() {
           </p>
 
           <Link href="/contact" className="no-underline">
-            <button className="bg-white p-4 text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90 cursor-pointer">
+            <button className="bg-white p-4 text-sm font-medium text-[#352FE1] transition rounded-md hover:bg-white/90 cursor-pointer">
               Discuss an AI use case
             </button>
           </Link>
