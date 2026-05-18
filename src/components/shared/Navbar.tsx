@@ -51,7 +51,7 @@ export function Navbar() {
           <div className="flex items-center rounded-bl-[28px] py-3 px-6 bg-white gap-8 text-[#352FE1]">
             <a href="tel:+447400714002" className="flex items-center justify-center gap-2 text-sm font-normal leading-none"            >
               <Image
-                src="navbar/phone.svg"
+                src="/navbar/phone.svg"
                 alt="Phone"
                 width={14}
                 height={14}
@@ -61,7 +61,7 @@ export function Navbar() {
             </a>
             <a href="mailto:contact@tevsotech.com" className="flex items-center gap-2 text-sm font-normal leading-none">
               <Image
-                src="navbar/email.svg"
+                src="/navbar/email.svg"
                 alt="Phone"
                 width={14}
                 height={14}
