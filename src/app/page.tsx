@@ -52,7 +52,8 @@ export default function HomePage() {
           scrollTrigger: {
             trigger: section,
             start: "top 80%",
-            toggleActions: "play none none none",
+            // toggleActions: "play none none none",
+            once: true,
           },
           y: 80,
           opacity: 0,
