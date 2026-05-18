@@ -8,69 +8,6 @@ import "swiper/css/pagination";
 import Link from "next/link";
 import { CASE_STUDIES } from "./caseStudies";
 
-// const CASE_STUDIES = [
-//   {
-//     title: "24/7 Digital Veterinary Care Platform",
-//     slug: "digital-veterinary-care-platform",
-//     image: "/5 1.png",
-//     alt: "24/7 Digital Veterinary Care Platform",
-//     description:
-//       "Veterinary clinics needed a way to offer continuous care without overloading staff or infrastructure. We developed a white label digital platform that allows clinics to provide round the clock virtual consultations under their own brand, connecting pet parents with licensed veterinarians seamlessly.",
-//     challenge:
-//       "Clinics could not scale consultation availability without hiring more staff or building costly technology. They also lacked a unified system for scheduling, payments, and emergency care.",
-//     approach:
-//       "Simple, intuitive, and trust-building experiences for pet parents. Clinics get full operational control through branded dashboards with insights and metrics for decision making.",
-//   },
-//   {
-//     title: "Online Pet Pharmacy Platform",
-//     slug: "online-pet-pharmacy-platform",
-//     image: "/4 1.png",
-//     alt: "Online Pet Pharmacy Platform",
-//     description:
-//       "Veterinary businesses needed a scalable platform to sell medications online while ensuring compliance. We built a white label pharmacy platform that manages OTC and prescription medications, logistics, payments, and regulatory workflows.",
-//     challenge:
-//       "Online pharmacy operations are complex due to compliance, tax handling, courier integration, and order automation. Many clinics lacked the technical capability to manage these efficiently.",
-//     approach:
-//       "Frictionless checkout experience, prescription upload and validation, real-time order tracking, and pharmacy dashboards for operational insights.",
-//   },
-//   {
-//     title: "Tenant Referencing and Verification Platform",
-//     slug: "tenant-referencing-and-verification-platform",
-//     image: "/1 9.png",
-//     alt: "Tenant Referencing and Verification Platform",
-//     description:
-//       "A platform automating tenant, guarantor, and property verification, streamlining compliance and referencing workflows for letting agents.",
-//     challenge:
-//       " Manual verification caused delays, errors, and compliance risks. Agents also relied on process applications quickly while ensuring credit and AML checks were accurate.",
-//     approach:
-//       "GuiGuided submission flows for applicants and real-time dashboards for agents. Transparent status tracking enhances user experience.",
-//   },
-//   {
-//     title: "Shipping and Clearing Platform",
-//     slug: "shipping-and-clearing-platform",
-//     image: "/2 5.png",
-//     alt: "Shipping and Clearing Platform",
-//     description:
-//       "A comprehensive platform centralizing shipping, clearing, and logistics         workflows across multiple regions.",
-//     challenge:
-//       "FFragmented operations and lack of real-time visibility caused delays and financial errors.",
-//     approach:
-//       "Workflow-based interface, financial dashboards, and real-time visibility for all operations.",
-//   },
-//   {
-//     title: "AI Marketing Automation Platform",
-//     slug: "ai-marketing-automation-platform",
-//     image: "/3 1.png",
-//     alt: "AI Marketing Automation Platform",
-//     description:
-//       "An AI-powered platform generating personalized campaigns from user behavior and engagement data, increasing conversions and revenue.",
-//     challenge:
-//       "Traditional marketing lacked personalization, required manual effort, and was difficult to scale.",
-//     approach:
-//       "Dynamic content generation with intuitive campaign builder, personalized experience per user segment, cost control for AI usage.",
-//   },
-// ];
-
 const CaseStudyCard = ({
   title,
   slug,
