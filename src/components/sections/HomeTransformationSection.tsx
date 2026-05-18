@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const caseStudies = [
   {
@@ -80,9 +81,11 @@ export function HomeTransformationSection() {
 
         {/* BUTTON */}
         <div className="mt-8 flex justify-center">
-          <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0]">
-            View all case studies
-          </button>
+          <Link href="/case-studies" className="no-underline">
+            <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0] cursor-pointer">
+              View all case studies
+            </button>
+          </Link>
         </div>
       </div>
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const servicesData = [
   {
@@ -147,7 +148,7 @@ export function ServicesProcessSection() {
           return (
             <div
               key={index}
-              className={`flex w-full flex-col gap-8 rounded-[20px] bg-[#f3f3f3] lg:gap-12 lg:${reverseLayout ? "flex-row-reverse" : "flex-row"}`}
+              className={`flex w-full flex-col gap-8 rounded-[20px] bg-[#f3f3f3] lg:gap-12 ${reverseLayout ? "lg:flex-row-reverse" : "lg:flex-row"}`}
             >
               {/* IMAGE */}
               <div className="order-1 w-full lg:w-1/2">
@@ -181,9 +182,11 @@ export function ServicesProcessSection() {
                 ))}
 
                 <div>
-                  <button className="rounded-md bg-[#3924e8] px-8 py-4 text-base font-medium text-white transition hover:bg-[#2f1fd0]">
-                    {service.button}
-                  </button>
+                  <Link href="/contact" className="no-underline">
+                    <button className="rounded-md bg-[#3924e8] px-8 py-4 text-base font-medium text-white transition hover:bg-[#2f1fd0] cursor-pointer">
+                      {service.button}
+                    </button>
+                  </Link>
                 </div>
 
               </div>

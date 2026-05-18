@@ -7,10 +7,10 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Solutions" },
+  { href: "/solutions", label: "Solutions" },
   { href: "/case-studies", label: "Case Studies" },
-  { href: "/ai-solutions", label: "AI Enablement" },
-  { href: "/technology", label: "How We Work" },
+  { href: "/ai-enablement", label: "AI Enablement" },
+  { href: "/how-we-work", label: "How We Work" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -88,7 +88,7 @@ export function Navbar() {
             </nav>
 
             <Link
-              href="/services"
+              href="/solutions"
               className="flex p-2 items-center justify-center bg-white max-[1065px]:text-xs text-sm font-medium text-[#352FE1] transition rounded-md hover:bg-white/90"
             >
               Explore Your Solution
@@ -171,7 +171,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/services"
+                href="/solutions"
                 onClick={closeMobileMenu}
                 className="flex h-10 items-center justify-center rounded-md bg-white text-sm font-semibold text-[#352FE1]"
               >

@@ -5,10 +5,10 @@ import Link from "next/link";
 export function Footer() {
   const websiteLinks = [
     { name: "Home", href: "/" },
-    { name: "Solutions", href: "/services" },
+    { name: "Solutions", href: "/solutions" },
     { name: "Case Studies", href: "/case-studies" },
-    { name: "AI Enablement", href: "/ai-solutions" },
-    { name: "How We Work", href: "/technology" },
+    { name: "AI Enablement", href: "/ai-enablement" },
+    { name: "How We Work", href: "/how-we-work" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -20,6 +20,8 @@ export function Footer() {
     "Application designing",
     "Application development",
   ];
+
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-[#f7f7f7] pt-12 md:pt-20">
@@ -170,7 +172,7 @@ export function Footer() {
         {/* BOTTOM */}
         <div className="mt-12 border-t border-[#dcdcdc] py-6">
           <p className="text-center text-[13px] text-[#666]">
-            © Copyright 2026 Tevso - All Rights Reserved.
+            © Copyright {currentYear} Tevso - All Rights Reserved.
           </p>
         </div>
       </div>

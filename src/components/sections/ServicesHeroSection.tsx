@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function ServicesHeroSection() {
   return (
@@ -32,9 +33,11 @@ export function ServicesHeroSection() {
             define the right technical approach to solve it.
           </p>
 
-          <button className="bg-white p-4 text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90">
-            Talk to Tevso
-          </button>
+          <Link href="/contact" className="no-underline">
+            <button className="bg-white p-4 text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90 cursor-pointer">
+              Talk to Tevso
+            </button>
+          </Link>
         </div>
       </div>
     </section>

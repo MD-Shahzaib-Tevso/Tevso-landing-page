@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function HomeFAQSection() {
   return (
@@ -31,11 +32,13 @@ export function HomeFAQSection() {
             delivery moving with structure and accountability.
           </p>
 
-           <div className="mt-6 flex">
-          <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0]">
-            Discuss your project
-          </button>
-        </div>
+          <div className="mt-6 flex">
+            <Link href="/contact" className="no-underline">
+              <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0] cursor-pointer">
+                Discuss your project
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -107,13 +108,17 @@ export function HomeHeroSection() {
           </p>
 
           <div className="fade-up-element flex items-center flex-wrap gap-4">
-            <button className="bg-white p-4 text-sm font-normal text-[#352FE1] transition rounded-md hover:bg-white/90">
-              Book a discovery call
-            </button>
+            <Link href="/contact" className="no-underline">
+              <button className="bg-white p-4 text-sm font-normal text-[#352FE1] transition rounded-md hover:bg-white/90 cursor-pointer">
+                Book a discovery call
+              </button>
+            </Link>
 
-            <button className="bg-white p-4 text-sm font-normal text-[#352FE1] transition rounded-md hover:bg-white/90">
-              View case studies
-            </button>
+            <Link href="/case-studies" className="no-underline">
+              <button className="bg-white p-4 text-sm font-normal text-[#352FE1] transition rounded-md hover:bg-white/90 cursor-pointer">
+                View case studies
+              </button>
+            </Link>
           </div>
         </div>
       </div>

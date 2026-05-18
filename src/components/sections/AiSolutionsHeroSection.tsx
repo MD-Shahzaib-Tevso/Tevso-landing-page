@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function AiSolutionsHeroSection() {
   return (
@@ -38,9 +39,11 @@ export function AiSolutionsHeroSection() {
             ways without rebuilding everything from scratch.
           </p>
 
-         <button className="bg-white p-4 text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90">
-            Discuss an AI use case
-          </button>
+          <Link href="/contact" className="no-underline">
+            <button className="bg-white p-4 text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90 cursor-pointer">
+              Discuss an AI use case
+            </button>
+          </Link>
         </div>
       </div>
     </section>

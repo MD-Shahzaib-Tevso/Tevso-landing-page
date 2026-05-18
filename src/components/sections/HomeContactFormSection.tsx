@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 export function HomeContactFormSection() {
   return (
@@ -45,13 +46,17 @@ export function HomeContactFormSection() {
           </p>
 
           <div className="mt-7 flex flex-col items-center gap-3 sm:mt-8 sm:flex-row sm:justify-center sm:gap-5 lg:justify-start">
-            <button className="w-full max-w-[260px] rounded-md bg-white px-6 py-3 text-sm font-medium text-[#321ee6] transition hover:bg-white/90 sm:w-auto">
-              Book a discovery call
-            </button>
+            <Link href="/contact" className="no-underline">
+              <button className="w-full max-w-[260px] rounded-md bg-white px-6 py-3 text-sm font-medium text-[#321ee6] transition hover:bg-white/90 sm:w-auto cursor-pointer">
+                Book a discovery call
+              </button>
+            </Link>
 
-            <button className="w-full max-w-[260px] rounded-md border border-white px-6 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-[#321ee6] sm:w-auto">
-              Send us your requirements
-            </button>
+            <Link href="/contact" className="no-underline">
+              <button className="w-full max-w-[260px] rounded-md border border-white px-6 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-[#321ee6] sm:w-auto cursor-pointer">
+                Send us your requirements
+              </button>
+            </Link>
           </div>
         </div>
       </div>

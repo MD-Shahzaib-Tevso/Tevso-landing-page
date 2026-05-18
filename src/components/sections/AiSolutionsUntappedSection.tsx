@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 const cards = [
   {
@@ -150,9 +151,11 @@ export function AiSolutionsUntappedSection() {
 
         {/* Bottom button */}
         <div className="mt-7 flex justify-center sm:mt-8">
-          <button className="bg-white p-4 text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90">
-            Discuss an AI opportunity
-          </button>
+          <Link href="/contact" className="no-underline">
+            <button className="bg-white p-4 text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90 cursor-pointer">
+              Discuss an AI opportunity
+            </button>
+          </Link>
         </div>
       </div>
     </section>

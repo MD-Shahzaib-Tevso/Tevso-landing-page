@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export function AiSolutionsScenariosSection() {
   return (
@@ -40,9 +41,11 @@ export function AiSolutionsScenariosSection() {
             whether AI is the right lever and how to add it without disruption.
           </p>
 
-          <button className="px-4 py-3 bg-white text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90">
-            Discuss an AI use case
-          </button>
+          <Link href="/contact" className="no-underline">
+            <button className="px-4 py-3 bg-white text-sm font-semibold text-[#352FE1] transition rounded-md hover:bg-white/90 cursor-pointer">
+              Discuss an AI use case
+            </button>
+          </Link>
         </div>
       </div>
     </section>

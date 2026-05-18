@@ -22,7 +22,7 @@ export function ServiceDetailsSidebar() {
           {services.map((service) => (
             <Link
               key={service.slug}
-              href={`/services/${service.slug}`}
+              href={`/solutions/${service.slug}`}
               className="group flex items-center justify-between bg-white px-5 py-4 border border-[#E2E8F0] transition-all hover:border-[#3B32C4] hover:shadow-md"
             >
               <span className="font-body text-[14px] font-semibold text-[#64748B] transition-colors group-hover:text-[#3B32C4]">

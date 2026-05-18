@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const points = [
   "Founder-level ownership",
@@ -37,9 +38,11 @@ export function PracticalAISection() {
           </ul>
 
           <div className="mt-10 flex justify-start">
-            <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0]">
-              Explore AI enablement
-            </button>
+            <Link href="/ai-enablement" className="no-underline">
+              <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0] cursor-pointer">
+                Explore AI enablement
+              </button>
+            </Link>
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function AboutIntroSection() {
   return (
@@ -32,9 +33,11 @@ export function AboutIntroSection() {
             </p>
           </div>
 
-          <button className="mt-8 w-fit rounded-sm bg-[#2d22e8] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1f17b8]">
-            Discuss an AI use case
-          </button>
+          <Link href="/contact" className="no-underline">
+            <button className="mt-8 w-fit rounded-sm bg-[#2d22e8] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1f17b8] cursor-pointer">
+              Discuss an AI use case
+            </button>
+          </Link>
         </div>
 
         {/* RIGHT IMAGE */}

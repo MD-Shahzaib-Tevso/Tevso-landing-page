@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 const supportCards = [
   {
@@ -109,9 +110,11 @@ export function HomeCaseStudiesSection() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0]">
-            Plan Your Next Build
-          </button>
+          <Link href="/contact" className="no-underline">
+            <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0] cursor-pointer">
+              Plan Your Next Build
+            </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const points = [
   "Founder-level ownership and accountability",
@@ -49,9 +50,11 @@ export function HomeEngagementSection() {
           </div>
 
           <div className="mt-4 flex justify-start">
-            <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0]">
-              See how we work
-            </button>
+            <Link href="/how-we-work" className="no-underline">
+              <button className="rounded-md bg-[#3924e8] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#2f1fd0] cursor-pointer">
+                See how we work
+              </button>
+            </Link>
           </div>
         </div>
       </div>

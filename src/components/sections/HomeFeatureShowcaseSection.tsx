@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function HomeFeatureShowcaseSection() {
   return (
@@ -28,7 +29,7 @@ export function HomeFeatureShowcaseSection() {
               "Businesses need technical ownership without a full internal department",
             ].map((item, index) => (
               <li key={index} className="flex items-start gap-3">
-                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#4f46e5]" />
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#3924e8]" />
                 <span>{item}</span>
               </li>
             ))}
@@ -36,9 +37,11 @@ export function HomeFeatureShowcaseSection() {
 
           {/* BUTTON */}
           <div className="flex justify-start">
-            <button className="w-full max-w-[260px] rounded-md bg-[#4f46e5] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#4338ca] sm:w-auto sm:max-w-none">
-              Discuss your current setup
-            </button>
+            <Link href="/contact" className="no-underline">
+              <button className="w-full max-w-[260px] rounded-md bg-[#3924e8] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#2f1fd0] sm:w-auto sm:max-w-none cursor-pointer">
+                Discuss your current setup
+              </button>
+            </Link>
           </div>
         </div>
 
