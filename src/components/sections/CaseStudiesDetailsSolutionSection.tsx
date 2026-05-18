@@ -20,8 +20,8 @@ export function CaseStudiesDetailsSolutionSection({ study }: Props) {
               className="group relative w-full cursor-pointer overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-8 text-[#020617] shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-[#311EE6] hover:bg-[#311EE6] hover:shadow-2xl md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
             >
               {/* bottom diagonal overlay */}
-              <div className="absolute bottom-0 left-0 h-28 w-full bg-white/10 [clip-path:ellipse(82%_30%_at_79%_88%)]" />
-              <div className="absolute bottom-0 left-0 h-28 w-full bg-white/10 [clip-path:ellipse(82%_30%_at_25%_88%)]" />
+              <div className="absolute h-150 w-147.5 -bottom-120 right-0 -left-20 rounded-[350px] bg-white/10" />
+              <div className="absolute h-150 w-147.5 -bottom-120 -right-20 rounded-[350px] bg-white/10" />
 
               {/* bottom circles */}
               <div className="absolute -bottom-2 -right-10 h-20 w-20 rounded-full bg-white/50" />
