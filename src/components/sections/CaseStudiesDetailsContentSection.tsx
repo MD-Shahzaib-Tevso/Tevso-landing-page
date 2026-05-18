@@ -1,17 +1,18 @@
+import { CaseStudy } from "@/interfaces";
 import Image from "next/image";
 
-export function CaseStudiesDetailsContentSection({
-  overviewTitle,
-}: {
-  overviewTitle: string;
-}) {
+interface Props {
+  study: CaseStudy;
+}
+
+export function CaseStudiesDetailsContentSection({ study }: Props) {
   return (
     <section className="space-y-16">
       {/* Featured Mockup Image */}
-      <div className="relative w-full aspect-[16/9] md:aspect-[2/1] rounded-3xl overflow-hidden bg-[#E8E8E8] shadow-2xl flex items-center justify-center border-[4px] border-white max-w-6xl mx-auto">
+      <div className="relative w-full aspect-video md:aspect-2/1 rounded-3xl overflow-hidden bg-[#E8E8E8] shadow-2xl flex items-center justify-center border-[4px] border-white max-w-6xl mx-auto">
         <Image
-          src="/laptop.png" // Placeholder URL for laptop mockup
-          alt="Fortknow Application Mockup"
+          src={study?.image} // Placeholder URL for laptop mockup
+          alt={study?.alt}
           fill
           className="object-cover md:object-contain p-4 md:p-8"
           priority
@@ -19,14 +20,14 @@ export function CaseStudiesDetailsContentSection({
       </div>
 
       {/* Overview & Challenge Text */}
-      <div className="max-w-4xl mx-auto space-y-12 px-2">
+      <div className="space-y-12">
         {/* Overview */}
         <div className="space-y-6">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#311EE6] tracking-tight">
-            {overviewTitle}
+            {study?.title}
           </h2>
           <p className="font-body text-[15px] leading-relaxed text-[#64748B]">
-            Veterinary clinics needed a way to offer continuous care without overloading staff or infrastructure. We developed a white label digital platform that allows clinics to provide round the clock virtual consultations under their own brand, connecting pet parents with licensed veterinarians seamlessly.
+            {study?.description}
           </p>
         </div>
 
@@ -36,7 +37,7 @@ export function CaseStudiesDetailsContentSection({
             Client challenge
           </h3>
           <p className="font-body text-[15px] leading-relaxed text-[#64748B]">
-            Clinics could not scale consultation availability without hiring more staff or building costly technology. They also lacked a unified system for scheduling, payments, and emergency care.
+            {study?.challenge}
           </p>
         </div>
       </div>

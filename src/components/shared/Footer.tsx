@@ -43,7 +43,7 @@ export function Footer() {
             </Link>
 
             <div className="mt-6 flex items-center gap-5 md:mt-8">
-              <a href="/" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61590041300666" aria-label="Facebook">
                 <Image
                   src="/footer/facebook.svg"
                   alt="Facebook"
@@ -52,7 +52,7 @@ export function Footer() {
                 />
               </a>
 
-              <a href="/" aria-label="Instagram">
+              <a href="https://www.instagram.com/tevso.tech" aria-label="Instagram">
                 <Image
                   src="/footer/instagram.svg"
                   alt="Instagram"
@@ -61,7 +61,7 @@ export function Footer() {
                 />
               </a>
 
-              <a href="/" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/tevsotech/posts/?feedView=all" aria-label="LinkedIn">
                 <Image
                   src="/footer/linkedin.svg"
                   alt="LinkedIn"
