@@ -11,7 +11,7 @@ export default function FloatingCalendlyChat() {
     return (
         <>
             {/* Floating Button */}
-            <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-4">
+            <div className="fixed bottom-15 right-6 z-9999 flex flex-col items-end gap-4">
                 {/* Quick Action Bubble */}
                 {openBubble && (
                     <div className="animate-in fade-in slide-in-from-bottom-4 duration-300 rounded-2xl bg-white p-4 shadow-2xl border border-gray-200">
