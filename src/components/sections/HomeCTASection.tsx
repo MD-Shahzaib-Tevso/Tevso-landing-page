@@ -66,7 +66,7 @@ function StepCard({ step }: { step: (typeof steps)[0] }) {
 
 export function HomeCTASection() {
   return (
-    <section className="bg-[#f5f5f5] py-12 sm:py-14 md:py-16 lg:py-20">
+    <section className="bg-[#f5f5f5] py-10">
       <div className="mx-auto max-w-7xl px-8 sm:px-14">
         {/* Heading */}
         <h2 className="text-center text-[26px] font-bold leading-tight text-[#333] sm:text-[30px] md:text-[34px] lg:text-[42px]">

@@ -24,7 +24,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#f7f7f7] pt-12 md:pt-20">
+    <footer className="bg-[#f7f7f7] pt-10">
       <div className="mx-auto max-w-7xl px-8 sm:px-14">
 
         {/* TOP */}
@@ -43,7 +43,7 @@ export function Footer() {
             </Link>
 
             <div className="mt-6 flex items-center gap-5 md:mt-8">
-              <a href="#" aria-label="Facebook">
+              <a href="/" aria-label="Facebook">
                 <Image
                   src="/footer/facebook.svg"
                   alt="Facebook"
@@ -52,7 +52,7 @@ export function Footer() {
                 />
               </a>
 
-              <a href="#" aria-label="Instagram">
+              <a href="/" aria-label="Instagram">
                 <Image
                   src="/footer/instagram.svg"
                   alt="Instagram"
@@ -61,7 +61,7 @@ export function Footer() {
                 />
               </a>
 
-              <a href="#" aria-label="LinkedIn">
+              <a href="/" aria-label="LinkedIn">
                 <Image
                   src="/footer/linkedin.svg"
                   alt="LinkedIn"
@@ -170,7 +170,7 @@ export function Footer() {
         </div>
 
         {/* BOTTOM */}
-        <div className="mt-12 border-t border-[#dcdcdc] py-6">
+        <div className="mt-10 border-t border-[#dcdcdc] py-6">
           <p className="text-center text-[13px] text-[#666]">
             © Copyright {currentYear} Tevso - All Rights Reserved.
           </p>

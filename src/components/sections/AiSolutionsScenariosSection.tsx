@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function AiSolutionsScenariosSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#3b22f4] py-12 md:py-16">
+    <section className="relative w-full overflow-hidden bg-[#3b22f4] py-10">
 
       {/* Right background logo pattern */}
       <div className="pointer-events-none absolute right-0 top-1/2 z-0 -translate-y-1/2 hidden lg:block">

@@ -6,7 +6,7 @@ import { Phone, Mail } from "lucide-react";
 export function ContactSectionSS() {
   return (
     <section
-      className="relative overflow-hidden bg-cover bg-center bg-no-repeat px-8 py-12 sm:px-14 sm:py-14 md:py-16 lg:py-20 border-t border-[#ffffff]"
+      className="relative overflow-hidden bg-cover bg-center bg-no-repeat px-8 py-10 sm:px-14 border-t border-[#ffffff]"
       style={{
         backgroundImage: "url('/Background.png')",
       }}
@@ -56,19 +56,19 @@ export function ContactSectionSS() {
             <input
               type="text"
               placeholder="Name"
-              className="w-full border-b border-gray-300 bg-transparent py-3 text-[14px] outline-none placeholder:text-gray-400 focus:border-[#311DE5]"
+              className="w-full border-b border-gray-300 bg-transparent py-3 text-[14px] outline-none placeholder:text-gray-500 focus:border-[#311DE5]"
             />
 
             <input
               type="text"
               placeholder="Company Name"
-              className="w-full border-b border-gray-300 bg-transparent py-3 text-[14px] outline-none placeholder:text-gray-400 focus:border-[#311DE5]"
+              className="w-full border-b border-gray-300 bg-transparent py-3 text-[14px] outline-none placeholder:text-gray-500 focus:border-[#311DE5]"
             />
 
             <input
               type="email"
               placeholder="Email"
-              className="w-full border-b border-gray-300 bg-transparent py-3 text-[14px] outline-none placeholder:text-gray-400 focus:border-[#311DE5]"
+              className="w-full border-b border-gray-300 bg-transparent py-3 text-[14px] outline-none placeholder:text-gray-500 focus:border-[#311DE5]"
             />
 
             <select className="w-full border-b border-gray-300 bg-transparent py-3 text-[14px] text-gray-500 outline-none focus:border-[#311DE5]">

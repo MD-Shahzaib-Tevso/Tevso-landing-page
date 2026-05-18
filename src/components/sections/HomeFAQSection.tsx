@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function HomeFAQSection() {
   return (
-    <section className="bg-[#f7f7f7] py-12 sm:py-10 md:py-16">
+    <section className="bg-[#f7f7f7] py-10">
       <div className="mx-auto grid max-w-7xl px-8 sm:px-14 grid-cols-1 items-center gap-10 md:gap-16 lg:grid-cols-2">
         {/* LEFT IMAGE */}
         <div className="hidden lg:block relative h-[450px] overflow-hidden rounded-[14px]">

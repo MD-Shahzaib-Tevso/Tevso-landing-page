@@ -131,7 +131,7 @@ export default function TechnologyShowcaseSection() {
       </section>
 
       {/* CORE PRINCIPLES */}
-      <section className="stack-section-trigger relative w-full overflow-hidden bg-[#f3f3f3] py-12 md:py-16">
+      <section className="stack-section-trigger relative w-full overflow-hidden bg-[#f3f3f3] py-10">
         <div className="mx-auto max-w-7xl px-8 sm:px-14">
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             {/* text */}
@@ -166,7 +166,7 @@ export default function TechnologyShowcaseSection() {
       </section>
 
       {/* PROCESS STEPS */}
-      <section className="platform-section-trigger pb-12 bg-[#f3f3f3] md:pb-16">
+      <section className="platform-section-trigger bg-[#f3f3f3] pb-10">
         <div className="mx-auto max-w-7xl px-8 sm:px-14">
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             {/* image first desktop */}
@@ -214,7 +214,7 @@ export default function TechnologyShowcaseSection() {
             </div>
           </div>
 
-          <div className="success-animate relative flex min-h-45 items-center justify-center overflow-hidden bg-[#352FE1] px-6 py-10 text-center md:min-h-60 md:justify-start md:px-12 md:text-left">
+          <div className="success-animate relative flex min-h-45 items-center justify-center overflow-hidden bg-[#352FE1] px-6 md:py-24 py-10 text-center md:min-h-60 md:justify-start md:px-12 md:text-left">
 
             {/* Right background logo pattern */}
             <div className="pointer-events-none absolute right-0 top-1/2 z-0 -translate-y-1/2">
@@ -223,7 +223,7 @@ export default function TechnologyShowcaseSection() {
                 alt="Tevso background logo"
                 width={300}
                 height={500}
-                className="w-auto h-48 md:h-64"
+                className="w-auto h-48 md:h-80"
               />
             </div>
 

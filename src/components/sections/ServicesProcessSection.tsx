@@ -140,8 +140,8 @@ const servicesData = [
 
 export function ServicesProcessSection() {
   return (
-    <section className="bg-[#f5f5f5] py-12 sm:py-16 lg:py-20">
-      <div className="mx-auto w-full max-w-7xl space-y-20 px-8 sm:px-14">
+    <section className="bg-[#f5f5f5] py-10">
+      <div className="mx-auto w-full max-w-7xl space-y-15 px-8 sm:px-14">
         {servicesData.map((service, index) => {
           const reverseLayout = index % 2 !== 0;
 

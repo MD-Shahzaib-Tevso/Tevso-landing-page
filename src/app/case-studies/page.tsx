@@ -82,7 +82,7 @@ const CaseStudyCard = ({
   reverse: boolean;
 }) => {
   return (
-    <section className="bg-white py-8">
+    <section className="bg-white py-5">
       <div className="mx-auto w-full max-w-7xl px-8 sm:px-14">
         <div className="flex w-full flex-col overflow-hidden rounded-[26px] bg-linear-to-r from-[#eeeeee] via-[#f4f4f4] to-[#d7d4ff] px-6 py-7 lg:flex-row lg:items-center lg:px-8">
 
@@ -159,7 +159,7 @@ export default function CaseStudiesPage() {
   return (
     <main className="bg-white">
       <CaseStudiesHeroSection />
-      <div className="mt-8">
+      <div className="my-10">
 
         {/* MOBILE */}
         <section className="md:hidden">
@@ -171,6 +171,7 @@ export default function CaseStudiesPage() {
             centeredSlides
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
+            className="[&_.swiper-pagination]:relative! [&_.swiper-pagination]:mt-6! [&_.swiper-pagination-bullet-active]:bg-[#3924e8]!"
           >
             {CASE_STUDIES.map((item, i) => (
               <SwiperSlide key={i}>

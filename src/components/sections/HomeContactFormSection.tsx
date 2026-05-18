@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function HomeContactFormSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#321ee6] py-12 text-white sm:py-14 md:py-16 lg:py-20">
+    <section className="relative isolate overflow-hidden bg-[#321ee6] py-10 text-white">
       {/* Right background logo pattern */}
       <div className="pointer-events-none absolute right-0 top-1/2 z-0 -translate-y-1/2 hidden lg:block">
         <Image

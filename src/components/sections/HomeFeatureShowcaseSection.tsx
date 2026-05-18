@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function HomeFeatureShowcaseSection() {
   return (
-    <section className="bg-[#f5f6fa] py-12 sm:py-16 md:py-20 lg:py-24">
+    <section className="bg-[#f5f6fa] py-10">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-8 sm:px-14 lg:grid-cols-2 lg:gap-16">
         {/* LEFT CONTENT */}
         <div className="order-1 space-y-8 text-left">

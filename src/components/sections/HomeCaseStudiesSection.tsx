@@ -72,7 +72,7 @@ function SupportCard({ card }: { card: (typeof supportCards)[0] }) {
 
 export function HomeCaseStudiesSection() {
   return (
-    <section className="bg-[#f7f7f7] py-12 sm:py-14 md:py-16 lg:py-20">
+    <section className="bg-[#f7f7f7] py-10">
       <div className="mx-auto w-full max-w-7xl px-8 sm:px-14">
         <h2 className="mx-auto max-w-[760px] text-center text-[26px] font-bold leading-tight text-[#333] sm:text-[30px] md:text-[34px] lg:text-[42px]">
           Practical technical support for systems that matter

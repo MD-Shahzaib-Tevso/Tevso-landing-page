@@ -81,7 +81,7 @@ function Card({
 
 export function AiSolutionsUntappedSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#f4f4f7] py-12 sm:py-14 md:py-16 lg:py-20">
+    <section className="relative w-full overflow-hidden bg-[#f4f4f7] py-10">
       {/* Background Image */}
       <Image
         src="/Frame.png"
