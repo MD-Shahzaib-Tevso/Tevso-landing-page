@@ -40,14 +40,14 @@ export function CaseStudiesDetailsSolutionSection({ study }: Props) {
               </div>
 
               {/* content */}
-              <div className="relative z-10 space-y-4">
+              <div className="relative z-10 space-y-2">
                 <h3 className="min-h-14 font-heading text-[18px] font-bold leading-tight transition-colors duration-500 group-hover:text-white">
                   {card.title}
                 </h3>
 
-                {/* <p className="text-[13px] leading-relaxed text-[#64748B] transition-colors duration-500 group-hover:text-white/85">
+                <p className="text-[13px] leading-relaxed text-[#64748B] transition-colors duration-500 group-hover:text-white/85">
                   {card.desc}
-                </p> */}
+                </p>
               </div>
             </article>
           );
