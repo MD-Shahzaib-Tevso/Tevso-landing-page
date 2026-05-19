@@ -39,7 +39,7 @@ const steps = [
 
 function StepCard({ step }: { step: (typeof steps)[0] }) {
   return (
-    <div className="group relative min-h-[250px] w-full cursor-pointer rounded-2xl border border-[#e5e5e5] bg-white p-6 text-[#333] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-[#3924e8] hover:text-white hover:shadow-lg">
+    <div className="h-80 sm:h-auto group relative min-h-[250px] w-full cursor-pointer rounded-2xl border border-[#e5e5e5] bg-white p-6 text-[#333] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-[#3924e8] hover:text-white hover:shadow-lg">
       {/* Top Row */}
       <div className="flex items-center justify-between">
         <span className="text-[24px] font-bold transition-colors duration-300 group-hover:text-white">
@@ -76,17 +76,13 @@ export function HomeCTASection() {
         {/* Mobile Slider */}
         <div className="mt-8 block sm:hidden">
           <Swiper
-            modules={[Pagination, Autoplay]}
+            modules={[Pagination]}
             slidesPerView={1}
-            spaceBetween={20}
+            centeredSlides
             loop
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            spaceBetween={10}
+            pagination={{ clickable: true }}
             className="[&_.swiper-pagination]:relative! [&_.swiper-pagination]:mt-6! [&_.swiper-pagination-bullet-active]:bg-[#3924e8]!"
           >
             {steps.map((step) => (
