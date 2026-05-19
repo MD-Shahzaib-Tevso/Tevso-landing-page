@@ -63,7 +63,7 @@ function Card({
   description: string;
 }) {
   return (
-    <div className="h-full rounded-2xl bg-[#4330f1] p-5 text-white shadow-[0_8px_20px_rgba(67,48,241,0.22)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(67,48,241,0.28)]">
+    <div className="h-72 sm:h-auto rounded-2xl bg-[#4330f1] p-5 text-white shadow-[0_8px_20px_rgba(67,48,241,0.22)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(67,48,241,0.28)]">
       <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10">
         {icon}
       </div>
