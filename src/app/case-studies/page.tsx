@@ -1,8 +1,8 @@
 "use client";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { CaseStudiesHeroSection } from "@/components/sections/CaseStudiesHeroSection";
+import { FallbackImage } from "@/components/shared/FallbackImage";
 import "swiper/css";
 import "swiper/css/pagination";
 import Link from "next/link";
@@ -35,12 +35,13 @@ const CaseStudyCard = ({
           {/* LEFT IMAGE */}
           {!reverse && (
             <div className="flex w-full justify-center lg:w-[52%] lg:justify-start">
-              <Image
+              <FallbackImage
                 src={image}
                 alt={alt}
+                fallbackText={title}
                 width={560}
                 height={350}
-                className="lg:h-auto w-full h-87.5 lg:max-w-135 rounded-md object-cover lg:object-contain"
+                className="h-87.5 w-full rounded-md object-cover lg:h-auto lg:max-w-135 lg:object-contain"
                 priority
               />
             </div>
@@ -83,12 +84,13 @@ const CaseStudyCard = ({
 
           {reverse && (
             <div className="mt-8 flex w-full justify-center lg:mt-0 lg:w-[50%] lg:justify-end">
-              <Image
+              <FallbackImage
                 src={image}
                 alt={alt}
+                fallbackText={title}
                 width={560}
-                height={360}
-                className="lg:h-auto w-full h-87.5 lg:max-w-135 rounded-md object-cover lg:object-contain"
+                height={350}
+                className="h-87.5 w-full rounded-md object-cover lg:h-auto lg:max-w-135 lg:object-contain"
                 priority
               />
             </div>
