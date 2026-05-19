@@ -1,6 +1,6 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { SOLUTIONS } from "@/app/solutions/solutions";
 
 export function Footer() {
   const websiteLinks = [
@@ -11,14 +11,6 @@ export function Footer() {
     { name: "How We Work", href: "/how-we-work" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
-  ];
-
-  const services = [
-    "Website designing",
-    "Website development",
-    "Seo services",
-    "Application designing",
-    "Application development",
   ];
 
   const currentYear = new Date().getFullYear();
@@ -98,17 +90,17 @@ export function Footer() {
             {/* SERVICES */}
             <div className="min-w-[190px] max-[460px]:min-w-[120px]">
               <h3 className="text-[18px] max-[460px]:text-base font-bold text-[#222]">
-                Services
+                Solutions
               </h3>
 
               <ul className="mt-6 space-y-5 max-[460px]:space-y-3 text-[14px] text-[#555]">
-                {services.map((service) => (
-                  <li key={service}>
+                {SOLUTIONS.map((solution) => (
+                  <li key={solution.title}>
                     <Link
-                      href="#"
+                      href={`/solutions#${solution.title.toLowerCase().replace(/\s+/g, "-")}`}
                       className="transition hover:text-[#3924e8] max-[460px]:text-[12px]"
                     >
-                      {service}
+                      {solution.title}
                     </Link>
                   </li>
                 ))}

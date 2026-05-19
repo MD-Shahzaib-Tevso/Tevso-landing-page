@@ -23,6 +23,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* font-family: var(--font-lato), sans-serif; */
   font-family: 'Poppins', sans-serif;
