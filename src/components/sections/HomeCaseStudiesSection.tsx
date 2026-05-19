@@ -48,7 +48,7 @@ const supportCards = [
 
 function SupportCard({ card }: { card: (typeof supportCards)[0] }) {
   return (
-    <article className="group min-h-[250px] cursor-pointer rounded-2xl border border-[#e5e5e5] bg-white p-6 text-left text-[#333] shadow-[0_6px_16px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-[#3924e8] hover:text-white hover:shadow-xl">
+    <article className="h-80 sm:h-auto group min-h-[250px] cursor-pointer rounded-2xl border border-[#e5e5e5] bg-white p-6 text-left text-[#333] shadow-[0_6px_16px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-[#3924e8] hover:text-white hover:shadow-xl">
       <div className="mb-5 flex h-[52px] w-[52px] items-center justify-center rounded-xl bg-[#3924e8] transition-all duration-300 group-hover:scale-105 group-hover:bg-white">
         <Image
           src={card.icon}
@@ -81,17 +81,13 @@ export function HomeCaseStudiesSection() {
         {/* Mobile slider only */}
         <div className="mt-8 block sm:hidden">
           <Swiper
-            modules={[Pagination, Autoplay]}
+            modules={[Pagination]}
             slidesPerView={1}
-            spaceBetween={20}
+            centeredSlides
             loop
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            spaceBetween={10}
+            pagination={{ clickable: true }}
             className="[&_.swiper-pagination]:relative! [&_.swiper-pagination]:mt-6! [&_.swiper-pagination-bullet-active]:bg-[#3924e8]!"
           >
             {supportCards.map((card) => (
