@@ -3,7 +3,7 @@ export const SOLUTIONS = [
     {
         title: "Website Designing",
         button: "Design your website",
-        image: "/Rectangle 22357.png",
+        image: "/solution/web-design.png",
         sections: [
             {
                 heading: "Problem",
@@ -22,7 +22,7 @@ export const SOLUTIONS = [
     {
         title: "Website Development",
         button: "Build your website",
-        image: "/Rectangle 22357 (1).png",
+        image: "/solution/web-develop.png",
         sections: [
             {
                 heading: "Problem",
@@ -41,7 +41,7 @@ export const SOLUTIONS = [
     {
         title: "SEO Services",
         button: "Improve your rankings",
-        image: "/Rectangle 22357 (2).png",
+        image: "/solution/seo.png",
         sections: [
             {
                 heading: "Problem",
@@ -60,7 +60,7 @@ export const SOLUTIONS = [
     {
         title: "Application Designing",
         button: "Design your application",
-        image: "/Rectangle 22357 (6).png",
+        image: "/solution/app-design.png",
         sections: [
             {
                 heading: "Problem",
@@ -79,7 +79,7 @@ export const SOLUTIONS = [
     {
         title: "Application Development",
         button: "Develop your application",
-        image: "/Rectangle 22357 (5).png",
+        image: "/solution/app-develop.png",
         sections: [
             {
                 heading: "Problem",
