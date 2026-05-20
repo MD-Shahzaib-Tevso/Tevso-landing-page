@@ -20,12 +20,12 @@ export function HomeTransformationSection() {
                 className="w-[280px] flex-shrink-0 overflow-hidden rounded-[12px] border border-[#e5e5e5] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_35px_rgba(0,0,0,0.12)] sm:w-[260px] md:w-[270px] lg:w-[260px]"
               >
                 {/* IMAGE */}
-                <div className="relative h-[190px] w-full bg-[#f3f3f3] sm:h-[170px] md:h-[190px] lg:h-[140px]">
+                <div className="relative min-h-[190px] w-full bg-[#f3f3f3] sm:min-h-[170px] md:min-h-[190px] lg:min-h-[140px]">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-contain p-5 sm:p-4"
+                    className="object-cover"
                   />
                 </div>
 
