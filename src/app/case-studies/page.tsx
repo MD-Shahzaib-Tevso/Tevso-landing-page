@@ -41,7 +41,7 @@ const CaseStudyCard = ({
                 fallbackText={title}
                 width={560}
                 height={350}
-                className="h-87.5 w-full rounded-md object-cover lg:h-auto lg:max-w-135 lg:object-contain"
+                className="h-87.5 w-full rounded-3xl object-cover lg:h-auto lg:max-w-135 lg:object-contain"
                 priority
               />
             </div>
