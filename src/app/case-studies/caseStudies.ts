@@ -3,7 +3,7 @@ export const CASE_STUDIES = [
         title: "24/7 Digital Veterinary Care Platform",
         slug: "digital-veterinary-care-platform",
         image: "/case-studies/cs-1.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-1-1.png",
         alt: "24/7 Digital Veterinary Care Platform",
         description:
             "Veterinary clinics needed a way to offer continuous care without overloading staff or infrastructure. We developed a white label digital platform that allows clinics to provide round the clock virtual consultations under their own brand, connecting pet parents with licensed veterinarians seamlessly.",
@@ -42,7 +42,7 @@ export const CASE_STUDIES = [
         title: "Online Pet Pharmacy Platform",
         slug: "online-pet-pharmacy-platform",
         image: "/case-studies/cs-2.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-2-1.png",
         alt: "Online Pet Pharmacy Platform",
         description:
             "Veterinary businesses needed a scalable platform to sell medications online while ensuring compliance. We built a white label pharmacy platform that manages OTC and prescription medications, logistics, payments, and regulatory workflows.",
@@ -81,7 +81,7 @@ export const CASE_STUDIES = [
         title: "Energy and Utility Switching Platform",
         slug: "energy-and-utility-switching-platform",
         image: "/case-studies/cs-11.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-11-1.png",
         alt: "Energy and Utility Switching Platform",
         description:
             "Partners wanted to offer energy switching services under their own brand without building complex supplier integrations. We created a white label platform that automates switching and partner onboarding.",
@@ -116,7 +116,7 @@ export const CASE_STUDIES = [
         title: "Tenant Referencing and Verification Platform",
         slug: "tenant-referencing-and-verification-platform",
         image: "/case-studies/cs-4.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-4-1.png",
         alt: "Tenant Referencing and Verification Platform",
         description:
             "A platform automating tenant, guarantor, and property verification, streamlining compliance and referencing workflows for letting agents.",
@@ -151,7 +151,7 @@ export const CASE_STUDIES = [
         title: "Legacy System Modernization",
         slug: "legacy-system-modernization",
         image: "/case-studies/cs-9.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-9-1.png",
         alt: "Legacy System Modernization",
         description:
             "We modernized a 2002 legacy system into a scalable, secure, and maintainable architecture, enabling uninterrupted business operations.",
@@ -186,7 +186,7 @@ export const CASE_STUDIES = [
         title: "Community Mobile Application",
         slug: "community-mobile-application",
         image: "/case-studies/cs-8.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-8-1.png",
         alt: "Community Mobile Application",
         description:
             "A mobile application delivering daily community content and utilities for over 200,000 users. It focuses on notifications, location-based services, and easy access to community resources.",
@@ -221,7 +221,7 @@ export const CASE_STUDIES = [
         title: "Resume Builder and Job Platform",
         slug: "resume-builder-and-job-platform",
         image: "/case-studies/cs-7.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-7-1.png",
         alt: "Resume Builder and Job Platform",
         description:
             "A platform connecting applicants and employers through structured resume building and hiring workflows. Employers can discover talent and communicate directly with candidates.",
@@ -256,7 +256,7 @@ export const CASE_STUDIES = [
         title: "GDPR Compliance Implementation",
         slug: "gdpr-compliance-implementation",
         image: "/case-studies/cs-6.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-6-1.png",
         alt: "GDPR Compliance Implementation",
         description:
             "Implemented GDPR compliance measures for regulated markets, ensuring proper handling of user data.",
@@ -291,7 +291,7 @@ export const CASE_STUDIES = [
         title: "Security Code Audit",
         slug: "security-code-audit",
         image: "/case-studies/cs-13.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-13-1.png",
         alt: "Security Code Audit",
         description:
             "A comprehensive security audit aligned with industry best practices to identify vulnerabilities and improve system security.",
@@ -326,7 +326,7 @@ export const CASE_STUDIES = [
         title: "Digital Advertising Platform",
         slug: "digital-advertising-platform",
         image: "/case-studies/cs-10.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-10-1.png",
         alt: "Digital Advertising Platform",
         description:
             "A platform for managing multi-location digital ad campaigns with automated billing and reporting.",
@@ -361,7 +361,7 @@ export const CASE_STUDIES = [
         title: "Logistics and Transportation Platform",
         slug: "logistics-and-transportation-platform",
         image: "/case-studies/cs-3.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-3-1.png",
         alt: "Logistics and Transportation Platform",
         description:
             "A platform providing end-to-end logistics management with real-time tracking and operational control.",
@@ -396,7 +396,7 @@ export const CASE_STUDIES = [
         title: "Shipping and Clearing Platform",
         slug: "shipping-and-clearing-platform",
         image: "/case-studies/cs-12.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-12-1.png",
         alt: "Shipping and Clearing Platform",
         description:
             "A comprehensive platform centralizing shipping, clearing, and logistics workflows across multiple regions.",
@@ -431,7 +431,7 @@ export const CASE_STUDIES = [
         title: "Fitness Training Platform",
         slug: "fitness-training-platform",
         image: "/case-studies/cs-5.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-5-1.png",
         alt: "Fitness Training Platform",
         description:
             "A subscription-based platform delivering structured workout programs with remote engagement and video tutorials.",
@@ -466,7 +466,7 @@ export const CASE_STUDIES = [
         title: "Utility Notification System",
         slug: "utility-notification-system",
         image: "/case-studies/cs-14.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-14-1.png",
         alt: "Utility Notification System",
         description:
             "A high-volume communication platform for utility suppliers and switching services to manage notifications reliably.",
@@ -501,7 +501,7 @@ export const CASE_STUDIES = [
         title: "AI Marketing Automation Platform",
         slug: "ai-marketing-automation-platform",
         image: "/case-studies/cs-15.png",
-        previewImage: "/case-studies/cs-0-1.png",
+        previewImage: "/case-studies/cs-15-1.png",
         alt: "AI Marketing Automation Platform",
         description:
             "An AI-powered platform generating personalized campaigns from user behavior and engagement data, increasing conversions and revenue.",

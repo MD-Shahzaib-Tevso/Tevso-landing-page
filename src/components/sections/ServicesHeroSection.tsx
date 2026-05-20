@@ -7,7 +7,7 @@ export function ServicesHeroSection() {
       {/* BACKGROUND */}
       <div className="absolute inset-0">
         <Image
-          src="/Rectangle 2340.png"
+          src="/solution/solution-hero.png"
           alt="Solutions Background"
           fill
           priority

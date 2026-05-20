@@ -9,13 +9,13 @@ export function CaseStudiesDetailsContentSection({ study }: Props) {
   return (
     <section className="space-y-16">
       {/* Featured Mockup Image */}
-      <div className="relative w-full aspect-video md:aspect-2/1 rounded-3xl overflow-hidden bg-[#E8E8E8] shadow-2xl flex items-center justify-center border-[4px] border-white max-w-6xl mx-auto">
+      <div className="relative w-full aspect-video md:aspect-2/1 rounded-3xl overflow-hidden bg-[#E8E8E8] shadow-2xl flex items-center justify-center max-w-6xl mx-auto">
         <FallbackImage
-          src={study?.image} // Placeholder URL for laptop mockup
+          src={study?.previewImage} // Placeholder URL for laptop mockup
           alt={study?.alt}
           fill
           fallbackText={study?.title}
-          className="object-cover md:object-contain p-4 md:p-8"
+          className="object-cover md:object-cover rounded-3xl"
           priority
         />
       </div>

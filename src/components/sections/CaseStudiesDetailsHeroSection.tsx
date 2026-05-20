@@ -6,7 +6,7 @@ export function CaseStudiesDetailsHeroSection({ title }: { title: string }) {
       {/* Background Image Layer */}
       <div className="absolute inset-0 z-0 bg-[#020617]">
         <Image
-          src="/case-study-hero-bg.png" // Placeholder URL for office background
+          src="/case-studies/case-study-detail-hero.png" // Placeholder URL for office background
           alt="Case Study Hero Background"
           fill
           priority

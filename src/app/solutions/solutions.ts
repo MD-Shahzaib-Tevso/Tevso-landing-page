@@ -3,7 +3,7 @@ export const SOLUTIONS = [
     {
         title: "Website Designing",
         button: "Design your website",
-        image: "/solution/web-design.png",
+        image: "/solution/web-design-new.png",
         sections: [
             {
                 heading: "Problem",
@@ -98,7 +98,7 @@ export const SOLUTIONS = [
     {
         title: "SaaS Product Development",
         button: "Discuss your product",
-        image: "/Rectangle 22357.png",
+        image: "/solution/saas.png",
         sections: [
             {
                 heading: "Problem",
