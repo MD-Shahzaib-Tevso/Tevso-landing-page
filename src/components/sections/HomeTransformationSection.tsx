@@ -17,10 +17,10 @@ export function HomeTransformationSection() {
             {CASE_STUDIES.map((item, index) => (
               <article
                 key={`${item.title}-${index}`}
-                className="w-[280px] flex-shrink-0 overflow-hidden rounded-[12px] border border-[#e5e5e5] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_35px_rgba(0,0,0,0.12)] sm:w-[260px] md:w-[270px] lg:w-[260px]"
+                className="w-65 shrink-0 overflow-hidden rounded-xl border border-[#e5e5e5] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_35px_rgba(0,0,0,0.12)] sm:w-60 md:w-62.5 lg:w-62.5 max-h-90"
               >
                 {/* IMAGE */}
-                <div className="relative min-h-[190px] w-full bg-[#f3f3f3] sm:min-h-[170px] md:min-h-[190px] lg:min-h-[140px]">
+                <div className="relative h-44 w-full bg-[#f3f3f3] sm:h-40 md:h-44 lg:h-36">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -35,7 +35,7 @@ export function HomeTransformationSection() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-[13px] leading-[1.7] text-[#555] sm:text-[12px] sm:leading-[1.6]">
+                  <p className="mt-3 text-[13px] leading-[1.7] text-[#555] sm:text-[12px] sm:leading-[1.6] line-clamp-3">
                     {item.description}
                   </p>
 
