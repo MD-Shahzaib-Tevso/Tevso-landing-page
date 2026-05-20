@@ -7,6 +7,7 @@ export interface CaseStudy {
   title: string;
   slug: string;
   image: string;
+  previewImage: string;
   alt: string;
   description: string;
   challenge: string;

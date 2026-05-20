@@ -11,7 +11,7 @@ export function CaseStudiesDetailsContentSection({ study }: Props) {
       {/* Featured Mockup Image */}
       <div className="relative w-full aspect-video md:aspect-2/1 rounded-3xl overflow-hidden bg-[#E8E8E8] shadow-2xl flex items-center justify-center border-[4px] border-white max-w-6xl mx-auto">
         <FallbackImage
-          src={study?.image} // Placeholder URL for laptop mockup
+          src={study?.previewImage} // Placeholder URL for laptop mockup
           alt={study?.alt}
           fill
           fallbackText={study?.title}
