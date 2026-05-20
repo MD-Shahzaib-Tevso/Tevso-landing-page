@@ -78,7 +78,7 @@ export const CASE_STUDIES = [
     {
         title: "Energy and Utility Switching Platform",
         slug: "energy-and-utility-switching-platform",
-        image: "/case-studies/cs-3.png",
+        image: "/case-studies/cs-11.png",
         alt: "Energy and Utility Switching Platform",
         description:
             "Partners wanted to offer energy switching services under their own brand without building complex supplier integrations. We created a white label platform that automates switching and partner onboarding.",
@@ -146,7 +146,7 @@ export const CASE_STUDIES = [
     {
         title: "Legacy System Modernization",
         slug: "legacy-system-modernization",
-        image: "/case-studies/cs-5.png",
+        image: "/case-studies/cs-9.png",
         alt: "Legacy System Modernization",
         description:
             "We modernized a 2002 legacy system into a scalable, secure, and maintainable architecture, enabling uninterrupted business operations.",
@@ -178,12 +178,12 @@ export const CASE_STUDIES = [
         ],
     },
     {
-        title: "Islamic Mobile Application",
-        slug: "islamic-mobile-application",
-        image: "/case-studies/cs-6.png",
-        alt: "Islamic Mobile Application",
+        title: "Community Mobile Application",
+        slug: "community-mobile-application",
+        image: "/case-studies/cs-8.png",
+        alt: "Community Mobile Application",
         description:
-            "A mobile application delivering daily Islamic content and utilities for over 200,000 users. It focuses on notifications, location-based services, and easy access to religious resources.",
+            "A mobile application delivering daily community content and utilities for over 200,000 users. It focuses on notifications, location-based services, and easy access to community resources.",
         challenge:
             "Need for a high-performance mobile experience with scalable notifications and real-time engagement.",
         approach:
@@ -191,7 +191,7 @@ export const CASE_STUDIES = [
         Development:
             "Firebase backend for real-time notifications and content management. Tested for scalability and reliability under high user load.",
         Results:
-            "Delivered a trusted mobile platform enabling users to access religious content and guidance anytime, increasing loyalty and engagement.",
+            "Delivered a trusted mobile platform enabling users to access community content and guidance anytime, increasing loyalty and engagement.",
         Solution: [
             {
                 title: "Daily notifications and reminders",
@@ -202,7 +202,7 @@ export const CASE_STUDIES = [
                 desc: "Localized services based on user location.",
             },
             {
-                title: "Islamic content library",
+                title: "Community content library",
                 desc: "Books, articles, and audio resources in one place.",
             },
             {
@@ -248,7 +248,7 @@ export const CASE_STUDIES = [
     {
         title: "GDPR Compliance Implementation",
         slug: "gdpr-compliance-implementation",
-        image: "/case-studies/cs-8.png",
+        image: "/case-studies/cs-6.png",
         alt: "GDPR Compliance Implementation",
         description:
             "Implemented GDPR compliance measures for regulated markets, ensuring proper handling of user data.",
@@ -282,7 +282,7 @@ export const CASE_STUDIES = [
     {
         title: "Security Code Audit",
         slug: "security-code-audit",
-        image: "/case-studies/cs-9.png",
+        image: "/case-studies/cs-___________.png",
         alt: "Security Code Audit",
         description:
             "A comprehensive security audit aligned with industry best practices to identify vulnerabilities and improve system security.",
@@ -316,7 +316,7 @@ export const CASE_STUDIES = [
     {
         title: "Digital Advertising Platform",
         slug: "digital-advertising-platform",
-        image: "/case-studies/cs-10.png",
+        image: "/case-studies/cs-___________.png",
         alt: "Digital Advertising Platform",
         description:
             "A platform for managing multi-location digital ad campaigns with automated billing and reporting.",
@@ -350,7 +350,7 @@ export const CASE_STUDIES = [
     {
         title: "Logistics and Transportation Platform",
         slug: "logistics-and-transportation-platform",
-        image: "/case-studies/cs-11.png",
+        image: "/case-studies/cs-3.png",
         alt: "Logistics and Transportation Platform",
         description:
             "A platform providing end-to-end logistics management with real-time tracking and operational control.",
@@ -418,7 +418,7 @@ export const CASE_STUDIES = [
     {
         title: "Fitness Training Platform",
         slug: "fitness-training-platform",
-        image: "/case-studies/cs-13.png",
+        image: "/case-studies/cs-___________.png",
         alt: "Fitness Training Platform",
         description:
             "A subscription-based platform delivering structured workout programs with remote engagement and video tutorials.",
