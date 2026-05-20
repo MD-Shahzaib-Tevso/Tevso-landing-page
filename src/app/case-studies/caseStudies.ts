@@ -290,7 +290,7 @@ export const CASE_STUDIES = [
     {
         title: "Security Code Audit",
         slug: "security-code-audit",
-        image: "/case-studies/cs-___________.png",
+        image: "/case-studies/cs-13.png",
         previewImage: "/case-studies/cs-0-1.png",
         alt: "Security Code Audit",
         description:
@@ -325,7 +325,7 @@ export const CASE_STUDIES = [
     {
         title: "Digital Advertising Platform",
         slug: "digital-advertising-platform",
-        image: "/case-studies/cs-___________.png",
+        image: "/case-studies/cs-10.png",
         previewImage: "/case-studies/cs-0-1.png",
         alt: "Digital Advertising Platform",
         description:
@@ -430,7 +430,7 @@ export const CASE_STUDIES = [
     {
         title: "Fitness Training Platform",
         slug: "fitness-training-platform",
-        image: "/case-studies/cs-___________.png",
+        image: "/case-studies/cs-5.png",
         previewImage: "/case-studies/cs-0-1.png",
         alt: "Fitness Training Platform",
         description:
