@@ -1,34 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const caseStudies = [
-  {
-    title: "24 / 7 Digital Veterinary Care Platform",
-    image: "/Macbook.png",
-    description:
-      "White-label platform with portals, consultations, payments, subscriptions, analytics, and reporting — supporting 500k+ users and 50+ clinics.",
-  },
-  {
-    title: "Online Pet Pharmacy Platform",
-    image: "/4 3.png",
-    description:
-      "Structured tenant and guarantor verification with automated workflows, credit checks, and AML support, used by 100+ letting agents.",
-  },
-  {
-    title: "Shipping and Clearing Platform",
-    image: "/2 7.png",
-    description:
-      "Partners wanted to offer energy switching services under their own brand without building complex supplier integrations.",
-  },
-  {
-    title: "AI Marketing Automation Platform",
-    image: "/3 3.png",
-    description:
-      "Partner portals, dashboards, APIs, and supplier automation for multiple UK partners, processing 500k+ completed sales.",
-  },
-];
-
-const carouselItems = [...caseStudies, ...caseStudies];
+import { CASE_STUDIES } from "@/app/case-studies/caseStudies";
 
 export function HomeTransformationSection() {
   return (
@@ -42,7 +14,7 @@ export function HomeTransformationSection() {
         {/* Carousel */}
         <div className="mt-8 w-full overflow-hidden">
           <div className="case-carousel-track flex w-max gap-6 lg:gap-5">
-            {carouselItems.map((item, index) => (
+            {CASE_STUDIES.map((item, index) => (
               <article
                 key={`${item.title}-${index}`}
                 className="w-[280px] flex-shrink-0 overflow-hidden rounded-[12px] border border-[#e5e5e5] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_35px_rgba(0,0,0,0.12)] sm:w-[260px] md:w-[270px] lg:w-[260px]"
@@ -67,12 +39,12 @@ export function HomeTransformationSection() {
                     {item.description}
                   </p>
 
-                  <a
-                    href="#"
+                  <Link
+                    href={`/case-studies/${item.slug}`}
                     className="mt-4 inline-block text-[13px] font-medium text-[#3924e8] underline sm:text-[12px]"
                   >
                     View More
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
